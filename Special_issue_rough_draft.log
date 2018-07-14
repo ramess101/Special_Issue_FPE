@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  10 JUL 2018 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  13 JUL 2018 23:14
 entering extended mode
 **./Special_issue_rough_draft.tex
 (Special_issue_rough_draft.tex
@@ -569,161 +569,160 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package natbib Warning: Citation `LEMMON-RP91' on page 2 undefined on input lin
-e 254.
-
-
-Package natbib Warning: Citation `Ethane2006' on page 2 undefined on input line
- 254.
-
-
-Package natbib Warning: Citation `Propane2009' on page 2 undefined on input lin
-e 254.
-
-
-Package natbib Warning: Citation `Butane2006' on page 2 undefined on input line
- 254.
-
-
-Package natbib Warning: Citation `Beckmueller2017' on page 2 undefined on input
- line 254.
-
-
-Package natbib Warning: Citation `Lemmon2006' on page 2 undefined on input line
- 254.
-
-
-Package natbib Warning: Citation `Blackham2017' on page 2 undefined on input li
-ne 254.
-
-
-Overfull \hbox (4.45917pt too wide) in paragraph at lines 254--255
-\T1/cmr/m/n/12 methylpentane, 2,2-dimethylpropane, 2,3-dimethylbutane, and 2,2,
-4-trimethylpentane. These
- []
-
-[2] <figures/empty_figure.jpg, id=17, 246.9225pt x 205.76875pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+<figures/empty_figure.jpg, id=19, 246.9225pt x 205.76875pt>
 File: figures/empty_figure.jpg Graphic file (type jpg)
 
 <use figures/empty_figure.jpg>
-Package pdftex.def Info: figures/empty_figure.jpg used on input line 265.
+Package pdftex.def Info: figures/empty_figure.jpg used on input line 263.
 (pdftex.def)             Requested size: 231.26378pt x 192.71933pt.
- [3]
 
-Package natbib Warning: Citation `Exp6' on page 4 undefined on input line 293.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./figures/empty_figure.jpg>]
+
+Package natbib Warning: Citation `Exp6' on page 4 undefined on input line 291.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `eq:Mie' on page 4 undefined on input line 320.
 
 
-LaTeX Warning: Reference `eq:Mie' on page 4 undefined on input line 322.
-
-
-Overfull \hbox (3.06705pt too wide) in paragraph at lines 322--323
+Overfull \hbox (3.06705pt too wide) in paragraph at lines 320--321
 []\T1/cmr/m/n/12 Non-bonded in-ter-ac-tion en-er-gies and forces be-tween sites
  lo-cated in two dif-fer-ent molecules
  []
 
+[4]
 
-Package natbib Warning: Citation `TraPPE' on page 4 undefined on input line 328
+Package natbib Warning: Citation `TraPPE' on page 5 undefined on input line 326
 .
 
 
-Package natbib Warning: Citation `Martin1999' on page 4 undefined on input line
- 328.
+Package natbib Warning: Citation `Martin1999' on page 5 undefined on input line
+ 326.
 
 
-Package natbib Warning: Citation `TraPPEUA2' on page 4 undefined on input line 
-328.
+Package natbib Warning: Citation `TraPPEUA2' on page 5 undefined on input line 
+326.
 
 
-Package natbib Warning: Citation `Mie' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `Mie' on page 5 undefined on input line 326.
 
 
-Package natbib Warning: Citation `Potoff_branched' on page 4 undefined on input
- line 328.
+Package natbib Warning: Citation `Potoff_branched' on page 5 undefined on input
+ line 326.
 
 
-Package natbib Warning: Citation `AUA4' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `AUA4' on page 5 undefined on input line 326.
 
 
-Package natbib Warning: Citation `Nieto2008' on page 4 undefined on input line 
-328.
+Package natbib Warning: Citation `Nieto2008' on page 5 undefined on input line 
+326.
 
 
-Package natbib Warning: Citation `TAMie' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `TAMie' on page 5 undefined on input line 326.
 
 
 
-Package natbib Warning: Citation `Weidler2016' on page 4 undefined on input lin
-e 328.
+Package natbib Warning: Citation `Weidler2016' on page 5 undefined on input lin
+e 326.
 
 
-Package natbib Warning: Citation `TraPPE' on page 4 undefined on input line 328
+Package natbib Warning: Citation `TraPPE' on page 5 undefined on input line 326
 .
 
 
-Package natbib Warning: Citation `Martin1999' on page 4 undefined on input line
- 328.
+Package natbib Warning: Citation `Martin1999' on page 5 undefined on input line
+ 326.
 
 
-Package natbib Warning: Citation `TraPPEUA2' on page 4 undefined on input line 
-328.
+Package natbib Warning: Citation `TraPPEUA2' on page 5 undefined on input line 
+326.
 
 
-Package natbib Warning: Citation `Mie' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `Mie' on page 5 undefined on input line 326.
 
 
-Package natbib Warning: Citation `Potoff_branched' on page 4 undefined on input
- line 328.
+Package natbib Warning: Citation `Potoff_branched' on page 5 undefined on input
+ line 326.
 
 
-Package natbib Warning: Citation `AUA4' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `AUA4' on page 5 undefined on input line 326.
 
 
-Package natbib Warning: Citation `Nieto2008' on page 4 undefined on input line 
-328.
+Package natbib Warning: Citation `Nieto2008' on page 5 undefined on input line 
+326.
 
 
-Package natbib Warning: Citation `TAMie' on page 4 undefined on input line 328.
+Package natbib Warning: Citation `TAMie' on page 5 undefined on input line 326.
 
 
 
-Package natbib Warning: Citation `Weidler2016' on page 4 undefined on input lin
-e 328.
+Package natbib Warning: Citation `Weidler2016' on page 5 undefined on input lin
+e 326.
 
 
-Overfull \hbox (0.91711pt too wide) in paragraph at lines 330--346
+Overfull \hbox (0.91711pt too wide) in paragraph at lines 328--344
  [] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package natbib Warning: Citation `Allen1987' on page 5 undefined on input line 
+347.
 
 
-Package natbib Warning: Citation `Allen1987' on page 4 undefined on input line 
-349.
+Package natbib Warning: Citation `Mie' on page 5 undefined on input line 347.
+
+[5]
+
+Package natbib Warning: Citation `GROMACS_2018' on page 6 undefined on input li
+ne 373.
 
 
-Package natbib Warning: Citation `Mie' on page 4 undefined on input line 349.
+Package natbib Warning: Citation `GROMACS_note' on page 6 undefined on input li
+ne 373.
 
-[4 <./figures/empty_figure.jpg>]
+[6]
 
-Package natbib Warning: Citation `GROMACS_2018' on page 5 undefined on input li
-ne 375.
+Package natbib Warning: Citation `LEMMON-RP91' on page 7 undefined on input lin
+e 400.
 
 
-Package natbib Warning: Citation `GROMACS_note' on page 5 undefined on input li
-ne 375.
+Package natbib Warning: Citation `Ethane2006' on page 7 undefined on input line
+ 400.
 
-[5] [6]
+
+Package natbib Warning: Citation `Propane2009' on page 7 undefined on input lin
+e 400.
+
+
+Package natbib Warning: Citation `Butane2006' on page 7 undefined on input line
+ 400.
+
+
+Package natbib Warning: Citation `Beckmueller2017' on page 7 undefined on input
+ line 400.
+
+
+Package natbib Warning: Citation `Lemmon2006' on page 7 undefined on input line
+ 400.
+
+
+Package natbib Warning: Citation `Blackham2017' on page 7 undefined on input li
+ne 400.
+
+
+Overfull \hbox (4.45917pt too wide) in paragraph at lines 400--401
+\T1/cmr/m/n/12 methylpentane, 2,2-dimethylpropane, 2,3-dimethylbutane, and 2,2,
+4-trimethylpentane. These
+ []
+
 File: figures/empty_figure.jpg Graphic file (type jpg)
- <use figures/empty_figure.jpg>
+<use figures/empty_figure.jpg>
 Package pdftex.def Info: figures/empty_figure.jpg used on input line 422.
 (pdftex.def)             Requested size: 231.26378pt x 192.71933pt.
  [7]
@@ -743,96 +742,109 @@ Package pdftex.def Info: figures/compare_force_fields_C12.pdf used on input lin
 e 440.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
 
-<figures/compare_force_fields_IC4_neoC5.pdf, id=44, 722.7pt x 1445.4pt>
-File: figures/compare_force_fields_IC4_neoC5.pdf Graphic file (type pdf)
+Overfull \hbox (42.90723pt too wide) in paragraph at lines 492--493
+\T1/cmr/m/n/12 dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane, while F
+ig-ure 6[] con-tains 2-methylpentane,
+ []
 
-<use figures/compare_force_fields_IC4_neoC5.pdf>
-Package pdftex.def Info: figures/compare_force_fields_IC4_neoC5.pdf used on inp
-ut line 469.
+
+Overfull \hbox (9.62677pt too wide) in paragraph at lines 492--493
+\T1/cmr/m/n/12 and 2,2-dimethylpropane were sim-u-lated with AUA4 (AUA LJ 12-6)
+ while 2,2-dimethylpropane
+ []
+
+<figures/compare_force_fields_short_branched.pdf, id=44, 722.7pt x 1445.4pt>
+File: figures/compare_force_fields_short_branched.pdf Graphic file (type pdf)
+
+<use figures/compare_force_fields_short_branched.pdf>
+Package pdftex.def Info: figures/compare_force_fields_short_branched.pdf used o
+n input line 498.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
 
-<figures/compare_force_fields_IC5_IC8.pdf, id=45, 722.7pt x 1445.4pt>
-File: figures/compare_force_fields_IC5_IC8.pdf Graphic file (type pdf)
+<figures/compare_force_fields_long_branched.pdf, id=45, 722.7pt x 1445.4pt>
+File: figures/compare_force_fields_long_branched.pdf Graphic file (type pdf)
 
-<use figures/compare_force_fields_IC5_IC8.pdf>
-Package pdftex.def Info: figures/compare_force_fields_IC5_IC8.pdf used on input
- line 478.
+<use figures/compare_force_fields_long_branched.pdf>
+Package pdftex.def Info: figures/compare_force_fields_long_branched.pdf used on
+ input line 505.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
-File: figures/empty_figure.jpg Graphic file (type jpg)
- <use figures/empty_figure.jpg>
-Package pdftex.def Info: figures/empty_figure.jpg used on input line 487.
-(pdftex.def)             Requested size: 231.26378pt x 192.71933pt.
 
-<figures/compare_REFPROP_T293highP_C3H8_Pas.pdf, id=46, 1445.4pt x 1445.4pt>
+Overfull \hbox (8.4227pt too wide) in paragraph at lines 514--515
+[]\T1/cmr/m/n/12 The de-vi-a-tions for each force field are largest for 2-methy
+lpropane and 2,2-dimethylpropane.
+ []
+
+[8] [9]
+<figures/compare_REFPROP_T293highP_C3H8_Pas.pdf, id=52, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_C3H8_Pas.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_C3H8_Pas.pdf>
 Package pdftex.def Info: figures/compare_REFPROP_T293highP_C3H8_Pas.pdf used on
- input line 512.
+ input line 546.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 
-<figures/compare_REFPROP_T293highP_C4H10_Pas_new_REFPROP.pdf, id=47, 1445.4pt x
+<figures/compare_REFPROP_T293highP_C4H10_Pas_new_REFPROP.pdf, id=53, 1445.4pt x
  1445.4pt>
 File: figures/compare_REFPROP_T293highP_C4H10_Pas_new_REFPROP.pdf Graphic file 
 (type pdf)
  <use figures/compare_REFPROP_T293highP_C4H10_Pas_new_REFPROP.pdf>
 Package pdftex.def Info: figures/compare_REFPROP_T293highP_C4H10_Pas_new_REFPRO
-P.pdf used on input line 519.
+P.pdf used on input line 553.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 
-<figures/compare_REFPROP_T293highP_C8H18_all.pdf, id=48, 1445.4pt x 1445.4pt>
+<figures/compare_REFPROP_T293highP_C8H18_all.pdf, id=54, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_C8H18_all.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_C8H18_all.pdf>
 Package pdftex.def Info: figures/compare_REFPROP_T293highP_C8H18_all.pdf used o
-n input line 526.
+n input line 560.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
- [8]
-<figures/compare_REFPROP_T293highP_IC4H10.pdf, id=52, 1445.4pt x 1445.4pt>
+
+<figures/compare_REFPROP_T293highP_IC4H10.pdf, id=55, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_IC4H10.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_IC4H10.pdf>
 Package pdftex.def Info: figures/compare_REFPROP_T293highP_IC4H10.pdf used on i
-nput line 552.
+nput line 586.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 File: figures/empty_figure.jpg Graphic file (type jpg)
 
 <use figures/empty_figure.jpg>
-Package pdftex.def Info: figures/empty_figure.jpg used on input line 559.
+Package pdftex.def Info: figures/empty_figure.jpg used on input line 593.
 (pdftex.def)             Requested size: 462.52756pt x 385.46378pt.
 File: figures/empty_figure.jpg Graphic file (type jpg)
  <use figures/empty_figure.jpg>
-Package pdftex.def Info: figures/empty_figure.jpg used on input line 566.
+Package pdftex.def Info: figures/empty_figure.jpg used on input line 600.
 (pdftex.def)             Requested size: 462.52756pt x 385.46378pt.
 
-<figures/compare_REFPROP_T293highP_IC8H18.pdf, id=53, 1445.4pt x 1445.4pt>
+<figures/compare_REFPROP_T293highP_IC8H18.pdf, id=56, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_IC8H18.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_IC8H18.pdf>
 Package pdftex.def Info: figures/compare_REFPROP_T293highP_IC8H18.pdf used on i
-nput line 573.
+nput line 607.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
- [9] [10] [11]
-(Special_issue_rough_draft.bbl)
+ [10]
+(Special_issue_rough_draft.bbl) [11] [12]
 
 Package natbib Warning: There were undefined citations.
 
-[12] [13] [14 <./figures/compare_force_fields_alkanes.pdf>] [15 <./figures/comp
-are_force_fields_C12.pdf>] [16 <./figures/compare_force_fields_IC4_neoC5.pdf>]
-[17 <./figures/compare_force_fields_IC5_IC8.pdf>] [18] [19 <./figures/compare_R
-EFPROP_T293highP_C3H8_Pas.pdf>] [20 <./figures/compare_REFPROP_T293highP_C4H10_
-Pas_new_REFPROP.pdf>] [21 <./figures/compare_REFPROP_T293highP_C8H18_all.pdf>]
-[22 <./figures/compare_REFPROP_T293highP_IC4H10.pdf>] [23] [24] [25 <./figures/
-compare_REFPROP_T293highP_IC8H18.pdf>] (Special_issue_rough_draft.aux)
+[13] [14] [15 <./figures/compare_force_fields_alkanes.pdf>] [16 <./figures/comp
+are_force_fields_C12.pdf>] [17 <./figures/compare_force_fields_short_branched.p
+df>] [18 <./figures/compare_force_fields_long_branched.pdf>] [19 <./figures/com
+pare_REFPROP_T293highP_C3H8_Pas.pdf>] [20 <./figures/compare_REFPROP_T293highP_
+C4H10_Pas_new_REFPROP.pdf>] [21 <./figures/compare_REFPROP_T293highP_C8H18_all.
+pdf>] [22 <./figures/compare_REFPROP_T293highP_IC4H10.pdf>] [23] [24] [25 <./fi
+gures/compare_REFPROP_T293highP_IC8H18.pdf>] (Special_issue_rough_draft.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12459 strings out of 493333
- 234725 string characters out of 3139198
- 291887 words of memory out of 3000000
- 15857 multiletter control sequences out of 15000+200000
+ 12460 strings out of 493333
+ 234789 string characters out of 3139198
+ 287897 words of memory out of 3000000
+ 15858 multiletter control sequences out of 15000+200000
  17736 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,9n,38p,10427b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -853,9 +865,9 @@ onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Special_issue_rough_draft.pdf (25 pages, 501357 bytes).
+Output written on Special_issue_rough_draft.pdf (25 pages, 518654 bytes).
 PDF statistics:
- 983 PDF objects out of 1000 (max. 8388607)
+ 987 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
