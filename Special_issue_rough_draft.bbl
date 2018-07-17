@@ -1,5 +1,50 @@
 \begin{thebibliography}{10}
 
+\bibitem{Maginn2018}
+Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
+  J.~Richard Elliott.
+\newblock Best practices for computing transport properties 1. self-diffusivity
+  and viscosity from equilibrium molecular dynamics v1.
+\newblock {\em Molecular Simulation}, Pending publication, 2018.
+
+\bibitem{Gordon2006}
+Peter~A. Gordon.
+\newblock Development of intermolecular potentials for predicting transport
+  properties of hydrocarbons.
+\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
+
+\bibitem{Allen1987}
+M.~P. Allen and D.~J. Tildesley.
+\newblock {\em {Computer Simulation of Liquids}}.
+\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
+  1987.
+
+\bibitem{Payal2012}
+Rajdeep~Singh Payal, S.~Balasubramanian, Indranil Rudra, Kunj Tandon, Ingo
+  Mahlke, David Doyle, and Roger Cracknell.
+\newblock Shear viscosity of linear alkanes through molecular simulations:
+  quantitative tests for n-decane and n-hexadecane.
+\newblock {\em Molecular Simulation}, 38(14-15):1234--1241, 2012.
+
+\bibitem{Mondello1997}
+Maurizio Mondello and Gary~S. Grest.
+\newblock Viscosity calculations of n-alkanes by equilibrium molecular
+  dynamics.
+\newblock {\em The Journal of Chemical Physics}, 106(22):9327--9336, 1997.
+
+\bibitem{Ungerer2007}
+Molecular simulation of the thermophysical properties of fluids: From
+  understanding toward quantitative predictions.
+\newblock {\em Journal of Molecular Liquids}, 134(1):71 -- 89, 2007.
+\newblock EMLG/JMLG 2005 Special Issue.
+
+\bibitem{Hoang2017}
+Hai Hoang, Stéphanie Delage-Santacreu, and Guillaume Galliero.
+\newblock Simultaneous description of equilibrium, interfacial, and transport
+  properties of fluids using a mie chain coarse-grained force field.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  56(32):9213--9226, 2017.
+
 \bibitem{Herdes2015}
 Carmelo Herdes, Tim~S. Totton, and Erich~A. M{\"u}ller.
 \newblock Coarse grained force field for the molecular simulation of natural
@@ -70,12 +115,6 @@ Dominik Weidler and Joachim Gross.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   55(46):12123--12132, 2016.
 
-\bibitem{Allen1987}
-M.~P. Allen and D.~J. Tildesley.
-\newblock {\em {Computer Simulation of Liquids}}.
-\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
-  1987.
-
 \bibitem{GROMACS_2018}
 M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
@@ -104,6 +143,12 @@ D.~B{\"u}cker and W.~Wagner.
 \newblock {\em Journal of Physical and Chemical Reference Data},
   35(1):205--266, 2006.
 
+\bibitem{Vogel2015}
+Eckhard Vogel, Roland Span, and Sebastian Herrmann.
+\newblock Reference correlation for the viscosity of ethane.
+\newblock {\em Journal of Physical and Chemical Reference Data}, 44(4):043101,
+  2015.
+
 \bibitem{Propane2009}
 Eric~W. Lemmon, Mark~O. McLinden, and Wolfgang Wagner.
 \newblock Thermodynamic properties of propane. iii. a reference equation of
@@ -119,16 +164,64 @@ D.~B{\"u}cker and W.~Wagner.
 \newblock {\em Journal of Physical and Chemical Reference Data},
   35(2):929--1019, 2006.
 
+\bibitem{Hermann2018}
+Sebastian Herrmann and Eckhard Vogel.
+\newblock New formulation for the viscosity of n{-}butane.
+\newblock {\em Journal of Physical and Chemical Reference Data}, 47(1):013104,
+  2018.
+
 \bibitem{Beckmueller2017}
 R.~Beckmueller, M.~Thol, and R.~Span.
 \newblock Fundamental equation of state for n-octane.
 \newblock {\em International Journal of Thermophysics}, Pending publication,
   2018.
 
+\bibitem{Huber2004FPE}
+Marcia~L. Huber, Arno Laesecke, and Hong~Wei Xiang.
+\newblock Viscosity correlations for minor constituent fluids in natural gas:
+  n-octane, n-nonane and n-decane.
+\newblock {\em Fluid Phase Equilibria}, 224(2):263 -- 270, 2004.
+
+\bibitem{Lemmon2004}
+Eric~W. Lemmon and Marcia~L. Huber.
+\newblock Thermodynamic properties of n{-}dodecane.
+\newblock {\em Energy \& Fuels}, 18(4):960--967, 2004.
+
+\bibitem{Huber2004}
+Marcia~L. Huber, Arno Laesecke, and Richard Perkins.
+\newblock Transport properties of n{-}dodecane.
+\newblock {\em Energy \& Fuels}, 18(4):968--975, 2004.
+
+\bibitem{Romeo2018}
+R.~Romeo and E.W. Lemmon.
+\newblock To be submitted.
+\newblock 2018.
+
+\bibitem{Vesovic2017}
+Private communication to M. Huber from V. Vesovic, Oct. 2017.
+
 \bibitem{Lemmon2006}
 Eric~W. Lemmon and Roland Span.
 \newblock Short fundamental equations of state for 20 industrial fluids.
 \newblock {\em Journal of Chemical \& Engineering Data}, 51(3):785--850, 2006.
+
+\bibitem{Vogel2000}
+E.~Vogel, C.~K{\"u}chenmeister, and E.~Bich.
+\newblock Viscosity correlation for isobutane over wide ranges of the fluid
+  region1.
+\newblock {\em International Journal of Thermophysics}, 21(2):343--356, Mar
+  2000.
+
+\bibitem{Huber2018}
+M.L. Huber.
+\newblock Models for the viscosity, thermal conductivity, and surface tension
+  of selected pure fluids as implemented in refprop v10.0.
+\newblock {\em NISTIR 8209}, Pending publication, 2018.
+
+\bibitem{Gao2017}
+K.~Gao, J.~Wu, and E.W. Lemmon.
+\newblock Unpublished equation.
+\newblock 2017.
 
 \bibitem{Blackham2017}
 T.M. Blackham, A.K. Lemmon, and E.W. Lemmon.

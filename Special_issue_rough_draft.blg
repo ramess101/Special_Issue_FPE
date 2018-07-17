@@ -1,3 +1,22 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Special_issue_rough_draft.aux
 The style file: unsrt.bst
 Database file #1: Special_issue_references.bib
+You're missing a field name---line 2458 of file Special_issue_references.bib
+ : 
+ : %url = "http://www.sciencedirect.com/science/article/pii/S016773220600331X",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2472 of file Special_issue_references.bib
+ : 
+ : %URL = {https://doi.org/10.1063/1.474002},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2486 of file Special_issue_references.bib
+ : 
+ : %URL = {https://doi.org/10.1080/08927022.2012.702423},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty author in Ungerer2007
+Warning--empty journal in Romeo2018
+Warning--empty journal in Gao2017
+(There were 3 error messages)
