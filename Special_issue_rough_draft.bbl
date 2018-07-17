@@ -1,0 +1,139 @@
+\begin{thebibliography}{10}
+
+\bibitem{Herdes2015}
+Carmelo Herdes, Tim~S. Totton, and Erich~A. M{\"u}ller.
+\newblock Coarse grained force field for the molecular simulation of natural
+  gases and condensates.
+\newblock {\em Fluid Phase Equilibria}, 406:91 -- 100, 2015.
+
+\bibitem{TraPPE}
+M.~G. Martin and J.~I. Siepmann.
+\newblock Transferable potentials for phase equilibria. 1. {United-atom}
+  description of n-alkanes.
+\newblock {\em The Journal of Physical Chemistry B}, 102(14):2569--2577, 1998.
+
+\bibitem{Martin1999}
+Marcus~G. Martin and J.~Ilja Siepmann.
+\newblock Novel configurational-bias monte carlo method for branched molecules.
+  {Transferable Potentials for Phase Equilibria. 2. United-Atom Description of
+  Branched Alkanes}.
+\newblock {\em The Journal of Physical Chemistry B}, 103(21):4508--4517, 1999.
+
+\bibitem{TraPPEUA2}
+Mansi~S. Shah, J.~Ilja Siepmann, and Michael Tsapatsis.
+\newblock Transferable potentials for phase equilibria. {Improved united-atom
+  description of ethane and ethylene}.
+\newblock {\em AIChE Journal}, 63(11):5098--5110, 2017.
+
+\bibitem{Mie}
+J.~J. Potoff and D.~A. Bernard-Brunel.
+\newblock Mie potentials for phase equilibria calculations: {Applications} to
+  alkanes and perfluoroalkanes.
+\newblock {\em The Journal of Physical Chemistry B}, 113(44):14725--14731,
+  2009.
+
+\bibitem{Potoff_branched}
+Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Loren Schwiebert, and
+  Jeffrey~J. Potoff.
+\newblock Optimized mie potentials for phase equilibria: Application to
+  branched alkanes.
+\newblock {\em Journal of Chemical \& Engineering Data}, 62(6):1806--1818,
+  2017.
+
+\bibitem{AUA4}
+Philippe Ungerer, Christele Beauvais, Jerome Delhommelle, Anne Boutin, Bernard
+  Rousseau, and Alain~H. Fuchs.
+\newblock Optimization of the anisotropic united atoms intermolecular potential
+  for n-alkanes.
+\newblock {\em The Journal of Chemical Physics}, 112(12):5499--5510, 2000.
+
+\bibitem{Nieto2008}
+Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
+  Ghoufi, Aur{\'e}lie Wender, , Anne Boutin, Bernard Rousseau, and Laurent
+  Normand.
+\newblock Optimisation of the dynamical behaviour of the anisotropic united
+  atom model of branched alkanes: application to the molecular simulation of
+  fuel gasoline.
+\newblock {\em Molecular Simulation}, 34(2):211--230, 2008.
+
+\bibitem{TAMie}
+Andrea Hemmen and Joachim Gross.
+\newblock Transferable anisotropic united-atom force field based on the {Mie}
+  potential for phase equilibrium calculations: n-alkanes and n-olefins.
+\newblock {\em The Journal of Physical Chemistry B}, 119(35):11695--11707,
+  2015.
+
+\bibitem{Weidler2016}
+Dominik Weidler and Joachim Gross.
+\newblock Transferable anisotropic united-atom force field based on the mie
+  potential for phase equilibria: Aldehydes, ketones, and small cyclic alkanes.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  55(46):12123--12132, 2016.
+
+\bibitem{Allen1987}
+M.~P. Allen and D.~J. Tildesley.
+\newblock {\em {Computer Simulation of Liquids}}.
+\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
+  1987.
+
+\bibitem{GROMACS_2018}
+M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
+  team.
+\newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}, 2018.
+
+\bibitem{GROMACS_note}
+GROMACS non-bonded tail corrections assume that the long-range contribution
+  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. By
+  comparing the GROMACS output with other (slower) simulation packages, we
+  verified that the small error introduced with this approximation does not
+  significantly affect our results. For this reason, although it is
+  straightforward to include the $r^{-\lambda}$ contribution, we did not
+  attempt to modify the GROMACS default tail correction values.
+
+\bibitem{LEMMON-RP91}
+E.~W. Lemmon, M.~L. Huber, and M.~O. McLinden.
+\newblock {NIST Standard Reference Database 23: Reference Fluid Thermodynamic
+  and Transport Properties-REFPROP, Version 9.1, National Institute of
+  Standards and Technology}, 2013.
+
+\bibitem{Ethane2006}
+D.~B{\"u}cker and W.~Wagner.
+\newblock A reference equation of state for the thermodynamic properties of
+  ethane for temperatures from the melting line to 675 {K} and pressures up to
+  900 {MPa}.
+\newblock {\em Journal of Physical and Chemical Reference Data},
+  35(1):205--266, 2006.
+
+\bibitem{Propane2009}
+Eric~W. Lemmon, Mark~O. McLinden, and Wolfgang Wagner.
+\newblock Thermodynamic properties of propane. iii. a reference equation of
+  state for temperatures from the melting line to 650 {K} and pressures up to
+  1000 {MPa}.
+\newblock {\em Journal of Chemical \& Engineering Data}, 54(12):3141--3180,
+  2009.
+
+\bibitem{Butane2006}
+D.~B{\"u}cker and W.~Wagner.
+\newblock Reference equations of state for the thermodynamic properties of
+  fluid phase n-butane and isobutane.
+\newblock {\em Journal of Physical and Chemical Reference Data},
+  35(2):929--1019, 2006.
+
+\bibitem{Beckmueller2017}
+R.~Beckmueller, M.~Thol, and R.~Span.
+\newblock Fundamental equation of state for n-octane.
+\newblock {\em International Journal of Thermophysics}, Pending publication,
+  2018.
+
+\bibitem{Lemmon2006}
+Eric~W. Lemmon and Roland Span.
+\newblock Short fundamental equations of state for 20 industrial fluids.
+\newblock {\em Journal of Chemical \& Engineering Data}, 51(3):785--850, 2006.
+
+\bibitem{Blackham2017}
+T.M. Blackham, A.K. Lemmon, and E.W. Lemmon.
+\newblock Fundamental equation of state for isooctane.
+\newblock {\em International Journal of Thermophysics}, Pending publication,
+  2018.
+
+\end{thebibliography}

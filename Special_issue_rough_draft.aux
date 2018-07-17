@@ -1,18 +1,19 @@
 \relax 
 \emailauthor{richard.messerly@nist.gov}{Richard A. Messerly}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Molecular Dynamics}{2}}
-\newlabel{Methods I}{{3}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Force field}{2}}
-\newlabel{Force Field}{{3.1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here.}}{3}}
-\newlabel{fig:AUA_isooctane}{{1}{3}}
-\citation{Exp6}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{4}}
-\newlabel{tab:bond-lengths}{{1}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Equilibrium bond angles $(\theta _0)$. $x$ and $y$ are values between 0-3.}}{4}}
-\newlabel{tab:angles}{{2}{4}}
+\emailauthor{michelle.anderson@nist.gov}{Michelle C. Anderson}
+\emailauthor{sr87@uakron.edu}{S. Mostafa Razavi}
+\emailauthor{elliot1@uakron.edu}{J. Richard Elliott}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{3}}
+\newlabel{Methods}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Force field}{3}}
+\newlabel{Force Field}{{2.1}{3}}
+\citation{Herdes2015}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{5}}
+\newlabel{tab:bond-lengths}{{1}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Equilibrium bond angles $(\theta _0)$. $x$ and $y$ are values between 0-3.}}{5}}
+\newlabel{tab:angles}{{2}{5}}
+\newlabel{eq:Mie}{{3}{5}}
 \citation{TraPPE,Martin1999}
 \citation{TraPPEUA2}
 \citation{Mie,Potoff_branched}
@@ -25,60 +26,92 @@
 \citation{TAMie,Weidler2016}
 \citation{Allen1987}
 \citation{Mie}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0-3.}}{5}}
-\newlabel{tab:torsions}{{3}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{5}}
-\newlabel{tab:nonbonded params}{{4}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0-3.}}{6}}
+\newlabel{tab:torsions}{{3}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{6}}
+\newlabel{tab:nonbonded params}{{4}{6}}
 \citation{GROMACS_2018}
 \citation{GROMACS_note}
-\newlabel{eq:Lorentz-Berthelot_eps}{{3}{6}}
-\newlabel{eq:Lorentz-Berthelot_sig}{{4}{6}}
-\newlabel{eq:Lorentz-Berthelot_lam}{{5}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Simulation set-up}{6}}
+\newlabel{eq:Lorentz-Berthelot_eps}{{4}{7}}
+\newlabel{eq:Lorentz-Berthelot_sig}{{5}{7}}
+\newlabel{eq:Lorentz-Berthelot_lam}{{6}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation set-up}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces General simulation specifications.}}{8}}
+\newlabel{tab:sim_specs}{{5}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Integrator, thermostat and barostat specifications.}}{8}}
+\newlabel{tab:thermostats_barostats}{{6}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Data analysis}{9}}
+\newlabel{eq:Green_Kubo}{{7}{9}}
 \citation{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017,Lemmon2006,Blackham2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Data analysis}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Saturated Liquid}{7}}
-\newlabel{sec:eta_sat}{{4.1}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}n-Alkanes}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Branched alkanes}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}High pressure fluid}{9}}
-\newlabel{sec:T293highP}{{4.2}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}n-Alkanes}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Branched alkanes}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion/Limitations}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{10}}
+\newlabel{eq: Double exponential}{{8}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{10}}
+\newlabel{Results}{{3}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Saturated Liquid}{11}}
+\newlabel{sec:eta_sat}{{3.1}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}n-Alkanes}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Saturated liquid viscosities for ethane. Colors/symbols denote different force fields.}}{11}}
+\newlabel{fig:Saturation_Ethane}{{1}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Branched alkanes}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for propane, \textit  {n}-butane, and \textit  {n}-octane. Colors/symbols denote different force fields.}}{13}}
+\newlabel{fig:Saturation_C3_C4_C8}{{2}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane and \textit  {n}-hexadecane. Colors/symbols denote different force fields.}}{14}}
+\newlabel{fig:Saturation_C12_C16}{{3}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Compressed liquid}{14}}
+\newlabel{sec:T293highP}{{3.2}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for 2-methylpropane, 2,2-dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane. Colors/symbols denote different force fields.}}{15}}
+\newlabel{fig:Saturation_short_branched}{{4}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{16}}
+\newlabel{fig:Saturation_long_branched}{{5}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}n-Alkanes}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Branched alkanes}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion/Limitations}{17}}
+\newlabel{Discussion/Limitations}{{4}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Compressed liquid viscosities at 293 K for propane. Colors/symbols denote different force fields.}}{18}}
+\newlabel{fig:T293highP_C3}{{6}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-butane. Colors/symbols denote different force fields.}}{19}}
+\newlabel{fig:T293highP_C4}{{7}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}$\rho _{\rm  liq}^{\rm  sat}$}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-octane. Colors/symbols denote different force fields.}}{20}}
+\newlabel{fig:T293highP_C8}{{8}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylpropane. Colors/symbols denote different force fields.}}{21}}
+\newlabel{fig:T293highP_IC4}{{9}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylbutane. Colors/symbols denote different force fields.}}{22}}
+\newlabel{fig:T293highP_IC5}{{10}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressed liquid viscosities at 293 K for 3-methylpentane. Colors/symbols denote different force fields.}}{23}}
+\newlabel{fig:T293highP_3MP}{{11}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{23}}
+\newlabel{Conclusions}{{5}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{24}}
+\newlabel{fig:T293highP_IC8}{{12}{24}}
+\bibstyle{unsrt}
 \bibdata{Special_issue_references}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Supporting Information}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Gromacs input files}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Tabulated values}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Finite-size effects}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Simulation length effects}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Validation Runs}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Bond types, Harmonic vs LINCS}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Green-Kubo analysis}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8}MCMC?}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for ethane. Colors/symbols denote different force fields.}}{14}}
-\newlabel{fig:Saturation_Ethane}{{2}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for propane, \textit  {n}-butane, and \textit  {n}-octane. Colors/symbols denote different force fields.}}{15}}
-\newlabel{fig:Saturation_C3_C4_C8}{{3}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane and \textit  {n}-hexadecane. Colors/symbols denote different force fields.}}{16}}
-\newlabel{fig:Saturation_C12_C16}{{4}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpropane, 2,2-dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane. Colors/symbols denote different force fields.}}{17}}
-\newlabel{fig:Saturation_short_branched}{{5}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Saturated liquid viscosities for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{18}}
-\newlabel{fig:Saturation_long_branched}{{6}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces High density fluid viscosities at 293 K for propane. Colors/symbols denote different force fields.}}{19}}
-\newlabel{fig:T293highP_C3}{{7}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces High density fluid viscosities at 293 K for \textit  {n}-butane. Colors/symbols denote different force fields.}}{20}}
-\newlabel{fig:T293highP_C4}{{8}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces High density fluid viscosities at 293 K for \textit  {n}-octane. Colors/symbols denote different force fields.}}{21}}
-\newlabel{fig:T293highP_C8}{{9}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces High density fluid viscosities at 293 K for 2-methylpropane. Colors/symbols denote different force fields.}}{22}}
-\newlabel{fig:T293highP_IC4}{{10}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces High density fluid viscosities at 293 K for 2-methylbutane. Colors/symbols denote different force fields.}}{23}}
-\newlabel{fig:T293highP_IC5}{{11}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces High density fluid viscosities at 293 K for 3-methylpentane. Colors/symbols denote different force fields.}}{24}}
-\newlabel{fig:T293highP_3MP}{{12}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces High density fluid viscosities at 293 K for 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{25}}
-\newlabel{fig:T293highP_IC8}{{13}{25}}
+\bibcite{Herdes2015}{{1}{}{{}}{{}}}
+\bibcite{TraPPE}{{2}{}{{}}{{}}}
+\bibcite{Martin1999}{{3}{}{{}}{{}}}
+\bibcite{TraPPEUA2}{{4}{}{{}}{{}}}
+\bibcite{Mie}{{5}{}{{}}{{}}}
+\bibcite{Potoff_branched}{{6}{}{{}}{{}}}
+\bibcite{AUA4}{{7}{}{{}}{{}}}
+\bibcite{Nieto2008}{{8}{}{{}}{{}}}
+\bibcite{TAMie}{{9}{}{{}}{{}}}
+\bibcite{Weidler2016}{{10}{}{{}}{{}}}
+\bibcite{Allen1987}{{11}{}{{}}{{}}}
+\bibcite{GROMACS_2018}{{12}{}{{}}{{}}}
+\bibcite{GROMACS_note}{{13}{}{{}}{{}}}
+\bibcite{LEMMON-RP91}{{14}{}{{}}{{}}}
+\bibcite{Ethane2006}{{15}{}{{}}{{}}}
+\bibcite{Propane2009}{{16}{}{{}}{{}}}
+\bibcite{Butane2006}{{17}{}{{}}{{}}}
+\bibcite{Beckmueller2017}{{18}{}{{}}{{}}}
+\bibcite{Lemmon2006}{{19}{}{{}}{{}}}
+\bibcite{Blackham2017}{{20}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Supporting Information}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Gromacs input files}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Tabulated values}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Finite-size effects}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Simulation length effects}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Validation Runs}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Bond types, Harmonic vs LINCS}{29}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Green-Kubo analysis}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}MCMC?}{30}}
