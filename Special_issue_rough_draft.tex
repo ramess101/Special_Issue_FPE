@@ -251,7 +251,7 @@
 	
 %	Unfortunately, the range of available (and reliable) experimental viscosity data does not cover the entire range of $P \rho T$ of interest. 
 	
-	There are two fundamental challenges for utilizing molecular simulation to estimate viscosity. First, obtaining reproducible results is more difficult for transport properties, such as viscosity, than for static properties. Second, viscosity is extremely sensitive to the force field. In addition to the strong dependence on the intermolecular interactions, the intramolecular potential plays a much greater role for viscosity than for static properties. For example, varying the torsional potential has a significant impact on viscosity while vapor-liquid coexistence is relatively unaffected. Therefore, the ability to predict viscosities with molecular simulation requires both robust methods and adequate force fields. 
+	There are two fundamental challenges for utilizing molecular simulation to estimate viscosity. First, obtaining reproducible results is more difficult for transport properties, such as viscosity, than for static properties. Second, viscosity is extremely sensitive to the force field. In addition to the strong dependence on the non-bonded interactions, the bonded potential plays a much greater role for viscosity than for static properties. For example, varying the torsional potential has a significant impact on viscosity while vapor-liquid coexistence is relatively unaffected. Therefore, the ability to predict viscosities with molecular simulation requires both robust methods and adequate force fields. 
 	
 %    Viscosity estimates can be obtained from both equilibrium molecular dynamics (EMD) and non-equilibrium molecular dynamics (NEMD) simulations. Recently, a ``Best Practices Guide'' for EMD was developed to improve reproducibility. 
 	
@@ -287,14 +287,11 @@
 	
 	\subsection{Force field} \label{Force Field}
 	
-	A united-atom (UA) or anisotropic-united-atom (AUA) representation is used for each compound studied. UA models assume that the UA interaction site is that of the carbon atom, while AUA models assume that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Note that TraPPE and Potoff are UA force fields while TraPPE-2, AUA4, and TAMie are AUA force fields.
+	A united-atom (UA) or anisotropic-united-atom (AUA) representation is used for each compound studied, i.e., normal and branched alkanes are represented with CH$_3$, CH$_2$, CH, and C sites. UA models assume that the UA interaction site is that of the carbon atom, while AUA models assume that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Note that TraPPE and Potoff are UA force fields while TraPPE-2, AUA4, and TAMie are AUA force fields. 
 	
-	The UA and AUA groups required for normal and branched alkanes are sp$^3$ hybridized CH$_3$, CH$_2$, CH, and C sites. For most literature models, a single (transferable) parameter set is assigned for each interaction site. However, two exceptions exist for the force fields studied. First, TAMie implements a different set of CH$_3$ parameters for ethane. Second, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The Potoff ``generalized'' CH and C parameter set is an attempt at a completely transferable set. However, since the ``generalized'' parameters performed poorly for some compounds, the S/L parameter set was proposed, where the ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively. 
+%	The UA and AUA groups required for normal and branched alkanes are sp$^3$ hybridized CH$_3$, CH$_2$, CH, and C sites. For most literature models, a single (transferable) parameter set is assigned for each interaction site. However, two exceptions exist for the force fields studied. First, TAMie implements a different set of CH$_3$ parameters for ethane. Second, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The Potoff ``generalized'' CH and C parameter set is an attempt at a completely transferable set. However, since the ``generalized'' parameters performed poorly for some compounds, the S/L parameter set was proposed, where the ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively. 
 	
-	A fixed bond-length is used for each bond between UA or AUA sites. Note that, although static thermodynamic properties are generally insensitive to the choice of fixed or flexible bonds, dynamic properties, such as viscosity, are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model. The results are provided as Supporting Information.
-	
-	Although TAMie is an AUA force field, only the terminal CH$_3$ sites have a displacement in the interaction site. This convention is much simpler to implement than other AUA approaches (such as AUA4) where non-terminal (i.e. CH$_2$ and CH) interaction sites also have a displacement distance. For this reason, 
-	we do not attempt to simulate the AUA4 force field for any compounds containing CH$_2$ and CH interaction sites. For the compounds and force fields simulated, the anisotropic shift in a terminal interaction site (i.e. CH$_3$) is treated simply as a longer effective bond-length (see Table \ref{tab:bond-lengths}). The bond-length for all non-terminal sites is 0.154 nm.
+	Note that only the terminal CH$_3$ sites are shifted in the TAMie force field. By contrast, AUA4 displaces the interaction location of non-terminal CH$_2$ and CH sites as well. For simplicity, we only utilize the AUA4 force field with compounds that are composed exclusively of CH$_3$ and C interaction sites, i.e., ethane and 2,2-dimethylpropane. Table \ref{tab:bond-lengths} provides the effective bond-lengths for terminal CH$_3$ sites. The bond-length for all non-terminal sites is 0.154 nm.
 	
 	\begin{table}[h!]
 		\caption{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.} \label{tab:bond-lengths}
@@ -310,8 +307,12 @@
 			\end{tabular}
 		\end{center} 
 	\end{table}
-	
-	The angle and dihedral energies are computed using the same functional forms for each force field. Angular bending interactions are evaluated using a harmonic potential:
+%
+%    A fixed bond-length is used for each bond between UA or AUA sites. Note that, although static thermodynamic properties are generally insensitive to the choice of fixed or flexible bonds, dynamic properties, such as viscosity, are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model. The results are provided as Supporting Information.
+
+    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model. The results are provided as Supporting Information. 
+    
+    The results presented in this work utilize fixed bond-lengths. The same angle and dihedral potentials are used for each force field. Angular bending interactions are evaluated using a harmonic potential:
 	\begin{equation}
 	u^{\rm bend} = \frac{k_\theta}{2} \left(\theta-\theta_0\right)^2
 	\end{equation}
@@ -321,8 +322,8 @@
 	\end{equation}
 	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants. The equilibrium bond angles and torsional parameters are found in Tables \ref{tab:angles}-\ref{tab:torsions}, respectively. 
 	\begin{table}[h!]
-		\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0-3.} \label{tab:angles}
-		\begin{center}%MRS: would it be more clear with x and y take all values between 0 and 3?
+		\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0 and 3.} \label{tab:angles}
+		\begin{center}
 			\begin{tabular}{|c|c|}
 				\hline
 				Bending sites & $\theta_0$ (degrees) \\ \hline
@@ -335,7 +336,7 @@
 	\end{table}
 	
 	\begin{table}[h!]
-		\caption{Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0-3.} \label{tab:torsions}
+		\caption{Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0 and 3.} \label{tab:torsions}
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
@@ -376,6 +377,8 @@
 			\end{tabular}
 		\end{center} 
 	\end{table}
+
+    Note that TraPPE (TraPPE-2) and TAMie implement a different set of CH$_3$ parameters for ethane. Also, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The Potoff ``generalized'' CH and C parameter set is an attempt at a completely transferable set. However, since the ``generalized'' parameters performed poorly for some compounds, the S/L parameter set was proposed, where the ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively.
 	
 	Non-bonded interactions between two different site types (i.e. cross-interactions) are determined using Lorentz-Berthelot combining rules \cite{Allen1987} for $\epsilon$ and $\sigma$, respectively, and an arithmetic mean for the repulsive exponent n (as recommended in Reference \citenum{Mie}):
 	\begin{equation} \label{eq:Lorentz-Berthelot_eps}
@@ -534,7 +537,7 @@
 	
 	\subsection{Data analysis}
 	
-	Following the ``Best Practices'' recommendation, we implement the Green-Kubo ``time-decomposition'' analysis to extract viscosity from EMD simulations. We refer the interested reader to References BLANK and BLANK for further details. In brief, the Green-Kubo integral is computed with respect to time according to
+	Following the ``Best Practices'' recommendation, we implement the Green-Kubo ``time-decomposition'' analysis to extract viscosity from EMD simulations. We refer the interested reader to References \citenum{Maginn2018} and \citenum{Zhang2015} for further details. In brief, the Green-Kubo integral is computed with respect to time according to
 	\begin{equation} \label{eq:Green_Kubo}
 	\frac{V}{3 k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \sum_{\alpha \ne \beta} \int_{0}^{\infty}dt\left\langle \tau_{\alpha\beta,n}(t) \tau_{\alpha\beta,n}(0)\right\rangle_{t_0}
 	\end{equation} 
@@ -548,7 +551,7 @@
 	\end{equation}
 	where $A, \alpha, \tau_1, $ and $\tau_2$ are fitting parameters and $\eta^\infty = A \alpha \tau_1 + A (1-\alpha) \tau_2$.
 	
-	To account for the increasing fluctuations in the ``running integral'' with respect to time, Equation \ref{eq: Double exponential} is fit by minimizing a weighted sum-squared error objective function. The weight model, $A t^{-b}$, is fit to the standard deviation $(\sigma_{\eta})$ of the replicate simulations. In addition, following a heuristic proposed by Zhang et al., data are excluded where $\sigma_{\eta} > 40$ \% $\eta^{\infty}$. As large fluctuations also exist at very short times, only data for $t > 3$ ps are included in the parameterization of Equation \ref{eq: Double exponential}. 
+	To account for the increasing fluctuations in the ``running integral'' with respect to time, Equation \ref{eq: Double exponential} is fit by minimizing a weighted sum-squared error objective function. The weight model, $A t^{-b}$, is fit to the standard deviation $(\sigma_{\eta})$ of the replicate simulations. In addition, following a heuristic proposed by Zhang et al., data are excluded where $\sigma_{\eta} > 40$ \% $\eta^{\infty}$. Note that occasionally the cut-off time was too short which resulted in very poor fits, in such cases it was necessary to manually increase the cut-off time. As large fluctuations also exist at very short times, only data for $t > 3$ ps are included in the parameterization of Equation \ref{eq: Double exponential}. 
 	
 	Uncertainties are obtained by bootstrap re-sampling. Specifically, the process described previously is repeated hundreds of times using randomly selected sets of replicate simulations. Furthermore, each repetition uses a randomly selected long-time cut-off between $30$ \% $\eta^{\infty}$ and $50$ \% $\eta^{\infty}$. A 95 \% confidence interval is obtained from the distribution of bootstrap estimates for $\eta_\infty$. An example of this process is provided as Supporting Information.
 	
@@ -597,7 +600,7 @@
 	
 	\section{Results} \label{Results}
 	
-	Six normal and seven branched alkanes of varying chain-length and degree of branching are simulated in this study. We only consider compounds with available REFPROP equations-of-state and viscosity correlations \cite{LEMMON-RP91}. Specifically, we simulate ethane \cite{Ethane2006,Vogel2015}, propane \cite{Propane2009}, \textit{n}-butane \cite{Butane2006,Hermann2018}, \textit{n}-octane \cite{Beckmueller2017,Huber2004FPE}, \textit{n}-dodecane \cite{Lemmon2004,Huber2004}, \textit{n}-hexadecane \cite{Romeo2018,Vesovic2017}, 2-methylpropane \cite{Lemmon2006,Vogel2000}, 2-methylbutane \cite{Lemmon2006,Huber2018}, 2-methylpentane \cite{Lemmon2006,Huber2018}, 3-methylpentane \cite{Gao2017,Huber2018}, 2,2-dimethylpropane \cite{Lemmon2006,Huber2018}, 2,3-dimethylbutane \cite{Gao2017,Huber2018}, and 2,2,4-trimethylpentane \cite{Blackham2017,Huber2018}. 
+	Six normal and seven branched alkanes of varying chain-length and degree of branching are simulated in this study. We only consider compounds with available REFPROP equations-of-state and viscosity correlations \cite{LEMMON-RP91}. Specifically, we simulate ethane \cite{Ethane2006,Vogel2015}, propane \cite{Propane2009,Vogel2016}, \textit{n}-butane \cite{Butane2006,Hermann2018}, \textit{n}-octane \cite{Beckmueller2017,Huber2004FPE}, \textit{n}-dodecane \cite{Lemmon2004,Huber2004}, \textit{n}-hexadecane \cite{Romeo2018,Vesovic2017}, 2-methylpropane \cite{Lemmon2006,Vogel2000}, 2-methylbutane \cite{Lemmon2006,Huber2018}, 2-methylpentane \cite{Lemmon2006,Huber2018}, 3-methylpentane \cite{Gao2017,Huber2018}, 2,2-dimethylpropane \cite{Lemmon2006,Huber2018}, 2,3-dimethylbutane \cite{Gao2017,Huber2018}, and 2,2,4-trimethylpentane \cite{Blackham2017,Huber2018}. 
 	
 	Each compound was simulated using the TraPPE (UA LJ 12-6) and Potoff S/L (UA Mie 16-6) force fields. Potoff ``short'' parameters are used for 2-methylpropane, 2-methylbutane, 2,2-dimethylpropane, and 2,3-dimethylbutane while Potoff ``long'' parameters are utilized for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Only 2,2-dimethylpropane was simulated with AUA4 (AUA LJ 12-6) while 2,2-dimethylpropane and 2,2,4-trimethylpentane were not simulated using the TAMie (AUA Mie 14-6) force field.
 	
@@ -836,7 +839,7 @@
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC8H18.pdf}
+		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC8H18_without_devPlots.pdf}
 		\caption{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}
 		\label{fig:T293highP_IC8}
 	\end{figure} 

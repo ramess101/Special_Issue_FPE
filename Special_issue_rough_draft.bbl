@@ -129,6 +129,13 @@ GROMACS non-bonded tail corrections assume that the long-range contribution
   straightforward to include the $r^{-\lambda}$ contribution, we did not
   attempt to modify the GROMACS default tail correction values.
 
+\bibitem{Zhang2015}
+Yong Zhang, Akihito Otani, and Edward~J. Maginn.
+\newblock Reliable viscosity calculation from equilibrium molecular dynamics
+  simulations: A time decomposition method.
+\newblock {\em Journal of Chemical Theory and Computation}, 11(8):3537--3546,
+  2015.
+
 \bibitem{LEMMON-RP91}
 E.~W. Lemmon, M.~L. Huber, and M.~O. McLinden.
 \newblock {NIST Standard Reference Database 23: Reference Fluid Thermodynamic
@@ -156,6 +163,12 @@ Eric~W. Lemmon, Mark~O. McLinden, and Wolfgang Wagner.
   1000 {MPa}.
 \newblock {\em Journal of Chemical \& Engineering Data}, 54(12):3141--3180,
   2009.
+
+\bibitem{Vogel2016}
+Eckhard Vogel and Sebastian Herrmann.
+\newblock New formulation for the viscosity of propane.
+\newblock {\em Journal of Physical and Chemical Reference Data}, 45(4):043103,
+  2016.
 
 \bibitem{Butane2006}
 D.~B{\"u}cker and W.~Wagner.
