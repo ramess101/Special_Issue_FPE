@@ -7,17 +7,11 @@ Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   and viscosity from equilibrium molecular dynamics v1.
 \newblock {\em Molecular Simulation}, Pending publication, 2018.
 
-\bibitem{Gordon2006}
-Peter~A. Gordon.
-\newblock Development of intermolecular potentials for predicting transport
-  properties of hydrocarbons.
-\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
-
-\bibitem{Allen1987}
-M.~P. Allen and D.~J. Tildesley.
-\newblock {\em {Computer Simulation of Liquids}}.
-\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
-  1987.
+\bibitem{Allen1997}
+William Allen and Richard~L. Rowley.
+\newblock Predicting the viscosity of alkanes using nonequilibrium molecular
+  dynamics: Evaluation of intermolecular potential models.
+\newblock {\em The Journal of Chemical Physics}, 106(24):10273--10281, 1997.
 
 \bibitem{Payal2012}
 Rajdeep~Singh Payal, S.~Balasubramanian, Indranil Rudra, Kunj Tandon, Ingo
@@ -31,6 +25,12 @@ Maurizio Mondello and Gary~S. Grest.
 \newblock Viscosity calculations of n-alkanes by equilibrium molecular
   dynamics.
 \newblock {\em The Journal of Chemical Physics}, 106(22):9327--9336, 1997.
+
+\bibitem{Gordon2006}
+Peter~A. Gordon.
+\newblock Development of intermolecular potentials for predicting transport
+  properties of hydrocarbons.
+\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
 
 \bibitem{Ungerer2007}
 Molecular simulation of the thermophysical properties of fluids: From
@@ -114,6 +114,12 @@ Dominik Weidler and Joachim Gross.
   potential for phase equilibria: Aldehydes, ketones, and small cyclic alkanes.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   55(46):12123--12132, 2016.
+
+\bibitem{Allen1987}
+M.~P. Allen and D.~J. Tildesley.
+\newblock {\em {Computer Simulation of Liquids}}.
+\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
+  1987.
 
 \bibitem{GROMACS_2018}
 M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development

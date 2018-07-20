@@ -255,9 +255,11 @@
 	
 %    Viscosity estimates can be obtained from both equilibrium molecular dynamics (EMD) and non-equilibrium molecular dynamics (NEMD) simulations. Recently, a ``Best Practices Guide'' for EMD was developed to improve reproducibility. 
 	
-	Recently, a ``Best Practices Guide'' was developed to address the first challenge, namely, to improve reproducibility \cite{Maginn2018}. While we apply the ``Best Practices'', the focus of this study is the second challenge. Specifically, we investigate the accuracy of united-atom Mie n-6 force fields, a popular class designed for the engineering purpose of predicting thermophysical properties. The suitability of these force fields for quantitative viscosity prediction has been widely debated in the literature. For example, BLANK suggested that united-atom models are inadequate for this purpose and recommended the use of all-atom models. By contrast, Reference \citenum{Gordon2006} suggested that great improvement is obtained by utilizing a Mie n-6 potential over the traditional Lennard-Jones 12-6 potential. However, these studies focused on viscosities of saturated liquids. Recently, it was shown that Mie n-6 potentials are overly repulsive at high densities/pressures. For these reasons, we study how well the united-atom Mie n-6 potentials perform both at saturation and elevated pressures.
+	Recently, a ``Best Practices Guide'' was developed to address the first challenge, namely, to improve reproducibility \cite{Maginn2018}. While we apply the ``Best Practices'', the focus of this study is the second challenge. Specifically, we investigate the accuracy of united-atom Mie n-6 force fields, a popular class designed for the engineering purpose of predicting thermophysical properties. The suitability of these force fields for quantitative viscosity prediction has been widely debated in the literature. For example, some studies have suggested that united-atom models are inadequate for this purpose and recommended the use of all-atom models \cite{Allen1997,Payal2012,Mondello1997}. By contrast, Reference \citenum{Gordon2006} suggests that great improvement is obtained by utilizing a Mie n-6 potential over the traditional Lennard-Jones 12-6 potential. Recently, it was shown that Mie n-6 potentials are overly repulsive at high densities/pressures. For these reasons, we study how well the united-atom Mie n-6 potentials perform both at saturation and elevated pressures.
 	
-	Some studies have suggested that united-atom models are not capable of accurately reproducing viscosity and, therefore, anisotropic-united-atom or all-atom models are needed \cite{Allen1987,Payal2012,Mondello1997}. However, other studies have shown that with the appropriate tuning of the united-atom Mie n-6 parameters viscosity can be accurately predicted without significant deprecation of other properties \cite{Gordon2006}. \cite{Ungerer2007} discusses different test cases (i.e. state points, compound structures) where united-atom or anisotropic-united-atom models are adequate and inadequate for predicting viscosity.
+%	However, this study focused on viscosities of saturated liquids.
+	
+	Some studies have suggested that united-atom models are not capable of accurately reproducing viscosity and, therefore, anisotropic-united-atom or all-atom models are needed \cite{Allen1997,Payal2012,Mondello1997}. However, other studies have shown that with the appropriate tuning of the united-atom Mie n-6 parameters viscosity can be accurately predicted without significant deprecation of other properties \cite{Gordon2006}. \cite{Ungerer2007} discusses different test cases (i.e. state points, compound structures) where united-atom or anisotropic-united-atom models are adequate and inadequate for predicting viscosity.
    
     Furthermore, Reference \citenum{Hoang2017} demonstrated that it is important to include viscosity data when parameterizing a Mie n-6 force field to obtain a unique set of transferable parameters. The force fields compared in this study were optimized solely with static vapor-liquid coexistence data, e.g., saturated liquid densities and saturated vapor pressures. Therefore, an additional purpose of this study is to determine the transferability of these force fields that were not parameterized without viscosity data.
     
@@ -858,10 +860,12 @@
 	
 	\section{Discussion/Limitations} \label{Discussion/Limitations}
 	
+	While the Potoff force field significantly over-predicts the $\eta$-$\rho$ dependence at $T= 293$ K, it does not over-predict $\eta$ for the highest values $\rho_{\rm liq}^{\rm sat}$ (those near the triple point temperature) (cf. Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:T293highP_C3}). To better understand this, Figure BLANK compares the radial distribution functions (RDF) for three different state points, namely, the triple point $(T_{\rm tp}$ and $\rho_{\rm tp}$ and two densities along the $T = 293$ K isotherm ($\rho_{\rm tp}$ and the maximum $\rho$). It is clear from these RDFs that the higher pressure simulations sample from much closer interactions than the triple point and, therefore, these close interactions cause the over-estimation of compressed liquid viscosities but not saturated high density liquid viscosities.
+	
 	\begin{enumerate}
 		\item Finite-size effects
 		\item Fixed vs flexible bonds
-		\item Simulation length, high viscosities
+		\item Simulation time, high viscosities
 		\item Cut-offs for C12
 		\item RDFs for propane
 	\end{enumerate}
@@ -905,13 +909,15 @@
 	
 	\subsection{Gromacs input files}
 	
-	\begin{enumerate}
-		\item Include all the .gro files
-		\item Include all the .top file templates
-		\item Include .mdp files
-		\item Or we can just include an example and then refer them to the GitHub website
-	\end{enumerate}
+	We have provided example input files for simulating \textit{n}-isooctane at BLANK K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files that were used to generate the results from this study can be found that the GitHub repository www.github.com/ramess101/IFPSC\_10.
 	
+%	\begin{enumerate}
+%		\item Include all the .gro files
+%		\item Include all the .top file templates
+%		\item Include .mdp files
+%		\item Or we can just include an example and then refer them to the GitHub website
+%	\end{enumerate}
+%	
 	\subsection{Tabulated values}
 	
 	\begin{enumerate}
@@ -971,30 +977,154 @@
 	
 	\subsection{Finite-size effects}
 	
+	Previous studies have demonstrated that finite-size effects are typically negligible for viscosity estimates with equilibrium molecular dynamics. However, since this analysis is typically not reported in the literature, the ``Best Practices'' guide recommends validating that finite-size effects are indeed negligible. For this reason, Figure BLANK compares the results for simulations performed with 100, 200, 400, and 800 molecules of BLANK and BLANK.   
+		
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Finite-size effects.}
+		\label{fig:finite_size_effects}
+	\end{figure} 
+
+	Notice that the averages and uncertainties typically overlap considerably and that there is no clear trend with respect to $N^{-1/3}$. In addition to this visual inspection, we also perform a ``random permutation test'' to determine that the results from the different system sizes are statistically indistinguishable. The algorithm for ``random permutation testing'' is the following:
+	
 	\begin{enumerate}
-		\item Simulation results for 100, 200, 400, and 800 molecules
+		\item Compute the ``observed'' sum-of-squares between the four different system sizes $(SS_{\rm obs})$
+		\item Randomly divide the replicate simulations of each system size into four groups, ``A'', ``B'', ``C'', and ``D'' \label{item:shuffling}
+		\item Average the replicate Green-Kubo integrals of each group \label{item:averaging}
+		\item Fit Equation \ref{eq: Double exponential} to the averages from Step \ref{item:averaging} \label{item:fitting}
+		\item Calculate the ``permutated'' sum-of-squares between the four different groups $(SS_{\rm perm}$ \label{item:SS_ABCD}
+		\item Repeat Steps \ref{item:shuffling} to \ref{item:SS_ABCD} hundreds of times $(N_{\rm perm})$
+		\item Count the number of permutations with $SS_{\rm perm} > SS_{\rm obs}$ $(N_{\rm count})$ \label{item:counting}
+		\item Assign a $p$-value equal to the ratio of $N_{\rm count}$ divided by $N_{\rm perm}$
+		\item If $p > 0.05$, we fail to reject the Null-hypothesis that all four system sizes are statistically equivalent 
 	\end{enumerate}
+	
+%	\begin{enumerate}
+%		\item Compute the ``observed'' $F$-statistic between the four different system sizes $(F_{\rm obs})$
+%		\item Randomly divide the replicate simulations of each system size into two groups, ``A'' and ``B'' \label{item:shuffling}
+%		\item Average the replicate Green-Kubo integrals of both groups \label{item:averaging}
+%		\item Fit Equation \ref{eq: Double exponential} to the averages from Step \ref{item:averaging} \label{item:fitting}
+%		\item Calculate the $F$-statistic for the two different groups $(F_{\rm AB}$ \label{item:F_AB}
+%		\item Repeat Steps \ref{item:shuffling} to \ref{item:F_AB} hundreds of times $(N_{\rm perm})$
+%		\item Count the number of permutations with $F_{\rm AB} > F_{\rm obs}$ \label{item:counting}
+%		\item Divide the value obtained in Step \ref{item:counting} by $N_{\rm perm}$ 
+%	\end{enumerate}
+     
+    This approach is employed in place of the standard Analysis of Variance (ANOVA) test because it is not possible to compute a reliable $F$-statistic since an individual replicate simulate does not provide a meaningful estimate of $\eta$. Therefore, we can only compute the sum-of-squares between averages and not the sum-of-squares between replicates. is not capable of  a meaningful  , which requires computing an $F$-statistic is   Step \ref{item:fitting}. 
+	
+%	\begin{enumerate}
+%		\item Computing the difference between two different system size
+%		\item Randomly dividing the replicate simulations of each system size into two groups, ``A'' and ``B''
+%		\item Averaging the replicate Green-Kubo integrals of both groups \label{step:averaging}
+%		\item Fitting Equation \ref{eq: Double exponential} to the averages from Step \ref{step:averaging}
+%		\item Calculating the difference between $\eta^{\infty}_{\rm A}$ and $\eta^{\infty}_{\rm B}$ $(\Delta \eta_{\rm AB})$
+%		\item Repeating steps 2 to 5 hundreds of times
+%		\item Binning the distribution of $\Delta \eta_{\rm AB}$ values
+%		\item Comparing the 
+%	\end{enumerate}
+	
+%	 randomly dividing the replicate simulations of each system size into two groups, ``A'' and ``B,'' computing the average Green-Kubo integral for both groups, fitting Equation \ref{eq: Double exponential} for both averages, calculating the difference between $\eta^{\infty}_{\rm A}$ and $\eta^{\infty}_{\rm B}$, repeating this process hundreds of times, and  selecting a subset of replicate simulations from each system size and computing the average.
+		
+%	\begin{enumerate}
+%		\item Simulation results for 100, 200, 400, and 800 molecules
+%	\end{enumerate}
 	
 	\subsection{Simulation length effects}
 	
-	\begin{enumerate}
-		\item Verified that 1 ns is long enough for larger compounds
-	\end{enumerate}
+	For less viscous systems, i.e., saturation and low pressures, a 1 ns simulation is typically sufficient for the Green-Kubo integral to reach a plateau. However, even when an apparent plateau is observed, too short of simulations can lead to systematic bias in $\eta$. For this reason, as recommended by ``Best Practices,'' we verify that the estimated viscosity obtained from a 1 ns trajectory is consistent with that obtained from 2 ns, 4 ns, and 8 ns simulations.
+	
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Finite-size effects.}
+		\label{fig:simulation_time}
+	\end{figure} 
+
+    For more viscous systems, i.e., greater than 100 MPa, a 1 ns simulation is too short to observe a plateau in the Green-Kubo integral. In these cases, we increased the simulation time to a value between 2 and 8 ns. Due to the increased computational cost of such simulations, we did not perform an exhaustive test with increasing simulation time. Instead, the choice of simulation time was determined primarily by the ability to detect a plateau region. Therefore, it is possible that even longer simulations are required for the most viscous systems.
+    
+    Due to inherently slow dynamics in highly viscous systems (greater than 0.02 Pa-s), obtaining well-converged Green-Kubo integrals is extremely challenging. Additional replicate simulations can help reduce noise.
+    
+    Storage limitations become a concern with simulations longer than 8 ns due to the frequency at which data are output (every 6 fs). Reading in these files for GROMACS to evaluate the data nearly crippled our computing cluster.
+    
+    Obtaining well-converged Green-Kubo integrals for highly viscous systems (greater than 0.02 Pa-s) is challenging and requires longer simulations.
+	
+%	\begin{enumerate}
+%		\item Verified that 1 ns is long enough for larger compounds
+%	\end{enumerate}
 	
 	\subsection{Validation Runs}
 	
-	\begin{enumerate}
-		\item Ethane NIST
-		\item n-Octane Literature
-	\end{enumerate}
+    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane. Figure \ref{fig:validation_runs} compares the ethane and \textit{n}-octane results from this study with those from NIST and the literature, respectively.   
+    
+    \begin{figure}[htb!]
+    	\centering
+    	\includegraphics[width=3.2in]{empty_figure.jpg}
+    	\caption{Comparison with NIST Reference Simulation Data and Reference \citenum{BLANK}.}
+    	\label{fig:validation_runs}
+    \end{figure} 
+    
+    The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are for fixed elevated pressures, which provides validation of our $NPT$ ensemble results.
+    
+%	
+%	\begin{enumerate}
+%		\item Ethane NIST
+%		\item n-Octane Literature
+%	\end{enumerate}
 	
 	\subsection{Bond types, Harmonic vs LINCS}
 	
-	\begin{enumerate}
-		\item Propane and n-butane with harmonic (arbirary bond constant) shows systematic increase
-	\end{enumerate}
+    To test how sensitive the results presented in Section \ref{Results} are to the use of fixed bond-lengths, we perform additional simulations with flexible bonds. Specifically, we use the traditional harmonic bond potential:
+    \begin{equation} \label{eq:harmonic_bond}
+    u^{\rm bond} = \frac{k_{\rm b}}{2} \left(r-r_{\rm eq}\right)^2
+    \end{equation}
+    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. To determine the impact, we perform simulations with two different values of $k_{\rm b}$, namely, BLANK (taken from reference BLANK) and BLANK (an arbitrarily large value). Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases, but for the larger force constant a systematic increase in viscosity is observed. Bootstrap resampling confirms that the LINCS and $k_{\rm b} = $ BLANK results are statistically indistinguishable, while the $k_{\rm b} = $ BLANK is statistically different.
+
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Fixed bond-lengths compared with two different harmonic bond potentials.}
+		\label{fig:fixed_flexible}
+	\end{figure} 
+	
+%	\begin{enumerate}
+%		\item Propane and n-butane with harmonic (arbirary bond constant) shows systematic increase
+%	\end{enumerate}
 	
 	\subsection{Green-Kubo analysis}
+	
+	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. Figure BLANK depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis.'' By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure BLANK is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure BLANK presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure BLANK). Figure BLANK shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures BLANK and BLANK is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap resampling provides an estimate of the uncertainty. Figure BLANK shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure BLANK are the lower and upper 95 \% confidence interval.
+
+    The results depicted in Figure BLANK are from BLANK, BLANK, BLANK.
+	
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Autocorrelation function with respect to time.}
+		\label{fig:autocorrelation}
+	\end{figure} 
+
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Replicate simulations, average, fit to average, cut-off, and bootstrap uncertainties.}
+		\label{fig:replicates}
+	\end{figure} 
+
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Standard deviation of replicate simulations with respect to time.}
+		\label{fig:standard_deviation}
+	\end{figure} 
+
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Bootstrap distribution of $\eta$.}
+		\label{fig:bootstraps}
+	\end{figure} 
+
 	
 	\begin{enumerate}
 		\item Raw data, i.e., multiple replicates with the average
@@ -1005,7 +1135,20 @@
 	
 	\subsection{MCMC?}
 	
+    \subsection{Cut-off distance}
+    
+    The choice of cut-off distance is a subtle by important decision. In this study, we implement a 1.4 nm cut-off for each force field except Potoff, which utilizes only a 1.0 nm cut-off. The ``Best Practices'' guide suggests that cut-off lengths could be significant but does not provide any convincing evidence to prove or disprove this notion. To address this issue, we perform simulations of the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff viscosity values for propane, \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
+
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\caption{Impact of cut-off distance.}
+		\label{fig:cutoff_distance}
+	\end{figure} 
 	
+	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible, while a 1.0 nm cut-off causes a significant error for \textit{n}-dodecane. For this reason, the Potoff results presented previously in Figure \ref{fig:Saturation_C12_C16} were obtained using a 1.4 nm cut-off. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off. 
+	
+    The instability of a 1.0 nm cut-off (with 2 fs time-steps) demonstrates the importance of verifying that the cut-off distance is long enough to not impact the system dynamics. Furthermore, this demonstrates why alternative tail modifications are ideal for molecular dynamics, e.g., force-shift and switch-force. Unfortunately, these tail modifications lead to extremely different vapor-liquid coexistence curves, suggesting that the non-bonded parameters must be re-optimized with the modified tail. Therefore, performing simulations with a force-shift or switch-force Potoff, TraPPE, TAMie, and AUA4 potentials would likely result in significantly different viscosities. Re-parameterizing the non-bonded interactions for a force-shift or switch-force potential is beyond the scope of this study.
 	
 	
 \end{document}
