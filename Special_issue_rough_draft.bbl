@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{Nieto2006}
+Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
+\newblock Optimization of the anisotropic united atoms intermolecular potential
+  for n-alkanes: Improvement of transport properties.
+\newblock {\em The Journal of Chemical Physics}, 125(4):044517, 2006.
+
+\bibitem{Bernard2009}
+Damien~A. Bernard-Brunel and Jeffrey~J. Potoff.
+\newblock Effect of torsional potential on the predicted phase behavior of
+  n-alkanes.
+\newblock {\em Fluid Phase Equilibria}, 279(2):100 -- 104, 2009.
+
 \bibitem{Maginn2018}
 Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   J.~Richard Elliott.
