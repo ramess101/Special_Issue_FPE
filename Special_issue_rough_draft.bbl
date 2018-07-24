@@ -1,5 +1,32 @@
 \begin{thebibliography}{10}
 
+\bibitem{PGL}
+B.E. Poling, J.M. Prausnitz, and J.P. O'Connell.
+\newblock {\em {The Properties of Gases and Liquids}}.
+\newblock McGraw-Hill Companies, Inc., 2001.
+\newblock Chapter 9.
+
+\bibitem{Mulero2017}
+{\'A}ngel Mulero, Isidro Cachadi{\~n}a, and Jos{\'e}~O. Valderrama.
+\newblock Artificial neural network for the correlation and prediction of
+  surface tension of refrigerants.
+\newblock {\em Fluid Phase Equilibria}, 451:60 -- 67, 2017.
+
+\bibitem{Lee2017}
+Seongmin Lee, Kiho Park, Yunkyung Kwon, Tae-Yun Park, and Dae~Ryook Yang.
+\newblock A modified scaled variable reduced coordinate (svrc)-quantitative
+  structure property relationship (qspr) model for predicting liquid viscosity
+  of pure organic compounds.
+\newblock {\em Korean Journal of Chemical Engineering}, 34(10):2715--2724, Oct
+  2017.
+
+\bibitem{Lotgering2015}
+Oliver L{\:o}tgering-Lin and Joachim Gross.
+\newblock Group contribution method for viscosities based on entropy scaling
+  using the perturbed-chain polar statistical associating fluid theory.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  54(32):7942--7952, 2015.
+
 \bibitem{Nieto2006}
 Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
@@ -17,7 +44,8 @@ Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   J.~Richard Elliott.
 \newblock Best practices for computing transport properties 1. self-diffusivity
   and viscosity from equilibrium molecular dynamics v1.
-\newblock {\em Molecular Simulation}, Pending publication, 2018.
+\newblock {\em Living Journal of Computational Molecular Science}, Pending
+  publication, 2018.
 
 \bibitem{Allen1997}
 William Allen and Richard~L. Rowley.
@@ -38,17 +66,17 @@ Maurizio Mondello and Gary~S. Grest.
   dynamics.
 \newblock {\em The Journal of Chemical Physics}, 106(22):9327--9336, 1997.
 
-\bibitem{Gordon2006}
-Peter~A. Gordon.
-\newblock Development of intermolecular potentials for predicting transport
-  properties of hydrocarbons.
-\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
-
 \bibitem{Ungerer2007}
 Molecular simulation of the thermophysical properties of fluids: From
   understanding toward quantitative predictions.
 \newblock {\em Journal of Molecular Liquids}, 134(1):71 -- 89, 2007.
 \newblock EMLG/JMLG 2005 Special Issue.
+
+\bibitem{Gordon2006}
+Peter~A. Gordon.
+\newblock Development of intermolecular potentials for predicting transport
+  properties of hydrocarbons.
+\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
 
 \bibitem{Hoang2017}
 Hai Hoang, Stéphanie Delage-Santacreu, and Guillaume Galliero.
@@ -231,6 +259,12 @@ R.~Romeo and E.W. Lemmon.
 \bibitem{Vesovic2017}
 Private communication to M. Huber from V. Vesovic, Oct. 2017.
 
+\bibitem{Huber2018}
+M.L. Huber.
+\newblock Models for the viscosity, thermal conductivity, and surface tension
+  of selected pure fluids as implemented in refprop v10.0.
+\newblock {\em NISTIR 8209}, Pending publication, 2018.
+
 \bibitem{Lemmon2006}
 Eric~W. Lemmon and Roland Span.
 \newblock Short fundamental equations of state for 20 industrial fluids.
@@ -242,12 +276,6 @@ E.~Vogel, C.~K{\"u}chenmeister, and E.~Bich.
   region1.
 \newblock {\em International Journal of Thermophysics}, 21(2):343--356, Mar
   2000.
-
-\bibitem{Huber2018}
-M.L. Huber.
-\newblock Models for the viscosity, thermal conductivity, and surface tension
-  of selected pure fluids as implemented in refprop v10.0.
-\newblock {\em NISTIR 8209}, Pending publication, 2018.
 
 \bibitem{Gao2017}
 K.~Gao, J.~Wu, and E.W. Lemmon.
@@ -267,5 +295,11 @@ Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
   data evaluation concept.
 \newblock {\em Journal of Chemical Information and Modeling}, 45(4):816--838,
   2005.
+
+\bibitem{Postdoc_2}
+Richard~A. Messerly, Michael~R. Shirts, and Andrei~F. Kazakov.
+\newblock Uncertainty quantification confirms unreliable extrapolation toward
+  high pressures for united-atom mie $\lambda$-6 force field.
+\newblock {\em Journal of Chemical Physics}, Pending publication, 2018.
 
 \end{thebibliography}

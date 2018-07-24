@@ -4,15 +4,16 @@
 \emailauthor{sr87@uakron.edu}{S. Mostafa Razavi}
 \emailauthor{elliot1@uakron.edu}{J. Richard Elliott}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
+\citation{PGL}
+\citation{BLANK}
+\citation{Mulero2017,Lee2017}
+\citation{Lotgering2015}
 \citation{Nieto2006}
 \citation{Bernard2009}
 \citation{Maginn2018}
-\citation{Allen1997,Payal2012,Mondello1997}
+\citation{Allen1997,Payal2012,Mondello1997,Ungerer2007}
 \citation{Gordon2006}
-\citation{Gordon2006}
-\citation{Ungerer2007}
-\citation{Hoang2017}
-\citation{Ungerer2007}
+\citation{Nieto2006}
 \citation{Hoang2017}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{5}}
 \newlabel{Methods}{{2}{5}}
@@ -41,10 +42,11 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{8}}
 \newlabel{tab:nonbonded params}{{4}{8}}
 \newlabel{eq:Lorentz-Berthelot_eps}{{4}{8}}
+\newlabel{eq:Lorentz-Berthelot_sig}{{5}{8}}
+\newlabel{eq:Lorentz-Berthelot_lam}{{6}{8}}
 \citation{GROMACS_2018}
+\citation{BLANK}
 \citation{GROMACS_note}
-\newlabel{eq:Lorentz-Berthelot_sig}{{5}{9}}
-\newlabel{eq:Lorentz-Berthelot_lam}{{6}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation set-up}{9}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces General simulation specifications.}}{9}}
 \newlabel{tab:sim_specs}{{5}{9}}
@@ -62,6 +64,7 @@
 \citation{Beckmueller2017,Huber2004FPE}
 \citation{Lemmon2004,Huber2004}
 \citation{Romeo2018,Vesovic2017}
+\citation{Romeo2018,Huber2018}
 \citation{Lemmon2006,Vogel2000}
 \citation{Lemmon2006,Huber2018}
 \citation{Lemmon2006,Huber2018}
@@ -73,125 +76,132 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{12}}
 \newlabel{Results}{{3}{12}}
 \citation{TDE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Saturated Liquid}{13}}
-\newlabel{sec:eta_sat}{{3.1}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}n-Alkanes}{13}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Compounds, force fields, and state points. ``X'': simulated, ``O'': not simulated, ``S'' simulated with ``Short'' parameters, ``L'' simulated with ``Long'' parameters.}}{14}}
-\newlabel{tab:simulations_performed}{{7}{14}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Branched alkanes}{14}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Compounds, force fields, and state points. ``X'': simulated, ``O'': not simulated, ``S'' simulated with ``Short'' parameters, ``L'' simulated with ``Long'' parameters.}}{13}}
+\newlabel{tab:simulations_performed}{{7}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Saturated Liquid}{14}}
+\newlabel{sec:eta_sat}{{3.1}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Normal alkanes}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Saturated liquid viscosities for ethane. Colors/symbols denote different force fields.}}{14}}
+\newlabel{fig:Saturation_Ethane}{{1}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for propane (\textit  {n}-C$_{3}$), \textit  {n}-butane (\textit  {n}-C$_{4}$), and \textit  {n}-octane (\textit  {n}-C$_{8}$). Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. Colors/symbols denote different force fields.}}{15}}
+\newlabel{fig:Saturation_C3_C4_C8}{{2}{15}}
 \citation{Postdoc_2}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Saturated liquid viscosities for ethane. Colors/symbols denote different force fields.}}{15}}
-\newlabel{fig:Saturation_Ethane}{{1}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for propane, \textit  {n}-butane, and \textit  {n}-octane. Colors/symbols denote different force fields.}}{16}}
-\newlabel{fig:Saturation_C3_C4_C8}{{2}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Compressed liquid}{16}}
-\newlabel{sec:T293highP}{{3.2}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane and \textit  {n}-hexadecane. Colors/symbols denote different force fields.}}{17}}
-\newlabel{fig:Saturation_C12_C16}{{3}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for 2-methylpropane, 2,2-dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane. Colors/symbols denote different force fields.}}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Branched alkanes}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane (\textit  {n}-C$_{12}$), \textit  {n}-hexadecane (\textit  {n}-C$_{16}$), and \textit  {n}-docosane (\textit  {n}-C$_{22}$). Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. Colors/symbols denote different force fields.}}{17}}
+\newlabel{fig:Saturation_C12_C16_C22}{{3}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Compressed liquid}{17}}
+\newlabel{sec:T293highP}{{3.2}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for 2-methylpropane (\textit  {i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit  {i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. For clarity, values in top panel are shifted by $\Delta \eta $. Colors/symbols denote different force fields.}}{18}}
 \newlabel{fig:Saturation_short_branched}{{4}{18}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}n-Alkanes}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpentane (\textit  {i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit  {i}-C$_{8}$). Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. For clarity, values in top panel are shifted by $\Delta \eta $. Colors/symbols denote different force fields.}}{19}}
 \newlabel{fig:Saturation_long_branched}{{5}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Compressed liquid viscosities at 293 K for propane. Colors/symbols denote different force fields.}}{20}}
-\newlabel{fig:T293highP_C3}{{6}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-butane. Colors/symbols denote different force fields.}}{21}}
-\newlabel{fig:T293highP_C4}{{7}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-octane. Colors/symbols denote different force fields.}}{22}}
-\newlabel{fig:T293highP_C8}{{8}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Branched alkanes}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylpropane. Colors/symbols denote different force fields.}}{23}}
-\newlabel{fig:T293highP_IC4}{{9}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylbutane. Colors/symbols denote different force fields.}}{24}}
-\newlabel{fig:T293highP_IC5}{{10}{24}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion/Limitations}{24}}
-\newlabel{Discussion/Limitations}{{4}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressed liquid viscosities at 293 K for 3-methylpentane. Colors/symbols denote different force fields.}}{25}}
+\citation{Gordon2006}
+\citation{Gordon2006}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Normal alkanes}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta $-$\rho $ and $\eta $-$P$ dependence. Bottom panels present deviations between simulated $(\eta _{\rm  sim})$ and REFPROP $(\eta _{\rm  REFPROP})$ values with respect to $\rho $ and $P$. Dashed lines correspond to REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range. Colors/symbols denote different force fields and experimental data. Simulation uncertainties are obtained from bootstrap re-sampling and are presented at the 95 \% confidence level.}}{21}}
+\newlabel{fig:T293highP_C3}{{6}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-butane. See caption of Figure 6\hbox {}.}}{22}}
+\newlabel{fig:T293highP_C4}{{7}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-octane. See caption of Figure 6\hbox {}.}}{23}}
+\newlabel{fig:T293highP_C8}{{8}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Branched alkanes}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion/Limitations}{23}}
+\newlabel{Discussion/Limitations}{{4}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylpropane. See caption of Figure 6\hbox {}.}}{24}}
+\newlabel{fig:T293highP_IC4}{{9}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylbutane. See caption of Figure 6\hbox {}.}}{25}}
+\newlabel{fig:T293highP_IC5}{{10}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressed liquid viscosities at 293 K for 3-methylpentane. See caption of Figure 6\hbox {}.}}{25}}
 \newlabel{fig:T293highP_3MP}{{11}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. Colors/symbols denote different force fields.}}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See caption of Figure 6\hbox {}.}}{26}}
 \newlabel{fig:T293highP_IC8}{{12}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Finite-size effects.}}{26}}
-\newlabel{fig:RDF}{{13}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Finite-size effects}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Finite-size effects.}}{27}}
-\newlabel{fig:finite_size_effects}{{14}{27}}
-\newlabel{item:shuffling}{{2}{27}}
-\newlabel{item:averaging}{{3}{27}}
-\newlabel{item:fitting}{{4}{27}}
-\newlabel{item:SS_ABCD}{{5}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Finite-size effects}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Comparison of radial distribution function $(g(r))$ for CH$_3$-CH$_3$ interactions. The top panel compares two different temperatures near the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different temperatures while line styles denote different force fields.}}{27}}
+\newlabel{fig:RDF_comparison_CH3}{{13}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Finite-size effects. Five different }}{28}}
+\newlabel{fig:finite_size_effects}{{14}{28}}
+\newlabel{item:shuffling}{{2}{28}}
+\newlabel{item:averaging}{{3}{28}}
+\newlabel{item:fitting}{{4}{28}}
+\newlabel{item:SS_ABCD}{{5}{28}}
 \newlabel{item:counting}{{7}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Cut-off distance}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Cut-off distance}{29}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Impact of cut-off distance.}}{29}}
 \newlabel{fig:cutoff_distance}{{15}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}$\rho _{\rm  liq}^{\rm  sat}$}{29}}
-\bibstyle{unsrt}
-\bibdata{Special_issue_references}
-\bibcite{Nieto2006}{{1}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}$\rho _{\rm  liq}^{\rm  sat}$}{30}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{30}}
 \newlabel{Conclusions}{{5}{30}}
-\bibcite{Bernard2009}{{2}{}{{}}{{}}}
-\bibcite{Maginn2018}{{3}{}{{}}{{}}}
-\bibcite{Allen1997}{{4}{}{{}}{{}}}
-\bibcite{Payal2012}{{5}{}{{}}{{}}}
-\bibcite{Mondello1997}{{6}{}{{}}{{}}}
-\bibcite{Gordon2006}{{7}{}{{}}{{}}}
-\bibcite{Ungerer2007}{{8}{}{{}}{{}}}
-\bibcite{Hoang2017}{{9}{}{{}}{{}}}
-\bibcite{Herdes2015}{{10}{}{{}}{{}}}
-\bibcite{TraPPE}{{11}{}{{}}{{}}}
-\bibcite{Martin1999}{{12}{}{{}}{{}}}
-\bibcite{TraPPEUA2}{{13}{}{{}}{{}}}
-\bibcite{Mie}{{14}{}{{}}{{}}}
-\bibcite{Potoff_branched}{{15}{}{{}}{{}}}
-\bibcite{AUA4}{{16}{}{{}}{{}}}
-\bibcite{Nieto2008}{{17}{}{{}}{{}}}
-\bibcite{TAMie}{{18}{}{{}}{{}}}
-\bibcite{Weidler2016}{{19}{}{{}}{{}}}
-\bibcite{Allen1987}{{20}{}{{}}{{}}}
-\bibcite{GROMACS_2018}{{21}{}{{}}{{}}}
-\bibcite{GROMACS_note}{{22}{}{{}}{{}}}
-\bibcite{Zhang2015}{{23}{}{{}}{{}}}
-\bibcite{LEMMON-RP91}{{24}{}{{}}{{}}}
-\bibcite{Ethane2006}{{25}{}{{}}{{}}}
-\bibcite{Vogel2015}{{26}{}{{}}{{}}}
-\bibcite{Propane2009}{{27}{}{{}}{{}}}
-\bibcite{Vogel2016}{{28}{}{{}}{{}}}
-\bibcite{Butane2006}{{29}{}{{}}{{}}}
-\bibcite{Hermann2018}{{30}{}{{}}{{}}}
-\bibcite{Beckmueller2017}{{31}{}{{}}{{}}}
-\bibcite{Huber2004FPE}{{32}{}{{}}{{}}}
-\bibcite{Lemmon2004}{{33}{}{{}}{{}}}
-\bibcite{Huber2004}{{34}{}{{}}{{}}}
-\bibcite{Romeo2018}{{35}{}{{}}{{}}}
-\bibcite{Vesovic2017}{{36}{}{{}}{{}}}
-\bibcite{Lemmon2006}{{37}{}{{}}{{}}}
-\bibcite{Vogel2000}{{38}{}{{}}{{}}}
-\bibcite{Huber2018}{{39}{}{{}}{{}}}
-\bibcite{Gao2017}{{40}{}{{}}{{}}}
-\bibcite{Blackham2017}{{41}{}{{}}{{}}}
-\bibcite{TDE}{{42}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Supporting Information}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Gromacs input files}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Tabulated values}{36}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Simulation length effects}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Finite-size effects.}}{37}}
-\newlabel{fig:simulation_time}{{16}{37}}
+\bibstyle{unsrt}
+\bibdata{Special_issue_references}
+\bibcite{PGL}{{1}{}{{}}{{}}}
+\bibcite{Mulero2017}{{2}{}{{}}{{}}}
+\bibcite{Lee2017}{{3}{}{{}}{{}}}
+\bibcite{Lotgering2015}{{4}{}{{}}{{}}}
+\bibcite{Nieto2006}{{5}{}{{}}{{}}}
+\bibcite{Bernard2009}{{6}{}{{}}{{}}}
+\bibcite{Maginn2018}{{7}{}{{}}{{}}}
+\bibcite{Allen1997}{{8}{}{{}}{{}}}
+\bibcite{Payal2012}{{9}{}{{}}{{}}}
+\bibcite{Mondello1997}{{10}{}{{}}{{}}}
+\bibcite{Ungerer2007}{{11}{}{{}}{{}}}
+\bibcite{Gordon2006}{{12}{}{{}}{{}}}
+\bibcite{Hoang2017}{{13}{}{{}}{{}}}
+\bibcite{Herdes2015}{{14}{}{{}}{{}}}
+\bibcite{TraPPE}{{15}{}{{}}{{}}}
+\bibcite{Martin1999}{{16}{}{{}}{{}}}
+\bibcite{TraPPEUA2}{{17}{}{{}}{{}}}
+\bibcite{Mie}{{18}{}{{}}{{}}}
+\bibcite{Potoff_branched}{{19}{}{{}}{{}}}
+\bibcite{AUA4}{{20}{}{{}}{{}}}
+\bibcite{Nieto2008}{{21}{}{{}}{{}}}
+\bibcite{TAMie}{{22}{}{{}}{{}}}
+\bibcite{Weidler2016}{{23}{}{{}}{{}}}
+\bibcite{Allen1987}{{24}{}{{}}{{}}}
+\bibcite{GROMACS_2018}{{25}{}{{}}{{}}}
+\bibcite{GROMACS_note}{{26}{}{{}}{{}}}
+\bibcite{Zhang2015}{{27}{}{{}}{{}}}
+\bibcite{LEMMON-RP91}{{28}{}{{}}{{}}}
+\bibcite{Ethane2006}{{29}{}{{}}{{}}}
+\bibcite{Vogel2015}{{30}{}{{}}{{}}}
+\bibcite{Propane2009}{{31}{}{{}}{{}}}
+\bibcite{Vogel2016}{{32}{}{{}}{{}}}
+\bibcite{Butane2006}{{33}{}{{}}{{}}}
+\bibcite{Hermann2018}{{34}{}{{}}{{}}}
+\bibcite{Beckmueller2017}{{35}{}{{}}{{}}}
+\bibcite{Huber2004FPE}{{36}{}{{}}{{}}}
+\bibcite{Lemmon2004}{{37}{}{{}}{{}}}
+\bibcite{Huber2004}{{38}{}{{}}{{}}}
+\bibcite{Romeo2018}{{39}{}{{}}{{}}}
+\bibcite{Vesovic2017}{{40}{}{{}}{{}}}
+\bibcite{Huber2018}{{41}{}{{}}{{}}}
+\bibcite{Lemmon2006}{{42}{}{{}}{{}}}
+\bibcite{Vogel2000}{{43}{}{{}}{{}}}
+\bibcite{Gao2017}{{44}{}{{}}{{}}}
+\bibcite{Blackham2017}{{45}{}{{}}{{}}}
+\bibcite{TDE}{{46}{}{{}}{{}}}
+\bibcite{Postdoc_2}{{47}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Supporting Information}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Gromacs input files}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Tabulated values}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Simulation length effects}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Finite-size effects.}}{39}}
+\newlabel{fig:simulation_time}{{16}{39}}
 \citation{BLANK}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Validation Runs}{38}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Bond types, Harmonic vs LINCS}{38}}
-\newlabel{eq:harmonic_bond}{{9}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Comparison with NIST Reference Simulation Data and Reference \citenum  {BLANK}.}}{39}}
-\newlabel{fig:validation_runs}{{17}{39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Green-Kubo analysis}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Validation Runs}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Comparison with NIST Reference Simulation Data and Reference \citenum  {BLANK}.}}{40}}
+\newlabel{fig:validation_runs}{{17}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Bond types, Harmonic vs LINCS}{40}}
+\newlabel{eq:harmonic_bond}{{9}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Fixed bond-lengths compared with two different harmonic bond potentials.}}{41}}
+\newlabel{fig:fixed_flexible}{{18}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Green-Kubo analysis}{41}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Fixed bond-lengths compared with two different harmonic bond potentials.}}{40}}
-\newlabel{fig:fixed_flexible}{{18}{40}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}MCMC?}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Autocorrelation function with respect to time.}}{41}}
-\newlabel{fig:autocorrelation}{{19}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Replicate simulations, average, fit to average, cut-off, and bootstrap uncertainties.}}{41}}
-\newlabel{fig:replicates}{{20}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Standard deviation of replicate simulations with respect to time.}}{42}}
-\newlabel{fig:standard_deviation}{{21}{42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Bootstrap distribution of $\eta $.}}{42}}
-\newlabel{fig:bootstraps}{{22}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Autocorrelation function with respect to time.}}{42}}
+\newlabel{fig:autocorrelation}{{19}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Replicate simulations, average, fit to average, cut-off, and bootstrap uncertainties.}}{42}}
+\newlabel{fig:replicates}{{20}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Standard deviation of replicate simulations with respect to time.}}{43}}
+\newlabel{fig:standard_deviation}{{21}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Bootstrap distribution of $\eta $.}}{43}}
+\newlabel{fig:bootstraps}{{22}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}MCMC?}{43}}
