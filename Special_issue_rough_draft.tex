@@ -12,7 +12,7 @@
 %% version 1999/12/01 or later.
 %% 
 %% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
+%% given in the file `manifest.t\textbf{xt}'.
 %% 
 
 %% Template article for Elsevier's document class `elsarticle'
@@ -511,7 +511,9 @@
 	
 %	The equilibration time is 1 ns, while the production time depends on the system, i.e., the compound and state point, where larger compounds, lower temperatures, and higher densities necessitate longer simulations. For most systems, 1 ns is a sufficient production time, while an 8 ns production time is required for the most viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. As recommended by BLANK, we investigate several different production times (1, 2, 4, and 8 ns) for some select systems to verify that our simulations are sufficiently long.
 	
-	Equilibrium molecular dynamics simulations are performed using GROMACS version 2018 \cite{GROMACS_2018}. GROMACS was compiled using the BLANK compiler and run on a BLANK. Example GROMACS input files (.top, .gro. and .mdp) are provided as Supporting Information. In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
+	Equilibrium molecular dynamics simulations are performed using GROMACS version 2018 with ``mixed'' (single and double) precision \cite{GROMACS_2018}. GROMACS was compiled using GNU 7.3.0, OpenMPI enabled, and GPU support disabled. Approximately three-fourths of the simulations were run using Linux 4.4.0-112-generic x86\_64 on an Intel(R) Xeon(R) CPU E5-2699 v4 @ 2.20GHz machine while the remaining one-fourth were run using Linux 4.15.0-22-generic x86\_64 on an Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz machine. Example GROMACS input files (.top, .gro. and .mdp) with corresponding shell and python scripts for preparing, running, and analyzing simulations are provided as Supporting Information. 
+	
+	%In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
 	
 	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. 
 	 
@@ -735,16 +737,16 @@
 	%	\item C12, C16
 	%\end{enumerate}
 	
-	Figure \ref{fig:Saturation_Ethane} compares the ethane results for saturated liquid viscosities obtained with the TraPPE, TraPPE-2, TAMie, Potoff, AUA4 and the Bayesian parameter sets for $\lambda = 13$, $14$, $15$, and $16$.
+	Figure \ref{fig:Saturation_Ethane} compares the ethane results for saturated liquid viscosities obtained with the TraPPE, TraPPE-2, TAMie, Potoff, AUA4 and the Bayesian parameter sets for $\lambda = 13$, $14$, $15$, and $16$. As the remainder of this section demonstrates, the over estimation of ethane $\eta_{\rm liq}^{\rm sat}$ is actually an anomaly for normal and branched alkanes. It is not uncommon for the smallest compounds in a homologous series, i.e., methane and ethane, to follow a different trend than the larger compounds. However, the relative magnitudes of the different force fields is consistent with other compounds, namely, TraPPE $<$ TAMie $<$ Potoff. This is expected since TraPPE utilizes a LJ 12-6, TAMie a Mie 14-6, and Potoff a Mie 16-6 potential. By comparing the results from TraPPE-UA2 with TraPPE-UA and the TAMie results with those of the Bayesian 14-6 potential, it appears that the anisotropic CH$_3$-CH$_3$ bond significantly reduces the viscosity of ethane.  
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{compare_force_fields_ethane.png}
+		\includegraphics[width=3.2in]{Ethane_eta_MCMC.pdf}
 		\caption{Saturated liquid viscosities for ethane. Colors/symbols denote different force fields.}
 		\label{fig:Saturation_Ethane}
 	\end{figure} 
 	
-	Figure \ref{fig:Saturation_C3_C4_C8} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for propane, \textit{n}-butane, and \textit{n}-octane. Similar to what has been demonstrated in previous studies, the TraPPE force field significantly under predicts $\eta_{\rm liq}^{\rm sat}$ (between 30 and 80 \%) with the deviation increasing with decreasing temperature. By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \%. While TAMie deviations increase near the triple point temperature of propane, Potoff deviations are nearly constant over the entire temperature range studied for each compound. 
+	Figure \ref{fig:Saturation_C3_C4_C8} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for propane, \textit{n}-butane, and \textit{n}-octane. Similar to what has been demonstrated in previous studies, the TraPPE force field significantly under predicts $\eta_{\rm liq}^{\rm sat}$ (between 30 and 80 \%) with the deviation increasing with decreasing temperature \cite{Gordon2006,Nieto2006}. By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \%. While TAMie deviations increase near the triple point temperature of propane, Potoff deviations are nearly constant over the entire temperature range studied for each compound. 
 	
 	%By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \% over the entire temperature range studied (which includes the triple point for propane), and do not demonstrate a strong temperature dependence.
 	
@@ -1114,7 +1116,7 @@
 	
 	However, due to the exponential dependence of $\eta$ on $\rho$, small differences in density can result in large deviations in viscosity. For this reason, we perform a small set of validation simulations to determine the variability caused by utilizing the REFPROP densities. Specifically, we simulate \textit{n}-butane with Potoff, TraPPE, and TAMie and 3-methylpentane using Potoff and TraPPE. The saturated liquid densities for these validation runs were taken from the literature \cite{Mie,Martin1999,Potoff_branched,TAMie}, where Reference \citenum{Martin1999} utilized GEMC and References \cite{Mie,Potoff_branched,TAMie} used GCMC-HR.      
 	
-	The results using the ``true'' force field for \textit{n}-butane and 3-methylpentane are found in Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:Saturation_long_branched}, respectively, as filled symbols. Note that the Potoff, TAMie, and TraPPE \textit{n}-butane and TraPPE 3-methylpentane filled points are consistent with the empty points because the force field $\rho_{\rm liq}^{\rm sat}$ deviates from the REFPROP $\rho_{\rm liq}^{\rm sat}$ by less than 0.3 \%. By contrast, the Potoff 3-methylpentane filled points are significantly lower than the empty points. This is because the Potoff force field under estimates $\rho_{\rm liq}^{\rm sat}$ by around 1.15 \% \cite{Potoff_branched}. In comparison, the Potoff S/L deviations in $\rho_{\rm liq}^{\rm sat}$ are between -0.12 \% and -0.60 \% for all other branched compounds studied. TraPPE percent deviations in $\rho_{\rm liq}^{\rm sat}$ are less than $\pm$ 0.6 for all compounds except for 2,2-dimethylpropane and 2,2,4-trimethylpentane, which have -1.55 \% and 2.81 \% deviations, respectively.     
+	The results using the ``true'' force field for \textit{n}-butane and 3-methylpentane are found in Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:Saturation_long_branched}, respectively, as filled symbols. Note that the Potoff, TAMie, and TraPPE \textit{n}-butane and TraPPE 3-methylpentane filled points are consistent with the respective empty points because the force field $\rho_{\rm liq}^{\rm sat}$ deviates from the REFPROP $\rho_{\rm liq}^{\rm sat}$ by less than 0.3 \%. By contrast, the Potoff 3-methylpentane filled point is approximately 3 \% lower than the respective empty points. This is because the Potoff force field under estimates $\rho_{\rm liq}^{\rm sat}$ by around 1.15 \% \cite{Potoff_branched}. In comparison, the Potoff S/L deviations in $\rho_{\rm liq}^{\rm sat}$ are between -0.12 \% and -0.60 \% for all other branched compounds studied. TraPPE percent deviations in $\rho_{\rm liq}^{\rm sat}$ are less than $\pm$ 0.6 for all compounds except for 2,2-dimethylpropane and 2,2,4-trimethylpentane, which have -1.55 \% and 2.81 \% deviations, respectively.     
 	
 %	, are less reliable near the triple point. By utilizing REFPROP densities, it is possible to compare force fields over the entire range of saturation temperatures.
 	
@@ -1133,7 +1135,7 @@
 	
 	\section{Supporting Information}
 	
-	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information). Furthermore, we investigate system size effects by comparing results with 100, 200, 400, and 800 molecules (see Section \ref{Discussion/Limitations}). In addition, we compare fixed and flexible bonds in the Supporting Information.
+%	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information). Furthermore, we investigate system size effects by comparing results with 100, 200, 400, and 800 molecules (see Section \ref{Discussion/Limitations}). In addition, we compare fixed and flexible bonds in the Supporting Information.
 	
 	\subsection{Systems simulated}
 	
@@ -1162,12 +1164,10 @@
 			\end{tabular}
 		\end{center} 
 	\end{table}
-	
-	
-	
+		
 	\subsection{Gromacs input files}
 	
-	We have provided example input files for simulating \textit{n}-isooctane at BLANK K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files that were used to generate the results from this study can be found that the GitHub repository www.github.com/ramess101/IFPSC\_10.
+	We provide example input files for simulating 2,2,4-trimethylpentane at BLANK K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files that were used to generate the results from this study can be found at www.github.com/ramess101/IFPSC\_10.
 	
 %	\begin{enumerate}
 %		\item Include all the .gro files
@@ -1179,72 +1179,65 @@
 	\subsection{Tabulated values}
 	
 	\begin{enumerate}
-		\item Ethane
+		\item Saturation
 		\begin{enumerate}
-			\item Saturation
+			\item Ethane
 			\begin{enumerate}
 				\item Potoff
 				\item TraPPE
 				\item AUA4
 				\item TAMie
 			\end{enumerate}
-			\item T293 highP
+			\item Propane
 			\begin{enumerate}
 				\item Potoff
 				\item TraPPE
 				\item AUA4
 				\item TAMie
 			\end{enumerate}
+		    \item Etc.
 		\end{enumerate}
-		\item Propane
+		\item Compressed liquids
 		\begin{enumerate}
-			\item Saturation
+			\item Ethane
 			\begin{enumerate}
 				\item Potoff
 				\item TraPPE
 				\item AUA4
 				\item TAMie
 			\end{enumerate}
-			\item T293 highP
+			\item Propane
 			\begin{enumerate}
 				\item Potoff
 				\item TraPPE
 				\item AUA4
 				\item TAMie
 			\end{enumerate}
-		\end{enumerate}
-		\item n-Butane
-		\begin{enumerate}
-			\item Saturation
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-			\item T293 highP
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-		\end{enumerate}
-		Repeat for all other compounds with corresponding potentials    
+		    \item Etc.
+		\end{enumerate}   
 	\end{enumerate}
 		
 	\subsection{Simulation length effects}
 	
-	For less viscous systems, i.e., saturation and low pressures, a 1 ns simulation is typically sufficient for the Green-Kubo integral to reach a plateau. However, even when there is an apparent plateau, systematic bias in $\eta$ may still exist if the simulation is too short. For this reason, as recommended by ``Best Practices,'' we verified that the estimated viscosity obtained from a 1 ns trajectory is consistent with that obtained from 2 ns, 4 ns, and 8 ns simulations.
+%	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information).
+	
+	For less viscous systems, i.e., saturation and low pressures, a 1 ns simulation is typically sufficient for the Green-Kubo integral to reach a plateau. However, even when there is an apparent plateau, systematic bias in $\eta$ may still exist if the simulation is too short \cite{Maginn2018,Zhang2015}. For this reason, Figure \ref{fig:simulation_time} compares the Green-Kubo integral for simulations with 0.5 ns, 1 ns, 2 ns, and 4 ns. We observe that the estimated viscosity obtained from a 1 ns trajectory is consistent with that from 2 ns and 4 ns simulations. Specifically, a plateau is observed at a similar value of $\eta$ despite the large fluctuations at long times. We also note that 0.5 ns simulations are typically reliable but occasionally the plateau deviates considerably. For these reasons, the results presented in this study were obtained from 1 ns simulations.
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
-		\caption{Simulation time.}
+		\includegraphics[width=3.2in]{simulation_time}
+		\caption{Simulation production time. Simulations were performed for \textit{n}-octane using the TraPPE potential. Colors/line styles denote different simulation times (0.5 ns, 1 ns, 2 ns, and 4 ns).}
 		\label{fig:simulation_time}
 	\end{figure} 
 
-    For more viscous systems (greater than 0.02 Pa-s) a 1 ns simulation is too short to observe a plateau in the Green-Kubo integral. In these cases, we increased the simulation time to a value between 2 and 8 ns. Due to the increased computational cost of such simulations, we did not perform an exhaustive test with increasing simulation time. Instead, the choice of simulation time was determined primarily by the ability to detect a plateau region. Therefore, it is possible that even longer simulations are required for the most viscous systems. Figure BLANK depicts the most viscous systems in this study.
+    For more viscous systems (greater than 0.02 Pa-s) a 1 ns simulation is too short to observe a plateau in the Green-Kubo integral. In these cases, we increased the simulation time to a value between 2 and 8 ns. Due to the increased computational cost of such simulations, we did not perform an exhaustive test with increasing simulation time. Instead, the choice of simulation time was determined primarily by the ability to detect a plateau region. Therefore, it is possible that even longer simulations are required for the most viscous systems. Figure \ref{fig:most_viscous} depicts some of these highly viscous systems. Note that the total simulation time is twice the maximum time plotted. For example, an 8 ns run appears to be sufficient to detect a plateau for 2,2,4-trimethylpentane at 750 MPa, despite this system having a viscosity around 0.08 Pa-s. By contrast, a 1 ns run provides a reasonable plateau for the other two systems with viscosities near 0.02 Pa-s.
+    
+    \begin{figure}[htb!]
+    	\centering
+    	\includegraphics[width=3.2in]{most_viscous_systems.pdf}
+    	\caption{Green-Kubo integrals for some of the most viscous systems. Each compound was simulated with the Potoff potential. Solid lines are the average of $N_{\rm reps}$ replicates. Dashed lines are the estimated $\eta$ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}
+    	\label{fig:most_viscous}
+    \end{figure} 
     
     %, i.e., greater than 100 MPa,
     
@@ -1260,14 +1253,27 @@
 	
 	\subsection{Validation Runs}
 	
-    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane. Figure \ref{fig:validation_runs} compares the ethane and \textit{n}-octane results from this study with those from NIST and the literature, respectively.   
+    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
+    
+    % from this study with those from NIST and the literature, respectively.   
     
     \begin{figure}[htb!]
     	\centering
     	\includegraphics[width=3.2in]{empty_figure.jpg}
-    	\caption{Comparison with NIST Reference Simulation Data and Reference \citenum{BLANK}.}
+    	\caption{Comparison with NIST Reference Simulation Data.}
     	\label{fig:validation_runs}
     \end{figure} 
+
+    \begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{validation_TraPPE_octane.png}
+		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols denote the same harmonic potential while square symbols denote fixed bond-lengths.}
+		\label{fig:validation_runs2}
+	\end{figure}
+    
+    Figure \ref{fig:validation_runs} demonstrates that our results are more consistent with the NIST Reference Simulation Data at higher densities. Note that the NIST Reference Simulation Data are obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported by NIST. 
+    
+    Figure \ref{fig:validation_runs2} demonstrates that our results agree quite well with the literature. Note that Reference \citenum{Kioupis2000} utilizes the same harmonic potential but performed NEMD simulations, while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths. Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols.  Note that there are small discrepancies between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but is somewhat curious. 
     
     The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are for fixed elevated pressures, which provides validation of our $NPT$ ensemble results.
     
@@ -1277,22 +1283,37 @@
 %		\item n-Octane Literature
 %	\end{enumerate}
 	
-	\subsection{Bond types, Harmonic vs LINCS}
+	\subsection{Fixed vs flexible bonds} \label{fixed flexbile}
 	
-    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model. The results are provided as Supporting Information.
+%    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model.
 	
-    To test how sensitive the results presented in Section \ref{Results} are to the use of fixed bond-lengths, we perform additional simulations with flexible bonds. Specifically, we use the traditional harmonic bond potential:
+    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. We perform additional simulations with flexible bonds to test how sensitive the results presented in Section \ref{Results} are to the use of fixed bond-lengths. Specifically, we use the traditional harmonic bond potential:
     \begin{equation} \label{eq:harmonic_bond}
     u^{\rm bond} = \frac{k_{\rm b}}{2} \left(r-r_{\rm eq}\right)^2
     \end{equation}
-    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. To determine the impact, we perform simulations with two different values of $k_{\rm b}$, namely, BLANK (taken from reference BLANK) and BLANK (an arbitrarily large value). Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases, but for the larger force constant a systematic increase in viscosity is observed. Bootstrap resampling confirms that the LINCS and $k_{\rm b} = $ BLANK results are statistically indistinguishable, while the $k_{\rm b} = $ BLANK is statistically different.
+    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b} = $, as this should result in a very stiff bonded potential. Since the bond-length should not vary significantly, any deviations should not be attributed to the bond-length but rather to the contributions the bonded forces make to the viscosity. 
+    
+    Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases. However, there is a small, but systematic, deviation towards higher viscosities for the stiff harmonic potential. 
+    
+    %Bootstrap re-sampling confirms that the LINCS and $k_{\rm b} = $ BLANK results are statistically indistinguishable, while the $k_{\rm b} = $ BLANK is statistically different.
 
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
-		\caption{Fixed bond-lengths compared with two different harmonic bond potentials.}
+		\includegraphics[width=3.2in]{nAlkanes_TraPPE_BondType.pdf}
+		\caption{Fixed bond-lengths compared with an arbitrarily strong harmonic bond potential. Simulations were performed using the TraPPE-UA force field. Colors/fill denote fixed or flexible bonds while symbol shape corresponds to different compounds.}
 		\label{fig:fixed_flexible}
 	\end{figure} 
+
+%	To determine the impact, we perform simulations with two different values of $k_{\rm b}$, namely, BLANK (taken from reference BLANK) and BLANK (an arbitrarily large value). Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases, but for the larger force constant a systematic increase in viscosity is observed. 
+%	
+%	%Bootstrap re-sampling confirms that the LINCS and $k_{\rm b} = $ BLANK results are statistically indistinguishable, while the $k_{\rm b} = $ BLANK is statistically different.
+%	
+%	\begin{figure}[htb!]
+%		\centering
+%		\includegraphics[width=3.2in]{nAlkanes_TraPPE_BondType.pdf}
+%		\caption{Fixed bond-lengths compared with two different harmonic bond potentials.}
+%		\label{fig:fixed_flexible}
+%	\end{figure} 
 	
 %	\begin{enumerate}
 %		\item Propane and n-butane with harmonic (arbirary bond constant) shows systematic increase
@@ -1300,9 +1321,7 @@
 	
 	\subsection{Green-Kubo analysis}
 	
-	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. Figure BLANK depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis.'' By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure BLANK is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure BLANK presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure BLANK). Figure BLANK shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures BLANK and BLANK is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap resampling provides an estimate of the uncertainty. Figure BLANK shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure BLANK are the lower and upper 95 \% confidence interval.
-
-    The results depicted in Figure BLANK are from BLANK, BLANK, BLANK.
+	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. The results depicted in Figures \ref{fig:autocorrelation} through \ref{fig:bootstraps} were obtained for BLANK BLANK. Figure \ref{fig:autocorrelation} depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis.'' By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure \ref{fig:autocorrelation} is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure \ref{fig:replicates} presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure \ref{fig:replicates}). Figure \ref{fig:standard_deviation} shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures \ref{fig:replicates} and \ref{fig:standard_deviation} is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap re-sampling provides an estimate of the uncertainty. Figure \ref{fig:bootstraps} shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure \ref{fig:replicates} are the lower and upper 95 \% confidence interval.
 	
 	\begin{figure}[htb!]
 		\centering
@@ -1340,6 +1359,6 @@
 %	
 %	Example analysis, i.e., bootstrap distribution, replicates
 	
-	\subsection{MCMC?}
+%	\subsection{MCMC?}
 	
 \end{document}

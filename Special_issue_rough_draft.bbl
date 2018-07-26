@@ -27,6 +27,14 @@ Oliver L{\:o}tgering-Lin and Joachim Gross.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   54(32):7942--7952, 2015.
 
+\bibitem{Maginn2018}
+Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
+  J.~Richard Elliott.
+\newblock Best practices for computing transport properties 1. self-diffusivity
+  and viscosity from equilibrium molecular dynamics v1.
+\newblock {\em Living Journal of Computational Molecular Science}, Pending
+  publication, 2018.
+
 \bibitem{Nieto2006}
 Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
@@ -38,14 +46,6 @@ Damien~A. Bernard-Brunel and Jeffrey~J. Potoff.
 \newblock Effect of torsional potential on the predicted phase behavior of
   n-alkanes.
 \newblock {\em Fluid Phase Equilibria}, 279(2):100 -- 104, 2009.
-
-\bibitem{Maginn2018}
-Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
-  J.~Richard Elliott.
-\newblock Best practices for computing transport properties 1. self-diffusivity
-  and viscosity from equilibrium molecular dynamics v1.
-\newblock {\em Living Journal of Computational Molecular Science}, Pending
-  publication, 2018.
 
 \bibitem{Allen1997}
 William Allen and Richard~L. Rowley.
@@ -301,5 +301,11 @@ Richard~A. Messerly, Michael~R. Shirts, and Andrei~F. Kazakov.
 \newblock Uncertainty quantification confirms unreliable extrapolation toward
   high pressures for united-atom mie $\lambda$-6 force field.
 \newblock {\em Journal of Chemical Physics}, Pending publication, 2018.
+
+\bibitem{Kioupis2000}
+Loukas~I. Kioupis and Edward~J. Maginn.
+\newblock Impact of molecular architecture on the high-pressure rheology of
+  hydrocarbon fluids.
+\newblock {\em The Journal of Physical Chemistry B}, 104(32):7774--7783, 2000.
 
 \end{thebibliography}
