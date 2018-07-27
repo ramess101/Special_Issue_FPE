@@ -757,7 +757,9 @@
 		\label{fig:Saturation_C3_C4_C8}
 	\end{figure} 
 	
-	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. The cause of this trend is unclear but, since it is only observed for larger compounds, it is likely attributed to the torsional potential or the transferability of the CH$_2$ Mie $\lambda$-6 parameters.  
+	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. Although the case of this trend is unclear, Section \ref{Discussion/Limitations} suggests that the cut-off distance impacts these larger compounds at higher $\rho_{\rm liq}^{\rm sat}$ (lower $T^{\rm sat}$).
+	
+	%The cause of this trend is unclear but, since it is only observed for larger compounds, it is likely attributed to the torsional potential or the transferability of the CH$_2$ Mie $\lambda$-6 parameters.  
 	
 	\begin{figure}[htb!]
 		\centering
@@ -1084,14 +1086,14 @@
 	
 	% each force field except Potoff, which utilizes only a 1.0 nm cut-off. This choice was made because the Potoff force field was parameterized with a 1.0 nm cut-off. 
 	
-	The ``Best Practices'' guide suggests that cut-off lengths could be significant but does not provide any support for this claim. To address this issue, we perform simulations of the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff viscosity values for propane, \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
+	The ``Best Practices'' guide suggests that cut-off lengths could be significant but does not provide any support for this claim. To address this issue, we perform simulations of the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff viscosity values for \textit{n}-butane and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
 	
 	% convincing evidence to prove or disprove this notion.
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
-		\caption{Impact of cut-off distance.}
+		\includegraphics[width=3.2in]{cutoff_distance.pdf}
+		\caption{Impact of cut-off distance. Filled symbols are for \textit{n}-butane and empty symbols for \textit{n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field.}
 		\label{fig:cutoff_distance}
 	\end{figure} 
 	
@@ -1259,19 +1261,19 @@
     
     \begin{figure}[htb!]
     	\centering
-    	\includegraphics[width=3.2in]{empty_figure.jpg}
+    	\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
     	\caption{Comparison with NIST Reference Simulation Data.}
     	\label{fig:validation_runs}
     \end{figure} 
 
     \begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{validation_TraPPE_octane.png}
+		\includegraphics[width=6.4in]{validation_TraPPE_octane.png}
 		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols denote the same harmonic potential while square symbols denote fixed bond-lengths.}
 		\label{fig:validation_runs2}
 	\end{figure}
     
-    Figure \ref{fig:validation_runs} demonstrates that our results are more consistent with the NIST Reference Simulation Data at higher densities. Note that the NIST Reference Simulation Data are obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported by NIST. 
+    Figure \ref{fig:validation_runs} demonstrates that our results are more consistent with the NIST Reference Simulation Data at higher densities. Note that the NIST Reference Simulation Data are obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported by NIST. Also, the NIST simulations used 500 molecules, 250 ps production time, and a 0.5 fs time-step.  
     
     Figure \ref{fig:validation_runs2} demonstrates that our results agree quite well with the literature. Note that Reference \citenum{Kioupis2000} utilizes the same harmonic potential but performed NEMD simulations, while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths. Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols.  Note that there are small discrepancies between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but is somewhat curious. 
     
@@ -1291,7 +1293,7 @@
     \begin{equation} \label{eq:harmonic_bond}
     u^{\rm bond} = \frac{k_{\rm b}}{2} \left(r-r_{\rm eq}\right)^2
     \end{equation}
-    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b} = $, as this should result in a very stiff bonded potential. Since the bond-length should not vary significantly, any deviations should not be attributed to the bond-length but rather to the contributions the bonded forces make to the viscosity. 
+    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b} = $ BLANK, as this should result in a very stiff bonded potential. Since the bond-length should not vary significantly, any deviations should not be attributed to the bond-length but rather to the contributions the bonded forces make to the viscosity. 
     
     Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases. However, there is a small, but systematic, deviation towards higher viscosities for the stiff harmonic potential. 
     
