@@ -452,7 +452,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline
 				\multicolumn{1}{|c}{} & \multicolumn{3}{|c}{TraPPE  (TraPPE-2)} & \multicolumn{3}{|c|}{Potoff (S/L)}  \\ \hline
-				United-atom & $\epsilon$ (K) & $\sigma$ (nm) & n & $\epsilon$ (K) & $\sigma$ (nm) & n \\ \hline
+				United-atom & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ \\ \hline
 				CH$_3$ & 98 (134.5)  & 0.375 (0.352) & 12 & 121.25 & 0.3783 & 16  \\ 
 				CH$_2$ & 46 & 0.395 & 12 & 61 & 0.399 & 16 \\ 
 				CH & 10 & 0.468 & 12 & 15 (15/14) & 0.46 (0.47/0.47) & 16\\
@@ -515,7 +515,7 @@
 	
 	%In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
 	
-	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. 
+	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. Section \ref{Discussion/Limitations} provides a detailed analysis for the number of molecules and cut-off lengths. Validation results for the 2 fs time-step, production times, and constrained bonds are provided as Supporting Information.
 	 
 	\begin{table}[htb!]
 		\caption{General simulation specifications.} \label{tab:sim_specs}
@@ -527,7 +527,7 @@
 				Production time (ns) & 1, 2, 4, or 8 \\
 				Cut-off length (nm) & 1.4 (1.0 for Potoff) \\
 				Tail-corrections \cite{GROMACS_note} & $U$ and $P$ \\
-				Constrained bonds & LINCS \\
+				Constrained bonds & LINCS \cite{GROMACS_2018} \\
 				LINCS-order & 8 \\			     
 				Number of molecules & 400 \\
 				\hline        
@@ -757,7 +757,7 @@
 		\label{fig:Saturation_C3_C4_C8}
 	\end{figure} 
 	
-	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. Although the case of this trend is unclear, Section \ref{Discussion/Limitations} suggests that the cut-off distance impacts these larger compounds more than smaller compounds at higher $\rho_{\rm liq}^{\rm sat}$ (lower $T^{\rm sat}$).
+	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. Although the cause of this trend is unclear, Section \ref{Discussion/Limitations} suggests that the cut-off distance impacts these larger compounds more than smaller compounds, especially at higher $\rho_{\rm liq}^{\rm sat}$ (lower $T^{\rm sat}$).
 	
 	%The cause of this trend is unclear but, since it is only observed for larger compounds, it is likely attributed to the torsional potential or the transferability of the CH$_2$ Mie $\lambda$-6 parameters.  
 	
@@ -960,7 +960,7 @@
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC8H18_without_devPlots.pdf}
+		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC8H18.pdf}
 		\caption{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
 		\label{fig:T293highP_IC8}
 	\end{figure} 
@@ -1192,44 +1192,249 @@
 %	
 	\subsection{Tabulated values}
 	
-	\begin{enumerate}
-		\item Saturation
-		\begin{enumerate}
-			\item Ethane
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-			\item Propane
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-		    \item Etc.
-		\end{enumerate}
-		\item Compressed liquids
-		\begin{enumerate}
-			\item Ethane
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-			\item Propane
-			\begin{enumerate}
-				\item Potoff
-				\item TraPPE
-				\item AUA4
-				\item TAMie
-			\end{enumerate}
-		    \item Etc.
-		\end{enumerate}   
-	\end{enumerate}
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for propane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+			\hline
+								  & Potoff            & TAMie             & TraPPE            \\ \hline
+			$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+			86                    & 10.7$_{1.5}$      & 5.31$_{0.40}$     & 2.47$_{0.16}$     \\ \hline
+			90                    & 8.34$_{0.96}$     & 4.42$_{0.22}$     & 2.01$_{0.12}$     \\ \hline
+			100                   & 3.56$_{0.22}$     & 2.53$_{0.18}$     & 1.243$_{0.049}$   \\ \hline
+			110                   & 2.17$_{0.12}$     & 1.500$_{0.060}$   & 0.898$_{0.039}$   \\ \hline
+			130                   & 1.003$_{0.033}$   & 0.844$_{0.026}$   & 0.517$_{0.013}$   \\ \hline
+			166                   & 0.439$_{0.011}$   & 0.389$_{0.013}$   & 0.2967$_{8.3e-3}$ \\ \hline
+			210                   & 0.2482$_{9.4e-3}$ & 0.2361$_{9.5e-3}$ & 0.1800$_{4.0e-3}$ \\ \hline
+			250                   & 0.1513$_{4.9e-3}$ & 0.1498$_{5.3e-3}$ & 0.1234$_{3.1e-3}$ \\ \hline
+			285                   & 0.1040$_{3.2e-3}$ & 0.1055$_{3.8e-3}$ & 0.0874$_{1.5e-3}$ \\ \hline
+			314                   & 0.0761$_{1.9e-3}$ & 0.0797$_{2.6e-3}$ & 0.0676$_{1.2e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for \textit{n}-butane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				& Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				191                   & 0.545$_{0.056}$   & 0.604$_{0.030}$   & 0.336$_{0.029}$   \\ \hline
+				241                   & 0.279$_{0.016}$   & 0.2664$_{6.2e-3}$ & 0.1900$_{4.3e-3}$ \\ \hline
+				287                   & 0.1691$_{3.7e-3}$ & 0.1640$_{3.7e-3}$ & 0.1327$_{2.7e-3}$ \\ \hline
+				328                   & 0.1146$_{2.5e-3}$ & 0.1168$_{1.8e-3}$ & 0.0928$_{2.0e-3}$ \\ \hline
+				361                   & 0.0858$_{1.6e-3}$ & 0.0849$_{2.1e-3}$ & 0.0726$_{1.2e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for \textit{n}-octane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				& Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				256                   & 0.830$_{0.041}$   & 0.870$_{0.029}$   & 0.504$_{0.019}$   \\ \hline
+				321                   & 0.373$_{0.011}$   & 0.373$_{0.010}$   & 0.2675$_{7.0e-3}$ \\ \hline
+				381                   & 0.2231$_{0.010}$  & 0.2378$_{5.9e-3}$ & 0.1689$_{4.9e-3}$ \\ \hline
+				434                   & 0.1385$_{5.9e-3}$ & 0.1416$_{3.5e-3}$ & 0.1161$_{2.8e-3}$ \\ \hline
+				479                   & 0.1053$_{4.7e-3}$ & 0.1024$_{7.4e-3}$ & 0.0851$_{2.4e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for \textit{n}-dodecane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				& Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				296                   & 1.056$_{0.065}$   & 1.009$_{0.048}$   & 0.691$_{0.049}$   \\ \hline
+				362                   & 0.487$_{0.024}$   & 0.487$_{0.014}$   & 0.349$_{0.014}$   \\ \hline
+				427                   & 0.2768$_{8.1e-3}$ & 0.2868$_{8.7e-3}$ & 0.2180$_{7.0e-3}$ \\ \hline
+				493                   & 0.1799$_{5.5e-3}$ & 0.1780$_{7.0e-3}$ & 0.1442$_{5.0e-3}$ \\ \hline
+				559                   & 0.1066$_{2.8e-3}$ & 0.1114$_{4.3e-3}$ & 0.0937$_{2.1e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for \textit{n}-hexadecane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				& Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				325                   & 1.225$_{0.092}$   & 1.217$_{0.094}$   & 0.794$_{0.047}$   \\ \hline
+				397                   & 0.572$_{0.027}$   & 0.568$_{0.023}$   & 0.439$_{0.017}$   \\ \hline
+				469                   & 0.364$_{0.025}$   & 0.329$_{0.017}$   & 0.264$_{0.010}$   \\ \hline
+				541                   & 0.1956$_{6.4e-3}$ & 0.1917$_{6.9e-3}$ & 0.1752$_{6.1e-3}$ \\ \hline
+				613                   & 0.1296$_{3.5e-3}$ & 0.1249$_{4.0e-3}$ & 0.1114$_{4.7e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for \textit{n}-docosane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2-methylpropane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				184                   & 0.546$_{0.017}$   & 0.3630$_{9.7e-3}$ & 0.347$_{0.019}$   \\ \hline
+				232                   & 0.2706$_{6.6e-3}$ & 0.2189$_{5.2e-3}$ & 0.2016$_{4.5e-3}$ \\ \hline
+				276                   & 0.1612$_{3.5e-3}$ & 0.1403$_{3.1e-3}$ & 0.1316$_{2.3e-3}$ \\ \hline
+				315                   & 0.1175$_{2.1e-3}$ & 0.1028$_{2.9e-3}$ & 0.0941$_{1.8e-3}$ \\ \hline
+				347                   & 0.0845$_{1.8e-3}$ & 0.0761$_{1.4e-3}$ & 0.0737$_{1.6e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2-methylbutane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				207                   & 0.648$_{0.019}$   & 0.475$_{0.014}$   & 0.396$_{0.021}$   \\ \hline
+				261                   & 0.3056$_{8.8e-3}$ & 0.2647$_{9.3e-3}$ & 0.2134$_{8.4e-3}$ \\ \hline
+				312                   & 0.1815$_{4.3e-3}$ & 0.1700$_{5.0e-3}$ & 0.1452$_{6.7e-3}$ \\ \hline
+				356                   & 0.1190$_{2.6e-3}$ & 0.1201$_{3.7e-3}$ & 0.1022$_{3.9e-3}$ \\ \hline
+				392                   & 0.0897$_{1.5e-3}$ & 0.0883$_{2.5e-3}$ & 0.0771$_{3.4e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2-methylpentane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				224                   & 0.572$_{0.016}$   & 0.501$_{0.019}$   & 0.330$_{0.014}$   \\ \hline
+				282                   & 0.2848$_{9.6e-3}$ & 0.2551$_{7.6e-3}$ & 0.2069$_{5.9e-3}$ \\ \hline
+				337                   & 0.1763$_{4.3e-3}$ & 0.1690$_{4.5e-3}$ & 0.1371$_{3.1e-3}$ \\ \hline
+				384                   & 0.1219$_{3.0e-3}$ & 0.1196$_{2.6e-3}$ & 0.0998$_{2.1e-3}$ \\ \hline
+				423                   & 0.101$_{0.010}$   & 0.0868$_{2.0e-3}$ & 0.0748$_{1.4e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 3-methylpentane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				227                   & 0.587$_{0.024}$   & 0.545$_{0.019}$   & 0.392$_{0.012}$   \\ \hline
+				278                   & 0.341$_{0.016}$   & 0.3090$_{8.6e-3}$ & 0.2423$_{7.3e-3}$ \\ \hline
+				328                   & 0.2060$_{5.6e-3}$ & 0.1913$_{5.0e-3}$ & 0.1700$_{9.3e-3}$ \\ \hline
+				379                   & 0.1325$_{2.6e-3}$ & 0.1282$_{2.7e-3}$ & 0.1131$_{2.5e-3}$ \\ \hline
+				430                   & 0.0882$_{1.6e-3}$ & 0.0895$_{1.9e-3}$ & 0.0778$_{1.4e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2,2-dimethylpropane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				& Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2,3-dimethylbutane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+									  & Potoff            & TAMie             & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				225                   & 0.898$_{0.035}$   & 0.579$_{0.019}$   & 0.478$_{0.013}$   \\ \hline
+				275                   & 0.410$_{0.013}$   & 0.332$_{0.015}$   & 0.2756$_{7.1e-3}$ \\ \hline
+				325                   & 0.270$_{0.011}$   & 0.218$_{0.010}$   & 0.1938$_{5.6e-3}$ \\ \hline
+				375                   & 0.1621$_{6.3e-3}$ & 0.1466$_{6.3e-3}$ & 0.1324$_{2.4e-3}$ \\ \hline
+				425                   & 0.1076$_{4.4e-3}$ & 0.0926$_{2.3e-3}$ & 0.0869$_{1.6e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[h!]
+		\caption{Saturated liquid viscosity values for 2,2,4-trimethylpentane.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				                      & Potoff               & TraPPE            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				245                   & 0.807$_{0.046}$      & 0.450$_{0.023}$   \\ \hline
+				309                   & 0.390$_{0.014}$      & 0.255$_{0.013}$   \\ \hline
+				369                   & 0.245$_{0.013}$      & 0.1654$_{7.8e-3}$ \\ \hline
+				421                   & 0.1488$_{3.2e-3}$    & 0.1199$_{6.8e-3}$ \\ \hline
+				464                   & 0.1035$_{1.6e-3}$    & 0.1009$_{5.8e-3}$ \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+%	\begin{enumerate}
+%		\item Saturation
+%		\begin{enumerate}
+%			\item Ethane
+%			\begin{enumerate}
+%				\item Potoff
+%				\item TraPPE
+%				\item AUA4
+%				\item TAMie
+%			\end{enumerate}
+%			\item Propane
+%			\begin{enumerate}
+%				\item Potoff
+%				\item TraPPE
+%				\item AUA4
+%				\item TAMie
+%			\end{enumerate}
+%		    \item Etc.
+%		\end{enumerate}
+%		\item Compressed liquids
+%		\begin{enumerate}
+%			\item Ethane
+%			\begin{enumerate}
+%				\item Potoff
+%				\item TraPPE
+%				\item AUA4
+%				\item TAMie
+%			\end{enumerate}
+%			\item Propane
+%			\begin{enumerate}
+%				\item Potoff
+%				\item TraPPE
+%				\item AUA4
+%				\item TAMie
+%			\end{enumerate}
+%		    \item Etc.
+%		\end{enumerate}   
+%	\end{enumerate}
 		
 	\subsection{Simulation time}
 	
@@ -1265,31 +1470,37 @@
 %		\item Verified that 1 ns is long enough for larger compounds
 %	\end{enumerate}
 	
-	\subsection{Validation Runs}
+	\subsection{Validation Runs} \label{Validation Runs}
 	
-    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
+    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Standard Reference Simulation Website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Kioupis2000,Nieto2006}. The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are for fixed elevated pressures, which provides validation of our $NPT$ ensemble results. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
     
     % from this study with those from NIST and the literature, respectively.   
     
     \begin{figure}[htb!]
     	\centering
     	\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
-    	\caption{Comparison with NIST Reference Simulation Data. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant error of 4 \% is assumed for NIST values \cite{NIST_SRSW}.}
+    	\caption{Comparison with NIST Standard Reference Simulation benchmark data. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant error of 4 \% is assumed for NIST values \cite{NIST_SRSW}.}
     	\label{fig:validation_runs}
     \end{figure} 
 
+    Figure \ref{fig:validation_runs} demonstrates that our results are more consistent with the NIST Reference Simulation Data at higher densities. Note that the NIST Standard Reference Simulation benchmark data were obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported on the NIST website. Also, the NIST simulations used 500 molecules, 250 ps production time, and a 0.5 fs time-step.  
+    
     \begin{figure}[htb!]
 		\centering
-		\includegraphics[width=6.4in]{validation_TraPPE_octane.png}
-		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols denote the same harmonic potential while square symbols denote fixed bond-lengths.}
+		\includegraphics[width=6.4in]{validation_TraPPE_octane.pdf}
+		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}
 		\label{fig:validation_runs2}
 	\end{figure}
+
+    Figure \ref{fig:validation_runs2} demonstrates that our results agree quite well with the literature values for TraPPE \textit{n}-octane at high pressures. Note that we utilize the same harmonic potential as Reference \citenum{Kioupis2000} ($k_{\rm b}/k_{\rm B} = 45.29$ K/pm$^2$, value reported in Reference \citenum{Kioupis1999}). Thus, by comparing the circular points, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity. Furthermore, by comparing the fixed and flexible bond results we see a small shift towards higher viscosities for the harmonic potential. This is investigated further in Section \ref{fixed flexible}.
     
-    Figure \ref{fig:validation_runs} demonstrates that our results are more consistent with the NIST Reference Simulation Data at higher densities. Note that the NIST Reference Simulation Data are obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported by NIST. Also, the NIST simulations used 500 molecules, 250 ps production time, and a 0.5 fs time-step.  
+    %Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols. By comparing the harmonic potential results, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity.
     
-    Figure \ref{fig:validation_runs2} demonstrates that our results agree quite well with the literature. Note that Reference \citenum{Kioupis2000} utilizes the same harmonic potential but performed NEMD simulations, while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths. Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols.  Note that there are small discrepancies between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but is somewhat curious. 
+    % while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths.
     
-    The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are for fixed elevated pressures, which provides validation of our $NPT$ ensemble results.
+    Recently, we became aware that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we perform our validation runs with a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations}, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
+    
+    Note that there are small discrepancies between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. Also, there does appear to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. 
     
 %	
 %	\begin{enumerate}
@@ -1297,15 +1508,15 @@
 %		\item n-Octane Literature
 %	\end{enumerate}
 	
-	\subsection{Fixed vs flexible bonds} \label{fixed flexbile}
+	\subsection{Fixed vs flexible bonds} \label{fixed flexible}
 	
 %    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. For this reason, we test the degree of variability that arises by implementing a harmonic oscillator model.
 	
-    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) are much more sensitive. We perform additional simulations with flexible bonds to test how sensitive the results presented in Section \ref{Results} are to the use of fixed bond-lengths. Specifically, we use the traditional harmonic bond potential:
+    Although static thermodynamic properties (e.g., $\rho_{\rm liq}^{\rm sat}$) are generally insensitive to the choice of fixed or flexible bonds, dynamic properties (e.g., $\eta$) can be much more sensitive. We perform additional simulations with flexible bonds to test how sensitive the results presented in Section \ref{Results} are to the use of fixed bond-lengths. Specifically, we use the traditional harmonic bond potential:
     \begin{equation} \label{eq:harmonic_bond}
     u^{\rm bond} = \frac{k_{\rm b}}{2} \left(r-r_{\rm eq}\right)^2
     \end{equation}
-    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b} = $ BLANK, as this should result in a very stiff bonded potential. Since the bond-length should not vary significantly, any deviations should not be attributed to the bond-length but rather to the contributions the bonded forces make to the viscosity. 
+    where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b}/k_{\rm B} = 60.43$ K/pm$^2$, as this should result in a fairly stiff bonded potential. Since the bond-length should not vary significantly, any deviations should not be attributed to the fluctuations in bond-length but rather to the contributions that the bonded forces make to the viscosity. 
     
     Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases. However, there is a small, but systematic, deviation towards higher viscosities for the stiff harmonic potential. 
     
@@ -1314,7 +1525,7 @@
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{nAlkanes_TraPPE_BondType.pdf}
-		\caption{Fixed bond-lengths compared with an arbitrarily strong harmonic bond potential. Simulations were performed using the TraPPE-UA force field. Colors/fill denote fixed or flexible bonds while symbol shape corresponds to different compounds.}
+		\caption{Fixed bond-lengths compared with an arbitrarily stiff harmonic bond potential. Simulations were performed using the TraPPE-UA force field. Colors/fill denote fixed or flexible bonds while symbol shape corresponds to different compounds.}
 		\label{fig:fixed_flexible}
 	\end{figure} 
 
@@ -1335,32 +1546,32 @@
 	
 	\subsection{Green-Kubo analysis}
 	
-	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. The results depicted in Figures \ref{fig:autocorrelation} through \ref{fig:bootstraps} were obtained for BLANK BLANK. Figure \ref{fig:autocorrelation} depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis.'' By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure \ref{fig:autocorrelation} is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure \ref{fig:replicates} presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure \ref{fig:replicates}). Figure \ref{fig:standard_deviation} shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures \ref{fig:replicates} and \ref{fig:standard_deviation} is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap re-sampling provides an estimate of the uncertainty. Figure \ref{fig:bootstraps} shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure \ref{fig:replicates} are the lower and upper 95 \% confidence interval.
+	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. The results depicted in Figures \ref{fig:autocorrelation} through \ref{fig:bootstraps} are for propane with the Potoff model and $T^{\rm sat} = 166$ K. Figure \ref{fig:autocorrelation} depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis'' command. By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure \ref{fig:autocorrelation} is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure \ref{fig:replicates} presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure \ref{fig:replicates}). Figure \ref{fig:standard_deviation} shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures \ref{fig:replicates} and \ref{fig:standard_deviation} is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap re-sampling provides an estimate of the uncertainty. Figure \ref{fig:bootstraps} shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure \ref{fig:replicates} are the lower and upper 95 \% confidence interval.
 	
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\includegraphics[width=3.2in]{autocorrelation_function.pdf}
 		\caption{Autocorrelation function with respect to time.}
 		\label{fig:autocorrelation}
 	\end{figure} 
 
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
-		\caption{Replicate simulations, average, fit to average, cut-off, and bootstrap uncertainties.}
+		\includegraphics[width=3.2in]{GK_MCMC_all_rho0.pdf}
+		\caption{Replicate simulations, average, fit to average, bootstrap uncertainties, and cut-off.}
 		\label{fig:replicates}
 	\end{figure} 
 
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\includegraphics[width=3.2in]{sig_fit_rho0.pdf}
 		\caption{Standard deviation of replicate simulations with respect to time.}
 		\label{fig:standard_deviation}
 	\end{figure} 
 
 	\begin{figure}[htb!]
 		\centering
-		\includegraphics[width=3.2in]{empty_figure.jpg}
+		\includegraphics[width=3.2in]{GK_bootstraps_MCMC_rho0.pdf}
 		\caption{Bootstrap distribution of $\eta$.}
 		\label{fig:bootstraps}
 	\end{figure} 
