@@ -757,7 +757,7 @@
 		\label{fig:Saturation_C3_C4_C8}
 	\end{figure} 
 	
-	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. Although the case of this trend is unclear, Section \ref{Discussion/Limitations} suggests that the cut-off distance impacts these larger compounds at higher $\rho_{\rm liq}^{\rm sat}$ (lower $T^{\rm sat}$).
+	Figure \ref{fig:Saturation_C12_C16_C22} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane. Although the TraPPE results for these compounds are similar to those observed in Figure \ref{fig:Saturation_C3_C4_C8} for smaller \textit{n}-alkanes, TAMie and Potoff demonstrate a stronger temperature dependence for these larger \textit{n}-alkanes. Although the case of this trend is unclear, Section \ref{Discussion/Limitations} suggests that the cut-off distance impacts these larger compounds more than smaller compounds at higher $\rho_{\rm liq}^{\rm sat}$ (lower $T^{\rm sat}$).
 	
 	%The cause of this trend is unclear but, since it is only observed for larger compounds, it is likely attributed to the torsional potential or the transferability of the CH$_2$ Mie $\lambda$-6 parameters.  
 	
@@ -1082,7 +1082,7 @@
 	
 	\subsection{Cut-off distance}
 	
-	The choice of cut-off distance is a subtle but important decision. In this study, we implement a 1.4 nm cut-off for TraPPE, TraPPE-2, TAMie, and AUA4 but a 1.0 nm cut-off for Potoff (as recommended in Reference \citenum{Mie}).
+	The choice of cut-off distance is a subtle but important decision. In this study, we implement a 1.4 nm cut-off for TraPPE, TraPPE-2, TAMie, and AUA4 but a 1.0 nm cut-off for Potoff, as these are the cut-off lengths implemented by the respective authors.
 	
 	% each force field except Potoff, which utilizes only a 1.0 nm cut-off. This choice was made because the Potoff force field was parameterized with a 1.0 nm cut-off. 
 	
@@ -1096,9 +1096,21 @@
 		\caption{Impact of cut-off distance. Filled symbols are for \textit{n}-butane and empty symbols for \textit{n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field.}
 		\label{fig:cutoff_distance}
 	\end{figure} 
+
+%	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time. Note that even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off. However, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off. For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
+%
+%    Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length.
+%	
+%	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. Even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length.
+%
+%    These results are somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. Therefore, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off.
+%	
+%	In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time.  For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
+%	
+	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, however, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time and does not resolve the observed bias. For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 	
-	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time. Although the 1.4 nm and 1.8 nm cut-off results are not identical, the 1.8 nm cut-off also increases the simulation wall-time by nearly a factor of two. For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
-	
+	Unfortunately, even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length. This is somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. Therefore, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off.
+		
 	%For this reason, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 	
 	%, and even a 1.4 nm cut-off demonstrates some small deviations
@@ -1141,7 +1153,7 @@
 	
 	\subsection{Systems simulated}
 	
-	Table \ref{tab:simulations_performed} demonstrates which compounds, force fields, and viscosity types were simulated in this study.
+	Table \ref{tab:simulations_performed} enumerates the compounds, force fields, and viscosity types simulated in this study.
 	
 	\begin{table}[h!]
 		\caption{Compounds, force fields, and state points. ``X'': simulated, ``O'': not simulated, ``S'' simulated with ``short'' parameters, ``L'' simulated with ``long'' parameters.} \label{tab:simulations_performed}
@@ -1169,7 +1181,7 @@
 		
 	\subsection{Gromacs input files}
 	
-	We provide example input files for simulating 2,2,4-trimethylpentane at BLANK K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files that were used to generate the results from this study can be found at www.github.com/ramess101/IFPSC\_10.
+	We provide example input files for simulating 2,2,4-trimethylpentane at BLANK K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files necessary to generate the results from this study can be found at www.github.com/ramess101/IFPSC\_10.
 	
 %	\begin{enumerate}
 %		\item Include all the .gro files
@@ -1219,7 +1231,7 @@
 		\end{enumerate}   
 	\end{enumerate}
 		
-	\subsection{Simulation length effects}
+	\subsection{Simulation time}
 	
 %	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information).
 	
@@ -1255,14 +1267,14 @@
 	
 	\subsection{Validation Runs}
 	
-    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
+    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Reference Simulation Data website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
     
     % from this study with those from NIST and the literature, respectively.   
     
     \begin{figure}[htb!]
     	\centering
     	\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
-    	\caption{Comparison with NIST Reference Simulation Data.}
+    	\caption{Comparison with NIST Reference Simulation Data. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant error of 4 \% is assumed for NIST values \cite{NIST_SRSW}.}
     	\label{fig:validation_runs}
     \end{figure} 
 
@@ -1353,7 +1365,6 @@
 		\label{fig:bootstraps}
 	\end{figure} 
 
-	
 %	\begin{enumerate}
 %		\item Raw data, i.e., multiple replicates with the average
 %		\item Exclude low time data and have a heuristic for determining the cut-off time
