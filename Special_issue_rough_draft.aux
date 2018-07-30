@@ -121,7 +121,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Finite-size effects. Simulation results were obtained for propane with the Potoff force field and $N= 100$, $200$, $400$, and $800$. Colors/symbols denote different saturation temperatures. The lines are obtained from a weighted linear fit with respect to $N^{-1/3}$.}}{28}}
 \newlabel{fig:finite_size_effects}{{14}{28}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Cut-off distance}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Impact of cut-off distance. Filled symbols are for \textit  {n}-butane and empty symbols for \textit  {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field.}}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Impact of cut-off distance. Filled symbols are for \textit  {n}-butane and empty symbols for \textit  {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions.}}{29}}
 \newlabel{fig:cutoff_distance}{{15}{29}}
 \citation{GROMACS_2018}
 \citation{Potoff_branched}
@@ -188,23 +188,17 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6}Supporting Information}{38}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Systems simulated}{38}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Gromacs input files}{38}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Tabulated values}{38}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Simulation time}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Simulation time}{38}}
 \@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Compounds, force fields, and state points. ``X'': simulated, ``O'': not simulated, ``S'' simulated with ``short'' parameters, ``L'' simulated with ``long'' parameters.}}{39}}
 \newlabel{tab:simulations_performed}{{7}{39}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Saturated liquid viscosity values for propane.}}{40}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-butane.}}{40}}
 \citation{NIST_SRSW}
 \citation{Kioupis2000,Nieto2006}
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-octane.}}{41}}
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-dodecane.}}{41}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Validation Runs}{41}}
-\newlabel{Validation Runs}{{6.5}{41}}
 \citation{NIST_SRSW}
 \citation{NIST_SRSW}
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-hexadecane.}}{42}}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-docosane.}}{42}}
-\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Saturated liquid viscosity values for 2-methylpropane.}}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Simulation production time. Simulations were performed for \textit  {n}-octane using the TraPPE potential. Colors/line styles denote different simulation times (0.5 ns, 1 ns, 2 ns, and 4 ns).}}{40}}
+\newlabel{fig:simulation_time}{{16}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Validation Runs}{40}}
+\newlabel{Validation Runs}{{6.4}{40}}
 \citation{Kioupis2000}
 \citation{Nieto2006}
 \citation{Kioupis2000}
@@ -213,38 +207,52 @@
 \citation{Kioupis1999}
 \citation{Kioupis2000}
 \citation{Kioupis2000}
-\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Saturated liquid viscosity values for 2-methylbutane.}}{43}}
-\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Saturated liquid viscosity values for 2-methylpentane.}}{43}}
-\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Saturated liquid viscosity values for 3-methylpentane.}}{44}}
-\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Saturated liquid viscosity values for 2,2-dimethylpropane.}}{44}}
-\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Saturated liquid viscosity values for 2,3-dimethylbutane.}}{44}}
 \citation{Nieto2006}
 \citation{Nieto2006}
 \citation{Nieto2006}
-\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Saturated liquid viscosity values for 2,2,4-trimethylpentane.}}{45}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Simulation production time. Simulations were performed for \textit  {n}-octane using the TraPPE potential. Colors/line styles denote different simulation times (0.5 ns, 1 ns, 2 ns, and 4 ns).}}{45}}
-\newlabel{fig:simulation_time}{{16}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Green-Kubo integrals for some of the most viscous systems. Each compound was simulated with the Potoff potential. Solid lines are the average of $N_{\rm  reps}$ replicates. Dashed lines are the estimated $\eta $ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}}{41}}
+\newlabel{fig:most_viscous}{{17}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Comparison with NIST Standard Reference Simulation benchmark data. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant uncertainty of 4 \% is assumed for NIST values \cite  {NIST_SRSW}.}}{42}}
+\newlabel{fig:validation_runs}{{18}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Comparison with Kioupis \cite  {Kioupis2000} and Nieto-Draghi \cite  {Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}}{42}}
+\newlabel{fig:validation_runs2}{{19}{42}}
 \citation{Kioupis2000}
 \citation{Nieto2006}
 \citation{Nieto2006}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Green-Kubo integrals for some of the most viscous systems. Each compound was simulated with the Potoff potential. Solid lines are the average of $N_{\rm  reps}$ replicates. Dashed lines are the estimated $\eta $ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}}{46}}
-\newlabel{fig:most_viscous}{{17}{46}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Fixed vs flexible bonds}{46}}
-\newlabel{fixed flexible}{{6.6}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Comparison with NIST Standard Reference Simulation benchmark data. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant error of 4 \% is assumed for NIST values \cite  {NIST_SRSW}.}}{47}}
-\newlabel{fig:validation_runs}{{18}{47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Comparison with Kioupis \cite  {Kioupis2000} and Nieto-Draghi \cite  {Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}}{47}}
-\newlabel{fig:validation_runs2}{{19}{47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Fixed vs flexible bonds}{43}}
+\newlabel{fixed flexible}{{6.5}{43}}
+\newlabel{eq:harmonic_bond}{{9}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Green-Kubo analysis}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Fixed bond-lengths compared with an arbitrarily stiff harmonic bond potential. Simulations were performed using the TraPPE-UA force field. Colors/fill denote fixed or flexible bonds while symbol shape corresponds to different compounds.}}{44}}
+\newlabel{fig:fixed_flexible}{{20}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Autocorrelation function with respect to time.}}{45}}
+\newlabel{fig:autocorrelation}{{21}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Replicate simulations, average, fit to average, bootstrap uncertainties, and cut-off.}}{46}}
+\newlabel{fig:replicates}{{22}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Standard deviation of replicate simulations with respect to time.}}{46}}
+\newlabel{fig:standard_deviation}{{23}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Bootstrap distribution of $\eta $.}}{47}}
+\newlabel{fig:bootstraps}{{24}{47}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{eq:harmonic_bond}{{9}{48}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Green-Kubo analysis}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Fixed bond-lengths compared with an arbitrarily stiff harmonic bond potential. Simulations were performed using the TraPPE-UA force field. Colors/fill denote fixed or flexible bonds while symbol shape corresponds to different compounds.}}{49}}
-\newlabel{fig:fixed_flexible}{{20}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Autocorrelation function with respect to time.}}{50}}
-\newlabel{fig:autocorrelation}{{21}{50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Replicate simulations, average, fit to average, bootstrap uncertainties, and cut-off.}}{50}}
-\newlabel{fig:replicates}{{22}{50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Standard deviation of replicate simulations with respect to time.}}{51}}
-\newlabel{fig:standard_deviation}{{23}{51}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Bootstrap distribution of $\eta $.}}{51}}
-\newlabel{fig:bootstraps}{{24}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Tabulated values}{48}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Saturated liquid viscosity values for ethane.}}{48}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Saturated liquid viscosity values for propane.}}{48}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-butane.}}{49}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-octane.}}{49}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-dodecane.}}{50}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-hexadecane.}}{50}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Saturated liquid viscosity values for \textit  {n}-docosane.}}{50}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Saturated liquid viscosity values for 2-methylpropane.}}{51}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Saturated liquid viscosity values for 2-methylbutane.}}{51}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Saturated liquid viscosity values for 2-methylpentane.}}{52}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Saturated liquid viscosity values for 3-methylpentane.}}{52}}
+\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Saturated liquid viscosity values for 2,2-dimethylpropane.}}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Saturated liquid viscosity values for 2,3-dimethylbutane.}}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces Saturated liquid viscosity values for 2,2,4-trimethylpentane.}}{54}}
+\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces Compressed liquid viscosity values for propane.}}{54}}
+\@writefile{lot}{\contentsline {table}{\numberline {23}{\ignorespaces Compressed liquid viscosity values for \textit  {n}-butane.}}{55}}
+\@writefile{lot}{\contentsline {table}{\numberline {24}{\ignorespaces Compressed liquid viscosity values for \textit  {n}-octane.}}{55}}
+\@writefile{lot}{\contentsline {table}{\numberline {25}{\ignorespaces Compressed liquid viscosity values for 2-methylpropane.}}{56}}
+\@writefile{lot}{\contentsline {table}{\numberline {26}{\ignorespaces Compressed liquid viscosity values for 2-methylbutane.}}{56}}
+\@writefile{lot}{\contentsline {table}{\numberline {27}{\ignorespaces Compressed liquid viscosity values for 3-methylpentane.}}{57}}
+\@writefile{lot}{\contentsline {table}{\numberline {28}{\ignorespaces Compressed liquid viscosity values for 2,2,4-trimethylpentane.}}{57}}
