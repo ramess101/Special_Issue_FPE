@@ -133,6 +133,21 @@
 %	\endgroup
 %}
 
+\newenvironment{myequation}{%
+	\addtocounter{equation}{-1}
+	\refstepcounter{defcounter}
+	\renewcommand\theequation{SI.\thedefcounter}
+	\begin{equation*}}
+{\end{equation*}}
+
+\renewcommand{\thefigure}{SI.\arabic{figure}}
+
+\renewcommand{\thepage}{SI.\arabic{page}}
+
+\renewcommand{\thesection}{SI.\Roman{section}}
+
+\renewcommand{\thetable}{SI.\Roman{table}}
+
 \makeatletter
 \newcommand*{\addFileDependency}[1]{% argument=file name and extension
 	\typeout{(#1)}
@@ -265,8 +280,6 @@
 		
 	\end{frontmatter}	
 	
-	\section{Supporting Information}
-	
 %	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information). Furthermore, we investigate system size effects by comparing results with 100, 200, 400, and 800 molecules (see Section \ref{Discussion/Limitations}). In addition, we compare fixed and flexible bonds in the Supporting Information.
 	
 	\section{Systems simulated}
@@ -309,7 +322,7 @@
 %	\end{enumerate}
 %	
 		
-	\section{Simulation time}
+	\section{Simulation time} \label{SI:Simulation time}
 	
 %	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information).
 	
@@ -417,7 +430,7 @@
 %		\item Propane and n-butane with harmonic (arbirary bond constant) shows systematic increase
 %	\end{enumerate}
 	
-	\section{Green-Kubo analysis}
+	\section{Green-Kubo analysis} \label{SI:GK_analysis}
 	
 	This section provides a detailed example of how we obtain estimates for $\eta$ with its corresponding uncertainty. The results depicted in Figures \ref{fig:autocorrelation} through \ref{fig:bootstraps} are for propane with the Potoff model and $T^{\rm sat} = 166$ K. Figure \ref{fig:autocorrelation} depicts a typical autocorrelation function obtained by executing the GROMACS ``energy --vis'' command. By default, GROMACS partitions the complete simulation into twelve evenly sized time blocks. Therefore, the autocorrelation in Figure \ref{fig:autocorrelation} is the average of twelve different time origins. GROMACS then performs a simple trapezoidal integration of neighboring points to obtain the Green-Kubo integral. The Green-Kubo integral with respect to time is output in the ``visco.xvg'' file. Figure \ref{fig:replicates} presents the Green-Kubo integral from forty replicate simulations. Although a single replicate is often quite noisy at long times, the average of these replicates converges smoothly (see Figure \ref{fig:replicates}). Figure \ref{fig:standard_deviation} shows that the fluctuations, or standard deviation, increases with time but is adequately modeled with $A t^{b}$. The line labeled ``cut-off'' in Figures \ref{fig:replicates} and \ref{fig:standard_deviation} is the time at which $\sigma_{\eta} \approx \eta^\infty$. Data beyond this time are excluded from the fit of the double-exponential function. Bootstrap re-sampling provides an estimate of the uncertainty. Figure \ref{fig:bootstraps} shows that, typically, the bootstrapped distribution is quite normal. The line labeled ``bootstraps'' in Figure \ref{fig:replicates} are the lower and upper 95 \% confidence interval.
 	
@@ -460,7 +473,7 @@
 
     \clearpage
 
-	\section{Tabulated values}
+	\section{Tabulated values} \label{SI:Tabulated}
 	
 	\begin{table}[h!]
 		\caption{Saturated liquid viscosity values for ethane.}
@@ -570,10 +583,10 @@
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
 				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
-				356 & 753.06 & 0.0$_{0.0}$       & 0.0$_{0.0}$       & 0.0$_{0.0}$       \\ \hline
 				435 & 700.85 & 0.626$_{0.028}$   & 0.677$_{0.046}$   & 0.529$_{0.026}$   \\ \hline
 				514 & 647.14 & 0.384$_{0.016}$   & 0.381$_{0.014}$   & 0.341$_{0.016}$   \\ \hline
 				594 & 588.70 & 0.2422$_{8.6e-3}$ & 0.246$_{0.010}$   & 0.1901$_{7.1e-3}$ \\ \hline
+				673 & 521.32 & 0.1368$_{4.5e-3}$ & 0.1540$_{5.5e-3}$ & 0.1267$_{4.3e-3}$ \\ \hline
 			\end{tabular}
 		\end{center}
 	\end{table}
@@ -733,11 +746,11 @@
 				\hline
 				&                  & \multicolumn{2}{c|}{Potoff}     & \multicolumn{2}{c|}{TAMie}      & \multicolumn{2}{c|}{TraPPE}    \\ \hline
 				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
-				293         & 702.44                                     & 1.15$_{0.65}$    & 0.508$_{0.034}$                        & 13.64$_{0.63}$   & 0.505$_{0.020}$                        & -6.37$_{0.47}$  & 0.324$_{0.014}$                        \\ \hline
-				293         & 764.16                                     & 123.47$_{0.83}$  & 1.435$_{0.076}$                        & 142.97$_{0.98}$  & 1.148$_{0.070}$                        & 77.88$_{0.59}$  & 0.657$_{0.024}$                        \\ \hline
-				293         & 832.65                                     & 405.1$_{6.2}$    & 5.93$_{0.64}$                          & 426.7$_{3.6}$    & 6.02$_{0.41}$                          & 260.9$_{1.1}$   & 1.790$_{0.084}$                        \\ \hline
-				293         & 894.90                                     & 873.4$_{1.4}$    & 58.1$_{5.1}$                           & 880.88$_{0.81}$  & 39.6$_{3.8}$                           & 548.29$_{0.99}$ & 5.29$_{0.84}$                          \\ \hline
-				293         & 832.65                                     & --                & --                                      & --                & --                                      & 719.6$_{1.1}$   & 11.7$_{1.1}$                           \\ \hline
+				293 & 702.44 & 1.15$_{0.65}$   & 0.508$_{0.034}$ & 13.64$_{0.63}$  & 0.505$_{0.020}$ & -6.37$_{0.47}$  & 0.324$_{0.014}$ \\ \hline
+				293 & 764.16 & 123.47$_{0.83}$ & 1.435$_{0.076}$ & 142.97$_{0.98}$ & 1.148$_{0.070}$ & 77.88$_{0.59}$  & 0.657$_{0.024}$ \\ \hline
+				293 & 832.65 & 405.1$_{7.6}$   & 5.93$_{0.64}$   & 426.7$_{2.8}$   & 6.02$_{0.41}$   & 260.9$_{1.1}$   & 1.790$_{0.084}$ \\ \hline
+				293 & 894.90 & 870.6$_{1.4}$   & 68.0$_{4.9}$    & 881.09$_{0.81}$ & 36.2$_{2.9}$    & 548.29$_{0.99}$ & 5.29$_{0.84}$   \\ \hline
+				293 & 921.79 & --               & --               & --               & --               & 719.6$_{1.1}$   & 11.7$_{1.1}$    \\ \hline
 			\end{tabular}
 		\end{center}
 	\end{table}

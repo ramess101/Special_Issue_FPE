@@ -546,7 +546,7 @@
 	
 	%In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
 	
-	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). Analytical tail corrections are applied in all cases. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. Section \ref{Discussion/Limitations} provides a detailed analysis for the number of molecules and cut-off lengths. Validation results for the 2 fs time-step, production times, and constrained bonds are provided as Supporting Information.
+	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). Analytical tail corrections are applied in all cases \cite{GROMACS_note}. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. Section \ref{Discussion/Limitations} provides a detailed analysis for the number of molecules and cut-off lengths. Validation results for the production times, 2 fs time-step, and constrained bonds are provided in Sections \ref{SI:Simulation time}, \ref{Validation Runs}, and \ref{fixed flexible} of Supporting Information, respectively.
 	 
 	\begin{table}[htb!]
 		\caption{General simulation specifications.} \label{tab:sim_specs}
@@ -557,7 +557,7 @@
 				Equilibration time (ns) & 1 \\
 				Production time (ns) & 1, 2, 4, or 8 \\
 				Cut-off length (nm) & 1.4 (1.0 for Potoff) \\
-				Tail-corrections \cite{GROMACS_note} & $U$ and $P$ \\
+				Tail-corrections & $U$ and $P$ \\
 				Constrained bonds & LINCS \cite{GROMACS_2018} \\
 				LINCS-order & 8 \\			     
 				Number of molecules & 400 \\
@@ -697,7 +697,7 @@
 	 
 %	To account for the increasing fluctuations in the ``running integral'' with respect to time, Equation \ref{eq: Double exponential} is fit by minimizing a weighted sum-squared error objective function. The weight model, $A t^{-b}$, is fit to the standard deviation $(\sigma_{\eta})$ of the replicate simulations. In addition, following a heuristic proposed by Zhang et al., data are excluded where $\sigma_{\eta} > 40$ \% $\eta^{\infty}$. Occasionally this heuristic resulted in a cut-off time that was too short, which lead to very poor fits. In such cases, it was necessary to manually increase the cut-off time. Large fluctuations also exist at very short times. Following ``Best Practices,'' only data for $t > 3$ ps are included in the fitting of Equation \ref{eq: Double exponential}. 
 	
-	As recommended by ``Best Practices'', uncertainties are obtained by bootstrap re-sampling. Specifically, the fitting process described previously is repeated hundreds of times using randomly selected subsets of replicate simulations. Furthermore, each bootstrap repetition uses a randomly selected long-time cut-off between 0.35 and 0.45 $\times \eta^{\infty}$ to account for uncertainty in the 0.4 $\times \eta^{\infty}$ heuristic. A 95 \% confidence interval is obtained from the distribution of bootstrap estimates for $\eta^\infty$. An example of this process is provided as Supporting Information.
+	As recommended by ``Best Practices'', uncertainties are obtained by bootstrap re-sampling. Specifically, the fitting process described previously is repeated hundreds of times using randomly selected subsets of replicate simulations. Furthermore, each bootstrap repetition uses a randomly selected long-time cut-off between 0.35 and 0.45 $\times \eta^{\infty}$ to account for uncertainty in the 0.4 $\times \eta^{\infty}$ heuristic. A 95 \% confidence interval is obtained from the distribution of bootstrap estimates for $\eta^\infty$. An example of this process is provided in Section \ref{SI:GK_analysis} of Supporting Information.
 	
 %	, and  are employed for a single MD run. The average of 30 to 60 independent replicate simulations $(N_{\rm reps})$ is fit to a double-exponential function by minimizing a weighted sum-squared error objective function.  
 	
@@ -1177,7 +1177,7 @@
 	
 	\section*{Acknowledgments}
 	
-	We are grateful for the internal review provided by NIST BERB Reviewer 1 and NIST BERB Reviewer 2 from the National Institute of Standards and Technology (NIST). 
+	We are grateful for the internal review provided by Andrei F. Kazakov and Alta Y. Fang of the National Institute of Standards and Technology (NIST). 
 	
 	This research was performed while Richard A. Messerly held a National Research Council (NRC) Postdoctoral Research Associateship at NIST and while Michelle C. Anderson held a Summer Undergraduate Research Fellowship (SURF) position at NIST.
 	
