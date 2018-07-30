@@ -2,7 +2,7 @@
 
 \bibitem{PGL}
 B.E. Poling, J.M. Prausnitz, and J.P. O'Connell.
-\newblock {\em {The Properties of Gases and Liquids}}.
+\newblock {\em {The Properties of Gases and Liquids, 5 ed.}}
 \newblock McGraw-Hill Companies, Inc., 2001.
 \newblock Chapter 9.
 
@@ -79,7 +79,7 @@ Peter~A. Gordon.
 \newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
 
 \bibitem{Hoang2017}
-Hai Hoang, Stéphanie Delage-Santacreu, and Guillaume Galliero.
+Hai Hoang, St{\'e}phanie Delage-Santacreu, and Guillaume Galliero.
 \newblock Simultaneous description of equilibrium, interfacial, and transport
   properties of fluids using a mie chain coarse-grained force field.
 \newblock {\em Industrial \& Engineering Chemistry Research},
