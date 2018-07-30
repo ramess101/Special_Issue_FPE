@@ -1,0 +1,35 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Special_issue_rough_draft.aux
+The style file: unsrt.bst
+Database file #1: Special_issue_references.bib
+You're missing a field name---line 2468 of file Special_issue_references.bib
+ : 
+ : %url = "http://www.sciencedirect.com/science/article/pii/S016773220600331X",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2482 of file Special_issue_references.bib
+ : 
+ : %URL = {https://doi.org/10.1063/1.474002},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2496 of file Special_issue_references.bib
+ : 
+ : %URL = {https://doi.org/10.1080/08927022.2012.702423},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Illegal end of database file---line 2629 of file Special_issue_references.bib
+ : }
+ :  
+I'm skipping whatever remains of this entry
+Warning--empty author in Ungerer2007
+Warning--empty journal in Romeo2018
+Warning--empty journal in Gao2017
+Name 1 in "Shen, V.K., Siderius, D.W., Krekelberg, W.P., and Hatch, H.W., Eds." has a comma at the end for entry NIST_SRSW
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Shen, V.K., Siderius, D.W., Krekelberg, W.P., and Hatch, H.W., Eds." for entry NIST_SRSW
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Shen, V.K., Siderius, D.W., Krekelberg, W.P., and Hatch, H.W., Eds." for entry NIST_SRSW
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Shen, V.K., Siderius, D.W., Krekelberg, W.P., and Hatch, H.W., Eds." for entry NIST_SRSW
+while executing---line 944 of file unsrt.bst
+Warning--empty year in NIST_SRSW
+(There were 8 error messages)

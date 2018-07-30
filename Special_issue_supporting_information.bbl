@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{Maginn2018}
+Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
+  J.~Richard Elliott.
+\newblock Best practices for computing transport properties 1. self-diffusivity
+  and viscosity from equilibrium molecular dynamics v1.
+\newblock {\em Living Journal of Computational Molecular Science}, Pending
+  publication, 2018.
+
+\bibitem{Zhang2015}
+Yong Zhang, Akihito Otani, and Edward~J. Maginn.
+\newblock Reliable viscosity calculation from equilibrium molecular dynamics
+  simulations: A time decomposition method.
+\newblock {\em Journal of Chemical Theory and Computation}, 11(8):3537--3546,
+  2015.
+
+\bibitem{NIST_SRSW}
+Siderius D.W. Krekelberg~W.P. Shen, V.K. and Eds. Hatch, H.W.
+\newblock Nist standard reference simulation website, nist standard reference
+  database number 173.
+\newblock {\em National Institute of Standards and Technology}, Gaithersburg
+  MD, 20899.
+
+\bibitem{Kioupis2000}
+Loukas~I. Kioupis and Edward~J. Maginn.
+\newblock Impact of molecular architecture on the high-pressure rheology of
+  hydrocarbon fluids.
+\newblock {\em The Journal of Physical Chemistry B}, 104(32):7774--7783, 2000.
+
+\bibitem{Nieto2006}
+Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
+\newblock Optimization of the anisotropic united atoms intermolecular potential
+  for n-alkanes: Improvement of transport properties.
+\newblock {\em The Journal of Chemical Physics}, 125(4):044517, 2006.
+
+\bibitem{Kioupis1999}
+Loukas~I. Kioupis and Edward~J. Maginn.
+\newblock Molecular simulation of poly-$\alpha$-olefin synthetic lubricants: 
+  impact of molecular architecture on performance properties.
+\newblock {\em The Journal of Physical Chemistry B}, 103(49):10781--10790,
+  1999.
+
+\end{thebibliography}
