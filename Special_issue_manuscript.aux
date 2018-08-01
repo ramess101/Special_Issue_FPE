@@ -31,13 +31,13 @@
 \citation{Gordon2006}
 \citation{Nieto2006}
 \citation{Hoang2017}
+\citation{Herdes2015}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{6}{section.2}}
 \newlabel{Methods}{{2}{6}{Methods}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Force field}{6}{subsection.2.1}}
 \newlabel{Force Field}{{2.1}{6}{Force field}{subsection.2.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{6}{table.1}}
-\newlabel{tab:bond-lengths}{{1}{6}{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis}{table.1}{}}
-\citation{Herdes2015}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{7}{table.1}}
+\newlabel{tab:bond-lengths}{{1}{7}{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis}{table.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Equilibrium bond angles $(\theta _0)$. $x$ and $y$ are values between 0 and 3.}}{7}{table.2}}
 \newlabel{tab:angles}{{2}{7}{Equilibrium bond angles $(\theta _0)$. $x$ and $y$ are values between 0 and 3}{table.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0 and 3.}}{7}{table.3}}
@@ -60,6 +60,7 @@
 \citation{GROMACS_2018}
 \citation{Mie}
 \citation{GROMACS_note}
+\citation{NIST_SRSW,Kioupis2000,Nieto2006}
 \newlabel{eq:Lorentz-Berthelot_eps}{{4}{9}{Force field}{equation.2.4}{}}
 \newlabel{eq:Lorentz-Berthelot_sig}{{5}{9}{Force field}{equation.2.5}{}}
 \newlabel{eq:Lorentz-Berthelot_lam}{{6}{9}{Force field}{equation.2.6}{}}
@@ -69,12 +70,8 @@
 \newlabel{tab:sim_specs}{{5}{10}{General simulation specifications}{table.5}{}}
 \citation{Maginn2018}
 \citation{Zhang2015}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Integrator, thermostat and barostat specifications.}}{11}{table.6}}
-\newlabel{tab:thermostats_barostats}{{6}{11}{Integrator, thermostat and barostat specifications}{table.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Data analysis}{11}{subsection.2.3}}
-\citation{Zhang2015}
-\newlabel{eq:Green_Kubo}{{7}{12}{Data analysis}{equation.2.7}{}}
-\newlabel{eq: Double exponential}{{8}{12}{Data analysis}{equation.2.8}{}}
+\newlabel{eq:Green_Kubo}{{7}{11}{Data analysis}{equation.2.7}{}}
 \citation{LEMMON-RP91}
 \citation{Ethane2006,Vogel2015}
 \citation{Propane2009,Vogel2016}
@@ -90,62 +87,65 @@
 \citation{Lemmon2006,Huber2018}
 \citation{Gao2017,Huber2018}
 \citation{Blackham2017,Huber2018}
+\newlabel{eq: Double exponential}{{8}{12}{Data analysis}{equation.2.8}{}}
 \citation{TDE}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{13}{section.3}}
 \newlabel{Results}{{3}{13}{Results}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Saturated Liquid}{13}{subsection.3.1}}
+\newlabel{sec:eta_sat}{{3.1}{13}{Saturated Liquid}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Normal alkanes}{13}{subsubsection.3.1.1}}
 \citation{Gordon2006,Nieto2006}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Saturated Liquid}{14}{subsection.3.1}}
-\newlabel{sec:eta_sat}{{3.1}{14}{Saturated Liquid}{subsection.3.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Normal alkanes}{14}{subsubsection.3.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width.}}{15}{figure.1}}
-\newlabel{fig:Saturation_Ethane}{{1}{15}{Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for propane (\textit  {n}-C$_{3}$), \textit  {n}-butane (\textit  {n}-C$_{4}$), and \textit  {n}-octane (\textit  {n}-C$_{8}$). See caption of Figure \ref  {fig:Saturation_Ethane} for detailed description. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm  liq}^{\rm  sat}$ (see Section \ref  {Discussion/Limitations}).}}{16}{figure.2}}
-\newlabel{fig:Saturation_C3_C4_C8}{{2}{16}{Saturated liquid viscosities for propane (\textit {n}-C$_{3}$), \textit {n}-butane (\textit {n}-C$_{4}$), and \textit {n}-octane (\textit {n}-C$_{8}$). See caption of Figure \ref {fig:Saturation_Ethane} for detailed description. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm liq}^{\rm sat}$ (see Section \ref {Discussion/Limitations})}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane (\textit  {n}-C$_{12}$), \textit  {n}-hexadecane (\textit  {n}-C$_{16}$), and \textit  {n}-docosane (\textit  {n}-C$_{22}$). See caption of Figure \ref  {fig:Saturation_Ethane} for detailed description.}}{17}{figure.3}}
-\newlabel{fig:Saturation_C12_C16_C22}{{3}{17}{Saturated liquid viscosities for \textit {n}-dodecane (\textit {n}-C$_{12}$), \textit {n}-hexadecane (\textit {n}-C$_{16}$), and \textit {n}-docosane (\textit {n}-C$_{22}$). See caption of Figure \ref {fig:Saturation_Ethane} for detailed description}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Branched alkanes}{17}{subsubsection.3.1.2}}
+\citation{Mie}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Branched alkanes}{14}{subsubsection.3.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and experimental data available in TDE. Bottom panel presents percent deviations between simulated $(\eta _{\rm  sim})$ and REFPROP $(\eta _{\rm  REFPROP})$ values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width.}}{15}{figure.1}}
+\newlabel{fig:Saturation_Ethane}{{1}{15}{Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and experimental data available in TDE. Bottom panel presents percent deviations between simulated $(\eta _{\rm sim})$ and REFPROP $(\eta _{\rm REFPROP})$ values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Saturated liquid viscosities for propane (\textit  {n}-C$_{3}$), \textit  {n}-butane (\textit  {n}-C$_{4}$), and \textit  {n}-octane (\textit  {n}-C$_{8}$). See Figure \ref  {fig:Saturation_Ethane} caption for details. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm  liq}^{\rm  sat}$ (see Section \ref  {Discussion/Limitations}).}}{16}{figure.2}}
+\newlabel{fig:Saturation_C3_C4_C8}{{2}{16}{Saturated liquid viscosities for propane (\textit {n}-C$_{3}$), \textit {n}-butane (\textit {n}-C$_{4}$), and \textit {n}-octane (\textit {n}-C$_{8}$). See Figure \ref {fig:Saturation_Ethane} caption for details. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm liq}^{\rm sat}$ (see Section \ref {Discussion/Limitations})}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Saturated liquid viscosities for \textit  {n}-dodecane (\textit  {n}-C$_{12}$), \textit  {n}-hexadecane (\textit  {n}-C$_{16}$), and \textit  {n}-docosane (\textit  {n}-C$_{22}$). See Figure \ref  {fig:Saturation_Ethane} caption for details.}}{17}{figure.3}}
+\newlabel{fig:Saturation_C12_C16_C22}{{3}{17}{Saturated liquid viscosities for \textit {n}-dodecane (\textit {n}-C$_{12}$), \textit {n}-hexadecane (\textit {n}-C$_{16}$), and \textit {n}-docosane (\textit {n}-C$_{22}$). See Figure \ref {fig:Saturation_Ethane} caption for details}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for 2-methylpropane (\textit  {i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit  {i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See Figure \ref  {fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta $.}}{18}{figure.4}}
+\newlabel{fig:Saturation_short_branched}{{4}{18}{Saturated liquid viscosities for 2-methylpropane (\textit {i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit {i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See Figure \ref {fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta $}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpentane (\textit  {i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit  {i}-C$_{8}$). See Figure \ref  {fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta $. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm  liq}^{\rm  sat}$ (see Section \ref  {Discussion/Limitations}).}}{19}{figure.5}}
+\newlabel{fig:Saturation_long_branched}{{5}{19}{Saturated liquid viscosities for 2-methylpentane (\textit {i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit {i}-C$_{8}$). See Figure \ref {fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta $. Filled symbols correspond to simulations performed at the respective force field $\rho _{\rm liq}^{\rm sat}$ (see Section \ref {Discussion/Limitations})}{figure.5}{}}
 \citation{Postdoc_2}
 \citation{Gordon2006}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Compressed liquid}{18}{subsection.3.2}}
-\newlabel{sec:T293highP}{{3.2}{18}{Compressed liquid}{subsection.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Saturated liquid viscosities for 2-methylpropane (\textit  {i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit  {i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See caption of Figure \ref  {fig:Saturation_Ethane} for detailed description. For clarity, values in top panel are shifted by $\Delta \eta $.}}{19}{figure.4}}
-\newlabel{fig:Saturation_short_branched}{{4}{19}{Saturated liquid viscosities for 2-methylpropane (\textit {i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit {i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See caption of Figure \ref {fig:Saturation_Ethane} for detailed description. For clarity, values in top panel are shifted by $\Delta \eta $}{figure.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Saturated liquid viscosities for 2-methylpentane (\textit  {i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit  {i}-C$_{8}$). See caption of Figures \ref  {fig:Saturation_Ethane} and \ref  {fig:Saturation_C3_C4_C8} for detailed descriptions. For clarity, values in top panel are shifted by $\Delta \eta $.}}{20}{figure.5}}
-\newlabel{fig:Saturation_long_branched}{{5}{20}{Saturated liquid viscosities for 2-methylpentane (\textit {i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit {i}-C$_{8}$). See caption of Figures \ref {fig:Saturation_Ethane} and \ref {fig:Saturation_C3_C4_C8} for detailed descriptions. For clarity, values in top panel are shifted by $\Delta \eta $}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Normal alkanes}{21}{subsubsection.3.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta $-$\rho $ and $\eta $-$P$ dependence. Bottom panels present deviations between simulated $(\eta _{\rm  sim})$ and REFPROP $(\eta _{\rm  REFPROP})$ values with respect to $\rho $ and $P$. Dashed lines correspond to REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling.}}{22}{figure.6}}
-\newlabel{fig:T293highP_C3}{{6}{22}{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta $-$\rho $ and $\eta $-$P$ dependence. Bottom panels present deviations between simulated $(\eta _{\rm sim})$ and REFPROP $(\eta _{\rm REFPROP})$ values with respect to $\rho $ and $P$. Dashed lines correspond to REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-butane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{23}{figure.7}}
-\newlabel{fig:T293highP_C4}{{7}{23}{Compressed liquid viscosities at 293 K for \textit {n}-butane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Branched alkanes}{23}{subsubsection.3.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-octane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{24}{figure.8}}
-\newlabel{fig:T293highP_C8}{{8}{24}{Compressed liquid viscosities at 293 K for \textit {n}-octane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion/Limitations}{24}{section.4}}
-\newlabel{Discussion/Limitations}{{4}{24}{Discussion/Limitations}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Liquid structure}{24}{subsection.4.1}}
-\newlabel{sec:RDF}{{4.1}{24}{Liquid structure}{subsection.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylpropane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{25}{figure.9}}
-\newlabel{fig:T293highP_IC4}{{9}{25}{Compressed liquid viscosities at 293 K for 2-methylpropane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylbutane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{25}{figure.10}}
-\newlabel{fig:T293highP_IC5}{{10}{25}{Compressed liquid viscosities at 293 K for 2-methylbutane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressed liquid viscosities at 293 K for 3-methylpentane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{26}{figure.11}}
-\newlabel{fig:T293highP_3MP}{{11}{26}{Compressed liquid viscosities at 293 K for 3-methylpentane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See caption of Figure \ref  {fig:T293highP_C3} for detailed description.}}{26}{figure.12}}
-\newlabel{fig:T293highP_IC8}{{12}{26}{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See caption of Figure \ref {fig:T293highP_C3} for detailed description}{figure.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields.}}{27}{figure.13}}
-\newlabel{fig:RDF_comparison_CH3}{{13}{27}{Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields}{figure.13}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Finite-size effects}{28}{subsection.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Finite-size effects. Simulation results were obtained for propane with the Potoff force field and $N= 100$, $200$, $400$, and $800$. Colors/symbols denote different saturation temperatures. The lines are obtained from a weighted linear fit with respect to $N^{-1/3}$.}}{29}{figure.14}}
-\newlabel{fig:finite_size_effects}{{14}{29}{Finite-size effects. Simulation results were obtained for propane with the Potoff force field and $N= 100$, $200$, $400$, and $800$. Colors/symbols denote different saturation temperatures. The lines are obtained from a weighted linear fit with respect to $N^{-1/3}$}{figure.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Cut-off distance}{29}{subsection.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Compressed liquid}{20}{subsection.3.2}}
+\newlabel{sec:T293highP}{{3.2}{20}{Compressed liquid}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Normal alkanes}{20}{subsubsection.3.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta $-$\rho $ and $\eta $-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta _{\rm  sim})$ and REFPROP $(\eta _{\rm  REFPROP})$ values with respect to $\rho $ and $P$. TDE data for temperatures between 288 and 298 K are depicted. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling.}}{21}{figure.6}}
+\newlabel{fig:T293highP_C3}{{6}{21}{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta $-$\rho $ and $\eta $-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta _{\rm sim})$ and REFPROP $(\eta _{\rm REFPROP})$ values with respect to $\rho $ and $P$. TDE data for temperatures between 288 and 298 K are depicted. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Branched alkanes}{22}{subsubsection.3.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-butane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{23}{figure.7}}
+\newlabel{fig:T293highP_C4}{{7}{23}{Compressed liquid viscosities at 293 K for \textit {n}-butane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion/Limitations}{23}{section.4}}
+\newlabel{Discussion/Limitations}{{4}{23}{Discussion/Limitations}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Liquid structure}{23}{subsection.4.1}}
+\newlabel{sec:RDF}{{4.1}{23}{Liquid structure}{subsection.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Compressed liquid viscosities at 293 K for \textit  {n}-octane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{24}{figure.8}}
+\newlabel{fig:T293highP_C8}{{8}{24}{Compressed liquid viscosities at 293 K for \textit {n}-octane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylpropane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{24}{figure.9}}
+\newlabel{fig:T293highP_IC4}{{9}{24}{Compressed liquid viscosities at 293 K for 2-methylpropane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Compressed liquid viscosities at 293 K for 2-methylbutane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{25}{figure.10}}
+\newlabel{fig:T293highP_IC5}{{10}{25}{Compressed liquid viscosities at 293 K for 2-methylbutane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressed liquid viscosities at 293 K for 3-methylpentane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{25}{figure.11}}
+\newlabel{fig:T293highP_3MP}{{11}{25}{Compressed liquid viscosities at 293 K for 3-methylpentane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See Figure \ref  {fig:T293highP_C3} caption for details.}}{26}{figure.12}}
+\newlabel{fig:T293highP_IC8}{{12}{26}{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See Figure \ref {fig:T293highP_C3} caption for details}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Finite-size effects}{26}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{\rm  CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields.}}{27}{figure.13}}
+\newlabel{fig:RDF_comparison_CH3}{{13}{27}{Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{\rm CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Finite-size effects. Simulation results were obtained for propane with the Potoff force field and $N= 100$, $200$, $400$, and $800$. Colors/symbols denote different saturation temperatures. The lines are obtained from a weighted linear fit with respect to $N^{-1/3}$.}}{28}{figure.14}}
+\newlabel{fig:finite_size_effects}{{14}{28}{Finite-size effects. Simulation results were obtained for propane with the Potoff force field and $N= 100$, $200$, $400$, and $800$. Colors/symbols denote different saturation temperatures. The lines are obtained from a weighted linear fit with respect to $N^{-1/3}$}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Cut-off distance}{28}{subsection.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Impact of cut-off distance. Filled symbols are for \textit  {n}-butane and empty symbols for \textit  {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions.}}{29}{figure.15}}
+\newlabel{fig:cutoff_distance}{{15}{29}{Impact of cut-off distance. Filled symbols are for \textit {n}-butane and empty symbols for \textit {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions}{figure.15}{}}
 \citation{GROMACS_2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Impact of cut-off distance. Filled symbols are for \textit  {n}-butane and empty symbols for \textit  {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions.}}{30}{figure.15}}
-\newlabel{fig:cutoff_distance}{{15}{30}{Impact of cut-off distance. Filled symbols are for \textit {n}-butane and empty symbols for \textit {n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions}{figure.15}{}}
+\citation{Thol_LJTS,Thol2016_LJ}
 \citation{Potoff_branched}
-\citation{Mie,Martin1999,Potoff_branched,TAMie}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}$\rho _{\rm  liq}^{\rm  sat}$}{30}{subsection.4.4}}
+\citation{Martin1999,Mie,Potoff_branched,TAMie}
 \citation{Martin1999}
 \citation{Mie,Potoff_branched,TAMie}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}$\rho _{\rm  liq}^{\rm  sat}$}{31}{subsection.4.4}}
 \citation{Potoff_branched}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{32}{section.5}}
 \newlabel{Conclusions}{{5}{32}{Conclusions}{section.5}{}}
@@ -177,25 +177,29 @@
 \bibcite{Allen1987}{{24}{}{{}}{{}}}
 \bibcite{GROMACS_2018}{{25}{}{{}}{{}}}
 \bibcite{GROMACS_note}{{26}{}{{}}{{}}}
-\bibcite{Zhang2015}{{27}{}{{}}{{}}}
-\bibcite{LEMMON-RP91}{{28}{}{{}}{{}}}
-\bibcite{Ethane2006}{{29}{}{{}}{{}}}
-\bibcite{Vogel2015}{{30}{}{{}}{{}}}
-\bibcite{Propane2009}{{31}{}{{}}{{}}}
-\bibcite{Vogel2016}{{32}{}{{}}{{}}}
-\bibcite{Butane2006}{{33}{}{{}}{{}}}
-\bibcite{Hermann2018}{{34}{}{{}}{{}}}
-\bibcite{Beckmueller2017}{{35}{}{{}}{{}}}
-\bibcite{Huber2004FPE}{{36}{}{{}}{{}}}
-\bibcite{Lemmon2004}{{37}{}{{}}{{}}}
-\bibcite{Huber2004}{{38}{}{{}}{{}}}
-\bibcite{Romeo2018}{{39}{}{{}}{{}}}
-\bibcite{Vesovic2017}{{40}{}{{}}{{}}}
-\bibcite{Huber2018}{{41}{}{{}}{{}}}
-\bibcite{Lemmon2006}{{42}{}{{}}{{}}}
-\bibcite{Vogel2000}{{43}{}{{}}{{}}}
-\bibcite{Gao2017}{{44}{}{{}}{{}}}
-\bibcite{Blackham2017}{{45}{}{{}}{{}}}
-\bibcite{TDE}{{46}{}{{}}{{}}}
-\bibcite{Postdoc_2}{{47}{}{{}}{{}}}
+\bibcite{NIST_SRSW}{{27}{}{{}}{{}}}
+\bibcite{Kioupis2000}{{28}{}{{}}{{}}}
+\bibcite{Zhang2015}{{29}{}{{}}{{}}}
+\bibcite{LEMMON-RP91}{{30}{}{{}}{{}}}
+\bibcite{Ethane2006}{{31}{}{{}}{{}}}
+\bibcite{Vogel2015}{{32}{}{{}}{{}}}
+\bibcite{Propane2009}{{33}{}{{}}{{}}}
+\bibcite{Vogel2016}{{34}{}{{}}{{}}}
+\bibcite{Butane2006}{{35}{}{{}}{{}}}
+\bibcite{Hermann2018}{{36}{}{{}}{{}}}
+\bibcite{Beckmueller2017}{{37}{}{{}}{{}}}
+\bibcite{Huber2004FPE}{{38}{}{{}}{{}}}
+\bibcite{Lemmon2004}{{39}{}{{}}{{}}}
+\bibcite{Huber2004}{{40}{}{{}}{{}}}
+\bibcite{Romeo2018}{{41}{}{{}}{{}}}
+\bibcite{Vesovic2017}{{42}{}{{}}{{}}}
+\bibcite{Huber2018}{{43}{}{{}}{{}}}
+\bibcite{Lemmon2006}{{44}{}{{}}{{}}}
+\bibcite{Vogel2000}{{45}{}{{}}{{}}}
+\bibcite{Gao2017}{{46}{}{{}}{{}}}
+\bibcite{Blackham2017}{{47}{}{{}}{{}}}
+\bibcite{TDE}{{48}{}{{}}{{}}}
+\bibcite{Postdoc_2}{{49}{}{{}}{{}}}
+\bibcite{Thol_LJTS}{{50}{}{{}}{{}}}
+\bibcite{Thol2016_LJ}{{51}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

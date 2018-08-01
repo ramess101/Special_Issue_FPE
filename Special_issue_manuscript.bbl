@@ -2,7 +2,7 @@
 
 \bibitem{PGL}
 B.E. Poling, J.M. Prausnitz, and J.P. O'Connell.
-\newblock {\em {The Properties of Gases and Liquids, 5 ed.}}
+\newblock {\em {The Properties of Gases and Liquids, 5th ed.}}
 \newblock McGraw-Hill Companies, Inc., 2001.
 \newblock Chapter 9.
 
@@ -15,13 +15,13 @@ B.E. Poling, J.M. Prausnitz, and J.P. O'Connell.
 \bibitem{Lee2017}
 Seongmin Lee, Kiho Park, Yunkyung Kwon, Tae-Yun Park, and Dae~Ryook Yang.
 \newblock A modified scaled variable reduced coordinate ({SVRC})-quantitative
-  structure property relationship (qspr) model for predicting liquid viscosity
-  of pure organic compounds.
-\newblock {\em Korean Journal of Chemical Engineering}, 34(10):2715--2724, Oct
+  structure property relationship ({QSPR}) model for predicting liquid
+  viscosity of pure organic compounds.
+\newblock {\em Korean Journal of Chemical Engineering}, 34(10):2715--2724,
   2017.
 
 \bibitem{Lotgering2015}
-Oliver L{\:o}tgering-Lin and Joachim Gross.
+Oliver L{\"o}tgering-Lin and Joachim Gross.
 \newblock Group contribution method for viscosities based on entropy scaling
   using the perturbed-chain polar statistical associating fluid theory.
 \newblock {\em Industrial \& Engineering Chemistry Research},
@@ -30,21 +30,21 @@ Oliver L{\:o}tgering-Lin and Joachim Gross.
 \bibitem{Maginn2018}
 Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   J.~Richard Elliott.
-\newblock Best practices for computing transport properties 1. self-diffusivity
-  and viscosity from equilibrium molecular dynamics v1.
+\newblock Best practices for computing transport properties 1.
+  {S}elf-diffusivity and viscosity from equilibrium molecular dynamics v1.
 \newblock {\em Living Journal of Computational Molecular Science}, Pending
   publication, 2018.
 
 \bibitem{Nieto2006}
 Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
-  for n-alkanes: Improvement of transport properties.
+  for \textit{n}-alkanes: Improvement of transport properties.
 \newblock {\em The Journal of Chemical Physics}, 125(4):044517, 2006.
 
 \bibitem{Bernard2009}
 Damien~A. Bernard-Brunel and Jeffrey~J. Potoff.
 \newblock Effect of torsional potential on the predicted phase behavior of
-  n-alkanes.
+  \textit{n}-alkanes.
 \newblock {\em Fluid Phase Equilibria}, 279(2):100 -- 104, 2009.
 
 \bibitem{Allen1997}
@@ -57,12 +57,12 @@ William Allen and Richard~L. Rowley.
 Rajdeep~Singh Payal, S.~Balasubramanian, Indranil Rudra, Kunj Tandon, Ingo
   Mahlke, David Doyle, and Roger Cracknell.
 \newblock Shear viscosity of linear alkanes through molecular simulations:
-  quantitative tests for n-decane and n-hexadecane.
+  quantitative tests for \textit{n}-decane and \textit{n}-hexadecane.
 \newblock {\em Molecular Simulation}, 38(14-15):1234--1241, 2012.
 
 \bibitem{Mondello1997}
 Maurizio Mondello and Gary~S. Grest.
-\newblock Viscosity calculations of n-alkanes by equilibrium molecular
+\newblock Viscosity calculations of \textit{n}-alkanes by equilibrium molecular
   dynamics.
 \newblock {\em The Journal of Chemical Physics}, 106(22):9327--9336, 1997.
 
@@ -70,7 +70,6 @@ Maurizio Mondello and Gary~S. Grest.
 Molecular simulation of the thermophysical properties of fluids: From
   understanding toward quantitative predictions.
 \newblock {\em Journal of Molecular Liquids}, 134(1):71 -- 89, 2007.
-\newblock EMLG/JMLG 2005 Special Issue.
 
 \bibitem{Gordon2006}
 Peter~A. Gordon.
@@ -81,7 +80,7 @@ Peter~A. Gordon.
 \bibitem{Hoang2017}
 Hai Hoang, St{\'e}phanie Delage-Santacreu, and Guillaume Galliero.
 \newblock Simultaneous description of equilibrium, interfacial, and transport
-  properties of fluids using a mie chain coarse-grained force field.
+  properties of fluids using a {Mie} chain coarse-grained force field.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   56(32):9213--9226, 2017.
 
@@ -94,7 +93,7 @@ Carmelo Herdes, Tim~S. Totton, and Erich~A. M{\"u}ller.
 \bibitem{TraPPE}
 M.~G. Martin and J.~I. Siepmann.
 \newblock Transferable potentials for phase equilibria. 1. {United-atom}
-  description of n-alkanes.
+  description of \textit{n}-alkanes.
 \newblock {\em The Journal of Physical Chemistry B}, 102(14):2569--2577, 1998.
 
 \bibitem{Martin1999}
@@ -120,7 +119,7 @@ J.~J. Potoff and D.~A. Bernard-Brunel.
 \bibitem{Potoff_branched}
 Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Loren Schwiebert, and
   Jeffrey~J. Potoff.
-\newblock Optimized mie potentials for phase equilibria: Application to
+\newblock Optimized {Mie} potentials for phase equilibria: Application to
   branched alkanes.
 \newblock {\em Journal of Chemical \& Engineering Data}, 62(6):1806--1818,
   2017.
@@ -129,7 +128,7 @@ Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Loren Schwiebert, and
 Philippe Ungerer, Christele Beauvais, Jerome Delhommelle, Anne Boutin, Bernard
   Rousseau, and Alain~H. Fuchs.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
-  for n-alkanes.
+  for \textit{n}-alkanes.
 \newblock {\em The Journal of Chemical Physics}, 112(12):5499--5510, 2000.
 
 \bibitem{Nieto2008}
@@ -144,13 +143,14 @@ Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
 \bibitem{TAMie}
 Andrea Hemmen and Joachim Gross.
 \newblock Transferable anisotropic united-atom force field based on the {Mie}
-  potential for phase equilibrium calculations: n-alkanes and n-olefins.
+  potential for phase equilibrium calculations: \textit{n}-alkanes and
+  \textit{n}-olefins.
 \newblock {\em The Journal of Physical Chemistry B}, 119(35):11695--11707,
   2015.
 
 \bibitem{Weidler2016}
 Dominik Weidler and Joachim Gross.
-\newblock Transferable anisotropic united-atom force field based on the mie
+\newblock Transferable anisotropic united-atom force field based on the {Mie}
   potential for phase equilibria: Aldehydes, ketones, and small cyclic alkanes.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   55(46):12123--12132, 2016.
@@ -164,7 +164,7 @@ M.~P. Allen and D.~J. Tildesley.
 \bibitem{GROMACS_2018}
 M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
-\newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}, 2018.
+\newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}.
 
 \bibitem{GROMACS_note}
 GROMACS non-bonded tail corrections assume that the long-range contribution
@@ -175,6 +175,19 @@ GROMACS non-bonded tail corrections assume that the long-range contribution
   straightforward to include the $r^{-\lambda}$ contribution, we did not
   attempt to modify the GROMACS default tail correction values.
 
+\bibitem{NIST_SRSW}
+Vince~K. Shen, Daniel~W. Siderius, William~P. Krekelberg, and Harold~W. Hatch.
+\newblock {NIST} standard reference simulation website, {NIST} standard
+  reference database number 173.
+\newblock {\em National Institute of Standards and Technology}, Gaithersburg
+  MD, 20899.
+
+\bibitem{Kioupis2000}
+Loukas~I. Kioupis and Edward~J. Maginn.
+\newblock Impact of molecular architecture on the high-pressure rheology of
+  hydrocarbon fluids.
+\newblock {\em The Journal of Physical Chemistry B}, 104(32):7774--7783, 2000.
+
 \bibitem{Zhang2015}
 Yong Zhang, Akihito Otani, and Edward~J. Maginn.
 \newblock Reliable viscosity calculation from equilibrium molecular dynamics
@@ -184,7 +197,7 @@ Yong Zhang, Akihito Otani, and Edward~J. Maginn.
 
 \bibitem{LEMMON-RP91}
 E.~W. Lemmon, M.~L. Huber, and M.~O. McLinden.
-\newblock {NIST Standard Reference Database 23: Reference Fluid Thermodynamic
+\newblock {{NIST} Standard Reference Database 23: Reference Fluid Thermodynamic
   and Transport Properties-REFPROP, Version 9.1, National Institute of
   Standards and Technology}, 2013.
 
@@ -219,7 +232,7 @@ Eckhard Vogel and Sebastian Herrmann.
 \bibitem{Butane2006}
 D.~B{\"u}cker and W.~Wagner.
 \newblock Reference equations of state for the thermodynamic properties of
-  fluid phase n-butane and isobutane.
+  fluid phase \textit{n}-butane and isobutane.
 \newblock {\em Journal of Physical and Chemical Reference Data},
   35(2):929--1019, 2006.
 
@@ -231,14 +244,14 @@ Sebastian Herrmann and Eckhard Vogel.
 
 \bibitem{Beckmueller2017}
 R.~Beckmueller, M.~Thol, and R.~Span.
-\newblock Fundamental equation of state for n-octane.
+\newblock Fundamental equation of state for \textit{n}-octane.
 \newblock {\em International Journal of Thermophysics}, Pending publication,
   2018.
 
 \bibitem{Huber2004FPE}
 Marcia~L. Huber, Arno Laesecke, and Hong~Wei Xiang.
 \newblock Viscosity correlations for minor constituent fluids in natural gas:
-  n-octane, n-nonane and n-decane.
+  \textit{n}-octane, \textit{n}-nonane and \textit{n}-decane.
 \newblock {\em Fluid Phase Equilibria}, 224(2):263 -- 270, 2004.
 
 \bibitem{Lemmon2004}
@@ -262,8 +275,8 @@ Private communication to M. Huber from V. Vesovic, Oct. 2017.
 \bibitem{Huber2018}
 M.L. Huber.
 \newblock Models for the viscosity, thermal conductivity, and surface tension
-  of selected pure fluids as implemented in refprop v10.0.
-\newblock {\em NISTIR 8209}, Pending publication, 2018.
+  of selected pure fluids as implemented in {REFPROP} v10.0.
+\newblock {\em {NISTIR} 8209}, Pending publication, 2018.
 
 \bibitem{Lemmon2006}
 Eric~W. Lemmon and Roland Span.
@@ -273,9 +286,8 @@ Eric~W. Lemmon and Roland Span.
 \bibitem{Vogel2000}
 E.~Vogel, C.~K{\"u}chenmeister, and E.~Bich.
 \newblock Viscosity correlation for isobutane over wide ranges of the fluid
-  region1.
-\newblock {\em International Journal of Thermophysics}, 21(2):343--356, Mar
-  2000.
+  region.
+\newblock {\em International Journal of Thermophysics}, 21(2):343--356, 2000.
 
 \bibitem{Gao2017}
 K.~Gao, J.~Wu, and E.W. Lemmon.
@@ -299,7 +311,20 @@ Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
 \bibitem{Postdoc_2}
 Richard~A. Messerly, Michael~R. Shirts, and Andrei~F. Kazakov.
 \newblock Uncertainty quantification confirms unreliable extrapolation toward
-  high pressures for united-atom mie $\lambda$-6 force field.
+  high pressures for united-atom {Mie} $\lambda$-6 force field.
 \newblock {\em Journal of Chemical Physics}, Pending publication, 2018.
+
+\bibitem{Thol_LJTS}
+Monika Thol, G{\'a}bor Rutkai, Roland Span, Jadran Vrabec, and Rolf Lustig.
+\newblock Equation of state for the {Lennard-Jones} truncated and shifted model
+  fluid.
+\newblock {\em International Journal of Thermophysics}, 36(1):25--43, 2015.
+
+\bibitem{Thol2016_LJ}
+Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Rolf Lustig, Roland Span,
+  and Jadran Vrabec.
+\newblock Equation of state for the {Lennard-Jones} fluid.
+\newblock {\em Journal of Physical and Chemical Reference Data}, 45(2):023101,
+  2016.
 
 \end{thebibliography}

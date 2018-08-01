@@ -237,11 +237,13 @@
 			
 %			While many common force fields are developed based on liquid density and heat of vaporization at room temperature, several more recent force fields have taken into account saturated vapor pressure and saturated liquid density over substantial portions of the vapor-liquid coexistence curve for multiple compounds simultaneously, enhancing transferability. 
 
-			Over the past decade, the Mie $\lambda$-6 (generalized Lennard-Jones) potential has grown in popularity due to its improved accuracy for predicting vapor-liquid coexistence compared to the traditional Lennard-Jones 12-6. This manuscript explores the hypothesis that greater accuracy in characterizing the coexistence properties may lead to greater accuracy for viscosity predictions. Four united atom force fields are considered in detail: the TraPPE-UA model of Siepmann and coworkers, the TAMie model of Gross and coworkers, the AUA4 model of Ungerer and coworkers, and the model of Potoff and coworkers. Equilibrium molecular dynamics simulations are analyzed using the Green-Kubo method for viscosity characterization. Simulations are performed for linear alkanes with two to twenty-two carbons and branched alkanes with four to nine carbons. Simulation conditions follow the saturated liquid from reduced temperatures of 0.5 to 0.85 and along the 293 K isotherm in the dense liquid region. 
+			Over the past decade, the Mie $\lambda$-6 (generalized Lennard-Jones) potential has grown in popularity due to its improved accuracy for predicting vapor-liquid coexistence densities and pressure compared to the traditional Lennard-Jones 12-6 potential. This manuscript explores the hypothesis that greater accuracy in characterizing the coexistence properties may lead to greater accuracy for viscosity predictions. Four united-atom force fields are considered in detail: the Transferable Potential for Phase Equilibria (TraPPE-UA) model of Siepmann and coworkers, the Transferable Anisotropic Mie (TAMie) model of Gross and coworkers, the fourth generation anisotropic-united-atom (AUA4) model of Ungerer and coworkers, and the model of Potoff and coworkers. 
 			
-			In general, the more accurate force fields for coexistence properties do indeed predict viscosity more accurately. For saturated liquids, both the Potoff and TAMie models provide roughly 10 \% accuracy for linear alkanes, while deviations are closer to 20 to 50 \% for TraPPE-UA. For branched alkanes, the behavior is more complicated but Potoff still provides roughly 15 to 20 \% accuracy, while the TAMie force field results in deviations of 20 to 40 \%, and TraPPE-UA has deviations of approximately 25 to 60 \%. The AUA4 deviations are 10 to 20 \% for ethane and 30 to 60 \% for 2,2-dimethylpropane, the only compounds tested with the AUA4 force field. The TraPPE-2 deviations for ethane are similar to those using the original TraPPE force field, namely, between 10 and 20 \%. The percent deviations for each compound and force field tend to increase with decreasing temperature, with the exception of the Potoff deviations for propane, which are nearly constant to the triple point temperature. 
+			Equilibrium molecular dynamics simulations are analyzed using the Green-Kubo method for viscosity characterization. Simulations are performed for linear alkanes with two to twenty-two carbons and branched alkanes with four to nine carbons. Simulation conditions follow the saturated liquid from reduced temperatures of 0.5 to 0.85 and along the 293 K isotherm in the dense liquid region. 
 			
-			For compressed liquids, the Mie-based potential models perform better once again than the Lennard-Jones-based force fields, but tend to overestimate the viscosity at very high densities. As the Potoff and TAMie models also tend to overestimate the pressure at high densities, a fortuitous cancellation of errors leads to predictions of viscosity with respect to pressure that are accurate to within about 10 \%. Experimental viscosity data tend to be sparse above 200 MPa for normal and branched alkanes, however, accurate predictions are obtained for propane to 1000 MPa with the Potoff force field. 
+			In general, the more accurate force fields for coexistence properties do indeed predict viscosity more accurately. For saturated liquids, both Mie-based potential models (Potoff and TAMie) provide roughly 10 \% accuracy for linear alkanes, while deviations are closer to 20 to 50 \% for TraPPE-UA. For branched alkanes, the performance is slightly diminished but Potoff still provides roughly 15 to 20 \% accuracy, while the TAMie force field results in deviations of 20 to 40 \%, and TraPPE-UA has deviations of approximately 25 to 60 \%. The AUA4 deviations are 10 to 20 \% for ethane and 30 to 60 \% for 2,2-dimethylpropane, the only compounds tested with the AUA4 force field. The TraPPE-2 deviations for ethane are similar to those using the original TraPPE force field, namely, between 10 and 20 \%. The percent deviations for each compound and force field tend to increase with decreasing temperature, with the exception of the Potoff deviations for propane, which are nearly constant to the triple point temperature. 
+			
+			For compressed liquids, the Mie-based potential models perform better once again than the Lennard-Jones-based force fields, but tend to overestimate the viscosity at very high densities. As the Potoff and TAMie models also tend to overestimate the pressure at high densities, a fortuitous cancellation of errors leads to predictions of viscosity with respect to pressure that are accurate to within about 10 \%. The comparison with experimental viscosity data is limited to pressures below 200 MPa for most normal and branched alkanes. However, accurate predictions are obtained for propane near 1000 MPa with the Potoff force field. 
 			
 			%Uncertainties increase substantially for simulations at high pressures and/or low reduced temperatures. 
 			
@@ -259,7 +261,7 @@
 			%% MSC codes here, in the form: \MSC code \sep code
 			%% or \MSC[2008] code \sep code (2000 is the default)
 			
-			Thermophysical Properties \sep Molecular Simulation \sep Force fields \sep Molecular dynamics \sep Green-Kubo
+			Thermophysical Properties \sep Molecular Simulation \sep Force Fields \sep Molecular Dynamics \sep Green-Kubo
 			
 		\end{keyword}
 		
@@ -284,7 +286,7 @@
 	
 	\section{Introduction}
 	
-	The design of efficient and reliable technical processes requires accurate estimates of thermophysical properties. Shear viscosity $(\eta)$ is an important property for characterizing flow, e.g., sizing pumps, assessing flow assurance in fossil fuel recovery, and lubricating bearings in tribological applications. There are primarily three different means by which shear viscosity estimates are obtained: experimental measurement, semi-empirical prediction models, and molecular simulation (molecular dynamics, MD). Significant limitations exist for each of these methods. 
+	The design of efficient and reliable technical processes requires accurate estimates of thermophysical properties. Shear viscosity $(\eta)$ is an important property for characterizing flow, e.g., sizing pumps, assessing flow assurance in fossil fuel recovery, and lubricating bearings in tribological applications. There are primarily three different means by which shear viscosity values are obtained: experimental measurement, semi-empirical prediction models, and molecular simulation (molecular dynamics, MD). Significant limitations exist for each of these methods. 
 	
 	For example, experimental measurements can be expensive, time-consuming, and challenging at extreme temperatures $(T)$ and pressures $(P)$. Experimental data tend to be distributed among several prototypes of linear, branched, ring, and polar molecules, with many gaps among a homologous series. Most experimental data are available below 200 MPa, while tribological applications may require estimates at pressures as high as 1000 MPa. Flow assurance applications are generally at pressures below 200 MPa, but at temperatures of 423 to 523 K. These ever expanding conditions of interest and economic constraints on new measurements foster increased research in predictive methods.
 	
@@ -312,7 +314,7 @@
 	
 %	Unfortunately, the range of available (and reliable) experimental viscosity data does not cover the entire range of $P \rho T$ of interest. 
 	
-	As an alternative to experiment and semi-empirical prediction models, molecular simulation is an attractive means for estimating viscosity. However, there are two fundamental challenges impeding the use of molecular simulation as a mainstream chemical engineering tool for viscosity prediction. The first challenge is that obtaining reproducible results is more difficult for transport properties, such as viscosity, than for static properties. Recently, a ``Best Practices Guide'' was developed to address this challenge, namely, to improve reproducibility of viscosity estimates \cite{Maginn2018}. In this study, we apply these ``Best Practices'' and address some outstanding issues mentioned therein.
+	As an alternative to experiment and semi-empirical prediction models, molecular simulation is an attractive means for estimating viscosity. However, there are two fundamental challenges impeding the use of molecular simulation as a mainstream chemical engineering tool for viscosity prediction. The first challenge is that obtaining reproducible results is more difficult for transport properties, such as viscosity, than for thermodynamic properties. Recently, a ``Best Practices Guide'' was developed to address this challenge, namely, to improve reproducibility of viscosity estimates \cite{Maginn2018}. In this study, we apply these ``Best Practices'' and address some outstanding issues mentioned therein.
 	
 	The second challenging aspect of obtaining accurate simulation estimates is that viscosity is extremely sensitive to the force field. In addition to the strong dependence on the non-bonded interactions, the bonded potential plays a much greater role for viscosity than for thermodynamic properties. For example, varying the torsional potential has a significant impact on viscosity \cite{Nieto2006}, while vapor-liquid coexistence is relatively unaffected \cite{Bernard2009}. Therefore, the ability to predict viscosities with molecular simulation requires both robust methods and adequate force fields. 
 	
@@ -328,7 +330,7 @@
 	 
 %	 We investigate the accuracy of united-atom (UA) Mie $\lambda$-6 force fields, a popular class designed for the engineering purpose of predicting thermophysical properties. Specifically, the force fields we compare are the Transferable Potential for Phase Equilibria (TraPPE-UA and TraPPE-UA2), Transferable Anisotropic Mie (TAMie), Potoff, and fourth generation anisotropic-united-atom (AUA4). The suitability of these force fields for quantitative viscosity prediction has been widely debated in the literature.
 	 
-	 We investigate the accuracy of four force fields, namely, Transferable Potential for Phase Equilibria (TraPPE-UA and TraPPE-UA2), Transferable Anisotropic Mie (TAMie), Potoff, and fourth generation anisotropic-united-atom (AUA4). Each force field is a variation of the united-atom (UA) Mie $\lambda$-6 model, a popular class designed for the engineering purpose of predicting thermophysical properties. However, the suitability of these force fields for quantitative viscosity prediction, especially at high pressures, has been widely debated in the literature.
+	 We investigate the accuracy of four force fields, namely, Transferable Potential for Phase Equilibria (TraPPE-UA, also referred to simply as TraPPE), Transferable Anisotropic Mie (TAMie), Potoff, and fourth generation anisotropic-united-atom (AUA4). Each force field is a variation of the united-atom (UA) Mie $\lambda$-6 (generalized Lennard-Jones) model, a popular class designed for the engineering purpose of predicting thermophysical properties. However, the suitability of these force fields for quantitative viscosity prediction, especially at high pressures, has been widely debated in the literature.
 	 
 %	 Recently, it was shown that the Mie 14-6 and 16-6 potentials of TAMie and Potoff, respectively, are overly repulsive at high densities/pressures.
 	
@@ -340,7 +342,7 @@
 	
 	%Some studies have suggested that united-atom models are not capable of accurately reproducing viscosity and, therefore, anisotropic-united-atom or all-atom models are needed \cite{Allen1997,Payal2012,Mondello1997}.
 	
-	For example, depending on the compound structure and state conditions, some studies suggest that united-atom Lennard-Jones 12-6 models are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. Considering the significant increase in computational cost of AA simulations, two promising alternatives have been investigated, namely, Mie $\lambda$-6 and/or modified torsional potentials. The UA Mie $\lambda$-6 has been shown to accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant deprecation of other vapor-liquid saturation properties \cite{Gordon2006}, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Nieto-Draghi et al. demonstrate significant improvement in viscosity prediction by modifying the torsional potential \cite{Nieto2006}.  
+	For example, depending on the compound structure and state conditions, some studies suggest that united-atom Lennard-Jones 12-6 models (e.g., TraPPE) are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. Considering the significant increase in computational cost of AA simulations, two promising alternatives have been investigated, namely, Mie $\lambda$-6 and/or modified torsional potentials. The UA Mie $\lambda$-6 has been shown to accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant deprecation of other vapor-liquid saturation properties \cite{Gordon2006}, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Nieto-Draghi et al. demonstrate significant improvement in viscosity prediction by modifying the torsional potential \cite{Nieto2006}.  
 	
 %For example, some studies suggest that, depending on the compound structure and state conditions, united-atom models are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. However, these studies focused primarily on UA Lennard-Jones (LJ) 12-6 force fields. Reference \citenum{Gordon2006} provides evidence that the UA Mie $\lambda$-6 potential can accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant deprecation of other vapor-liquid saturation properties, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Reference \citenum{Nieto2006} demonstrated significant improvement in viscosity prediction by modifying the AUA4 torsional potential (AUA4m). Considering the significant increase in computational cost of AA simulations, Mie $\lambda$-6 and/or modified torsional potentials are a desirable alternative to AA force fields. 
 	
@@ -386,7 +388,7 @@
 	
 	\subsection{Force field} \label{Force Field}
 	
-	A united-atom (UA) or anisotropic-united-atom (AUA) representation is used for each compound studied, i.e., normal and branched alkanes are represented with CH$_3$, CH$_2$, CH, and C sites. UA models assume that the UA interaction site is that of the carbon atom, while AUA models assume that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Note that TraPPE and Potoff are UA force fields while TraPPE-2, AUA4, and TAMie are AUA force fields. 
+	A united-atom (UA) or anisotropic-united-atom (AUA) representation is used for each compound studied, i.e., normal and branched alkanes are represented with CH$_3$, CH$_2$, CH, and C sites. UA models assume that the UA interaction site is that of the carbon atom, while AUA models assume that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Note that TraPPE and Potoff are UA force fields while TraPPE-2 (a recent improvement of TraPPE for ethane and ethylene), AUA4, and TAMie are AUA force fields. 
 	
 %	The UA and AUA groups required for normal and branched alkanes are sp$^3$ hybridized CH$_3$, CH$_2$, CH, and C sites. For most literature models, a single (transferable) parameter set is assigned for each interaction site. However, two exceptions exist for the force fields studied. First, TAMie implements a different set of CH$_3$ parameters for ethane. Second, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The Potoff ``generalized'' CH and C parameter set is an attempt at a completely transferable set. However, since the ``generalized'' parameters performed poorly for some compounds, the S/L parameter set was proposed, where the ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively. 
 	
@@ -437,11 +439,8 @@
 	\begin{equation}
 	u^{\rm bend} = \frac{k_\theta}{2} \left(\theta-\theta_0\right)^2
 	\end{equation}
-	where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle (see Table \ref{tab:angles}), and $k_\theta$ is the harmonic force constant which is equal to 62500 K/rad$^2$ for all bonding angles. Dihedral torsional interactions are determined using a cosine series:
-	\begin{equation}
-	u^{\rm tors} = c_0 + c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
-	\end{equation}
-	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants listed in Table \ref{tab:torsions}. 
+	where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle (see Table \ref{tab:angles}), and $k_\theta$ is the harmonic force constant which is equal to 62500 K/rad$^2$ for all bonding angles. 
+	 
 	\begin{table}[h!]
 		\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0 and 3.} \label{tab:angles}
 		\begin{center}
@@ -455,6 +454,12 @@
 			\end{tabular}
 		\end{center} 
 	\end{table}
+	
+	Dihedral torsional interactions are determined using a cosine series:
+	\begin{equation}
+	u^{\rm tors} = c_0 + c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
+	\end{equation}
+	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants listed in Table \ref{tab:torsions}.
 	
 	\begin{table}[h!]
 		\caption{Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0 and 3.} \label{tab:torsions}
@@ -499,11 +504,11 @@
 		\end{center} 
 	\end{table}
 
-    Note that TAMie implements an ethane-specific set of CH$_3$ parameters, and TraPPE has recently developed an improved TraPPE-2 model for ethane. Also, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively. Due to their superior accuracy, we only provide results for the Potoff S/L parameter set.
+    Note that TAMie implements an ethane-specific set of CH$_3$ parameters. TraPPE and TraPPE-2 are both considered in this study for ethane. Also, Potoff reports a ``generalized'' and ``short/long'' (S/L) CH and C parameter set. The ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively. Due to their superior accuracy, we only provide results for the Potoff S/L parameter set.
     
     %The Potoff ``generalized'' CH and C parameter set is an attempt at a completely transferable set. However, since the ``generalized'' parameters performed poorly for some compounds, the S/L parameter set was proposed, where the ``short'' and ``long'' parameters are implemented when the number of carbons in the backbone is $\le 4$ and $> 4$, respectively.
 	
-	Non-bonded parameters between two different site types (i.e., cross-interactions) are determined using Lorentz-Berthelot combining rules \cite{Allen1987} for $\epsilon$ and $\sigma$, respectively, and an arithmetic mean for the repulsive exponent $\lambda$ (as recommended in Reference \citenum{Mie}):
+	Non-bonded parameters between two different site types (i.e., cross-interactions) are determined using Lorentz-Berthelot combining rules \cite{Allen1987} for $\epsilon$ and $\sigma$ and an arithmetic mean for the repulsive exponent $\lambda$ (as recommended in Reference \citenum{Mie}):
 	\begin{equation} \label{eq:Lorentz-Berthelot_eps}
 	\epsilon_{ij} = \sqrt{\epsilon_{ii} \epsilon_{jj}}
 	\end{equation}
@@ -546,7 +551,9 @@
 	
 	%In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
 	
-	Simulation specifications are provided in Tables \ref{tab:sim_specs} and \ref{tab:thermostats_barostats}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). Analytical tail corrections are applied in all cases \cite{GROMACS_note}. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. Section \ref{Discussion/Limitations} provides a detailed analysis for the number of molecules and cut-off lengths. Validation results for the production times, 2 fs time-step, and constrained bonds are provided in Sections \ref{SI:Simulation time}, \ref{Validation Runs}, and \ref{fixed flexible} of Supporting Information, respectively.
+	Simulation specifications are provided in Table \ref{tab:sim_specs}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}). Analytical tail corrections are applied in all cases \cite{GROMACS_note}. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 2,2,4-trimethylpentane at elevated pressures. Section \ref{Discussion/Limitations} provides a detailed analysis for the number of molecules and cut-off lengths. Sections \ref{SI:Simulation time} and \ref{fixed flexible} of Supporting Information investigate, respectively, the sensitivity of our results to the production time and constrained bonds. To validate our methods, a comparison with other reference simulation values \cite{NIST_SRSW,Kioupis2000,Nieto2006} is provided in Section \ref{Validation Runs} of Supporting Information. 
+
+%	Validation results for the production times, 2 fs time-step, and constrained bonds are provided in Sections \ref{SI:Simulation time}, \ref{Validation Runs}, and \ref{fixed flexible} of Supporting Information, respectively.
 	 
 	\begin{table}[htb!]
 		\caption{General simulation specifications.} \label{tab:sim_specs}
@@ -566,22 +573,22 @@
 		\end{center}
 	\end{table}
 	
-	\begin{table}[h!]
-		\caption{Integrator, thermostat and barostat specifications.} \label{tab:thermostats_barostats}
-		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|}
-				\hline
-				& $NPT$ Equil. & $NPT$ Prod. & $NVT$ Equil. & $NVT$ Prod. \\ \hline
-				Integrator & Velocity Verlet & Leap frog & Velocity Verlet & Velocity Verlet \\ \hline 
-				Thermostat & Velocity rescale & Nos{\'e}-Hoover & Nos{\'e}-Hoover & Nos{\'e}-Hoover \\ \hline 
-				Thermostat time-constant (ps) & 1.0 & 1.0 & 1.0 & 1.0 \\ \hline
-				Barostat & Berendsen & Parrinello-Rahman & N/A & N/A \\ \hline
-				Barostat time-constant (ps) & 1.0 & 5.0 & N/A & N/A \\ \hline
-				Barostat compressibility & 4.5e-5 & 4.5e-5 & N/A & N/A \\
-				\hline
-			\end{tabular}
-		\end{center} 
-	\end{table}
+%	\begin{table}[h!]
+%		\caption{Integrator, thermostat and barostat specifications.} \label{tab:thermostats_barostats}
+%		\begin{center}
+%			\begin{tabular}{|c|c|c|c|c|}
+%				\hline
+%				& $NPT$ Equil. & $NPT$ Prod. & $NVT$ Equil. & $NVT$ Prod. \\ \hline
+%				Integrator & Velocity Verlet & Leap frog & Velocity Verlet & Velocity Verlet \\ \hline 
+%				Thermostat & Velocity rescale & Nos{\'e}-Hoover & Nos{\'e}-Hoover & Nos{\'e}-Hoover \\ \hline 
+%				Thermostat time-constant (ps) & 1.0 & 1.0 & 1.0 & 1.0 \\ \hline
+%				Barostat & Berendsen & Parrinello-Rahman & N/A & N/A \\ \hline
+%				Barostat time-constant (ps) & 1.0 & 5.0 & N/A & N/A \\ \hline
+%				Barostat compressibility & 4.5e-5 & 4.5e-5 & N/A & N/A \\
+%				\hline
+%			\end{tabular}
+%		\end{center} 
+%	\end{table}
 	
 	%Also, notice that the production time depends on the system, i.e., the compound and state point, where larger compounds, lower temperatures, and higher densities necessitate longer simulations.
 	
@@ -621,7 +628,7 @@
 
 %	When $\eta$ is desired at a prescribed $T$ and $\rho$, three simulation stages are required: energy minimization, $NVT$ equilibration, and $NVT$ production. When $\eta$ is desired at a prescribed $T$ and $P$, five simulation stages are required: energy minimization, $NPT$ equilibration, $NPT$ production, $NVT$ equilibration, and $NVT$ production. Note that, according to ``Best Practices'', the final production stage simulations are always performed using the $NVT$ ensemble. 
 	
-	When $\eta$ is desired at a prescribed $T$ and $P$, five simulation stages are required: energy minimization, $NPT$ equilibration, $NPT$ production, $NVT$ equilibration, and $NVT$ production. When $\eta$ is desired at a prescribed $T$ and $\rho$, the $NPT$ stages are unnecessary and only three simulation stages are required: energy minimization, $NVT$ equilibration, and $NVT$ production. Note that, according to ``Best Practices'', the final production stage simulations are always performed using the $NVT$ ensemble. 
+	When $\eta$ is desired at a prescribed $T$ and $P$, five simulation stages are required: energy minimization, $NPT$ equilibration, $NPT$ production, $NVT$ equilibration, and $NVT$ production. When $\eta$ is desired at a prescribed $T$ and $\rho$, the $NPT$ stages are unnecessary and only three simulation stages are required: energy minimization, $NVT$ equilibration, and $NVT$ production. Note that, according to ``Best Practices'', the final production stage simulations are always performed using the $NVT$ ensemble. Details regarding the thermostats and barostats employed are provided in Section \ref{Additional simulation details} of Supporting Information.
 	
 	As recommended by ``Best Practices,'' we utilize 30 to 60 independent replicates to improve the precision and to provide more rigorous estimates of uncertainty. To ensure independence between replicates, the entire series of simulation stages are repeated for each replicate. 
 	
@@ -675,7 +682,7 @@
 	\end{equation} 
 	where $t$ is time, $V$ is the volume, $k_{\rm B}$ is the Boltzmann constant, $N_{\rm reps}$ is the number of independent replicate simulations, $\langle \cdots \rangle_{t_0}$ denotes an average over time origins $(t_0)$, $\alpha$ and $\beta = x, y, $ or $z$ Cartesian coordinates, and $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal stress tensor element for the $n^{\rm th}$ replicate. 
 	
-	$\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) to adequately integrate the initial rapid decay of the autocorrelation function. To improve precision, Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components (hence the factor of 3 in the denominator of Equation \ref{eq:Green_Kubo}).
+	$\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) for accurate integration of Equation \ref{eq:Green_Kubo}. To improve precision, Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components (hence the factor of 3 in the denominator of Equation \ref{eq:Green_Kubo}).
 	
 	%	Since Equation \ref{eq:Green_Kubo} requires information as $t \rightarrow \infty$ and the ``running integral'' can become quite noisy at long times, it is important to fit the ``running integral'' to a function that can be extrapolated to the ``true'' infinite time limit $(\eta^{\infty})$. Per ``Best Practices'', we use a double-exponential function for this purpose
 	
@@ -693,11 +700,11 @@
 	
 	Since the Green-Kubo ``running integral'' suffers from extreme fluctuations at long times, Equation \ref{eq: Double exponential} is fit by minimizing a weighted sum-squared error objective function. Weights are equal to the inverse of the standard deviation $(\sigma_{\eta})$ of the replicate simulations. The time dependence of $\sigma_{\eta}$ is modeled with $A t^{b}$, where $A$ and $b$ are fitting parameters.
 	
-	Following a heuristic proposed in Reference \citenum{Zhang2015}, data are excluded where $\sigma_{\eta} > 0.4 \times \eta^{\infty}$. Occasionally, this heuristic results in a cut-off that is too short, in particular for systems with slow dynamics, which lead to very poor fits. In such cases, it is necessary to modify the heuristic, e.g., exclude data where $\sigma_{\eta} > 0.8 \times \eta^{\infty}$. Erroneously large fluctuations also exist at very short times. Following ``Best Practices,'' only data for $t > 3$ ps are included in the fitting of Equation \ref{eq: Double exponential}. 
+	Following the ``Best Practices'' heuristic, data are excluded where $\sigma_{\eta} > 0.4 \times \eta^{\infty}$. Occasionally, this heuristic results in a cut-off that is too short, in particular for systems with slow dynamics, which lead to very poor fits. In such cases, it is necessary to modify the heuristic, e.g., exclude data where $\sigma_{\eta} > 0.8 \times \eta^{\infty}$. Erroneously large fluctuations also exist at very short times. Following ``Best Practices,'' only data for $t > 3$ ps are included in the fitting of Equation \ref{eq: Double exponential}. 
 	 
 %	To account for the increasing fluctuations in the ``running integral'' with respect to time, Equation \ref{eq: Double exponential} is fit by minimizing a weighted sum-squared error objective function. The weight model, $A t^{-b}$, is fit to the standard deviation $(\sigma_{\eta})$ of the replicate simulations. In addition, following a heuristic proposed by Zhang et al., data are excluded where $\sigma_{\eta} > 40$ \% $\eta^{\infty}$. Occasionally this heuristic resulted in a cut-off time that was too short, which lead to very poor fits. In such cases, it was necessary to manually increase the cut-off time. Large fluctuations also exist at very short times. Following ``Best Practices,'' only data for $t > 3$ ps are included in the fitting of Equation \ref{eq: Double exponential}. 
 	
-	As recommended by ``Best Practices'', uncertainties are obtained by bootstrap re-sampling. Specifically, the fitting process described previously is repeated hundreds of times using randomly selected subsets of replicate simulations. Furthermore, each bootstrap repetition uses a randomly selected long-time cut-off between 0.35 and 0.45 $\times \eta^{\infty}$ to account for uncertainty in the 0.4 $\times \eta^{\infty}$ heuristic. A 95 \% confidence interval is obtained from the distribution of bootstrap estimates for $\eta^\infty$. An example of this process is provided in Section \ref{SI:GK_analysis} of Supporting Information.
+	As recommended by ``Best Practices'', uncertainties are obtained by bootstrap re-sampling. Specifically, the fitting process described previously is repeated hundreds of times using randomly selected subsets of replicate simulations. Furthermore, each bootstrap repetition uses a randomly selected long-time cut-off between 0.35 $\times \eta^{\infty}$ and 0.45 $\times \eta^{\infty}$ to account for uncertainty in the 0.4 $\times \eta^{\infty}$ heuristic. A 95 \% confidence interval is obtained from the distribution of bootstrap estimates for $\eta^\infty$. An example of this process is provided in Section \ref{SI:GK_analysis} of Supporting Information.
 	
 %	, and  are employed for a single MD run. The average of 30 to 60 independent replicate simulations $(N_{\rm reps})$ is fit to a double-exponential function by minimizing a weighted sum-squared error objective function.  
 	
@@ -746,9 +753,9 @@
 	
 	Seven normal and seven branched alkanes of varying chain-length and degree of branching are simulated in this study. We only consider compounds with available REFPROP equations-of-state and viscosity correlations \cite{LEMMON-RP91}. Specifically, we simulate ethane \cite{Ethane2006,Vogel2015}, propane \cite{Propane2009,Vogel2016}, \textit{n}-butane \cite{Butane2006,Hermann2018}, \textit{n}-octane \cite{Beckmueller2017,Huber2004FPE}, \textit{n}-dodecane \cite{Lemmon2004,Huber2004}, \textit{n}-hexadecane \cite{Romeo2018,Vesovic2017}, \textit{n}-docosane \cite{Romeo2018,Huber2018}, 2-methylpropane \cite{Lemmon2006,Vogel2000}, 2-methylbutane \cite{Lemmon2006,Huber2018}, 2-methylpentane \cite{Lemmon2006,Huber2018}, 3-methylpentane \cite{Gao2017,Huber2018}, 2,2-dimethylpropane \cite{Lemmon2006,Huber2018}, 2,3-dimethylbutane \cite{Gao2017,Huber2018}, and 2,2,4-trimethylpentane \cite{Blackham2017,Huber2018}. 
 	
-	Each compound was simulated using the TraPPE and Potoff S/L force fields. Potoff ``short'' parameters are employed for 2-methylpropane, 2-methylbutane, 2,2-dimethylpropane, and 2,3-dimethylbutane while Potoff ``long'' parameters are utilized for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. 2,2-dimethylpropane and 2,2,4-trimethylpentane were not simulated using the TAMie force field since we are not aware of any TAMie parameters for C sites. Only ethane and 2,2-dimethylpropane were simulated with AUA4. 
+	Each compound was simulated using the TraPPE and Potoff S/L force fields. Potoff ``short'' parameters are employed for 2-methylpropane, 2-methylbutane, 2,2-dimethylpropane, and 2,3-dimethylbutane while Potoff ``long'' parameters are utilized for 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. 2,2-dimethylpropane and 2,2,4-trimethylpentane were not simulated using the TAMie force field since we are not aware of any TAMie parameters for C sites. Only ethane and 2,2-dimethylpropane were simulated with AUA4. See Section \ref{Systems simulated} of Supporting Information for a comprehensive list of all systems studied.
 	
-	Sections \ref{sec:eta_sat} and \ref{sec:T293highP} present results for saturated liquid viscosities $(\eta_{\rm liq}^{\rm sat})$ and compressed liquid viscosities $(\eta_{\rm liq}^{\rm comp})$, respectively. In both sections, the \textit{n}-alkane results are followed by the branched alkane results. Simulation results are compared with the REFPROP viscosity correlations and experimental data from the ThermoData Engine (TDE) database \cite{TDE}.
+	Sections \ref{sec:eta_sat} and \ref{sec:T293highP} present results for saturated liquid viscosities $(\eta_{\rm liq}^{\rm sat})$ and compressed liquid viscosities $(\eta_{\rm liq}^{\rm comp})$, respectively. In both sections, the \textit{n}-alkane results are followed by the branched alkane results. Simulation results are compared with the REFPROP viscosity correlations and experimental data from the ThermoData Engine (TDE) database \cite{TDE}. Tabulated simulation values are provided in Section \ref{SI:Tabulated} of Supporting Information.
 	
 	\subsection{Saturated Liquid} \label{sec:eta_sat}
 	
@@ -770,25 +777,27 @@
 	
 %	Figure \ref{fig:Saturation_Ethane} compares the ethane results for saturated liquid viscosities obtained with the TraPPE, TraPPE-2, TAMie, Potoff, AUA4 and the Bayesian parameter sets for $\lambda = 13$, $14$, $15$, and $16$. As the remainder of this section demonstrates, the over estimation of ethane $\eta_{\rm liq}^{\rm sat}$ is actually an anomaly for normal and branched alkanes. It is not uncommon for the smallest compounds in a homologous series, i.e., methane and ethane, to follow a different trend than the larger compounds. However, the relative magnitudes of the different force fields is consistent with other compounds, namely, TraPPE (and TraPPE-2) viscosities are less than those of TAMie which are less than the Potoff viscosities. This is expected since TraPPE utilizes a LJ 12-6, TAMie a Mie 14-6, and Potoff a Mie 16-6 potential. By comparing the TraPPE and TraPPE-2 results, it appears that the anisotropic CH$_3$-CH$_3$ bond significantly reduces the viscosity of ethane.
 	
-	Figure \ref{fig:Saturation_Ethane} compares the ethane results for saturated liquid viscosities obtained with the TraPPE, TraPPE-2, TAMie, Potoff, and AUA4 force fields. As the remainder of this section demonstrates, the over estimation of ethane $\eta_{\rm liq}^{\rm sat}$ is actually an anomaly for normal and branched alkanes. It is not uncommon for the smallest compounds in a homologous series, i.e., methane and ethane, to follow a different trend than the larger compounds. However, the relative magnitudes of the different force fields is consistent with other compounds, namely, TraPPE and AUA4 viscosities are less than those of TAMie which are less than the Potoff viscosities. This is expected considering the respective values of $\lambda$ (the repulsive exponent), i.e., $\lambda = 12$ for TraPPE, TraPPE-2, and AUA4, $\lambda = 14$ for TAMie, and $\lambda = 16$ for Potoff. By comparing the TraPPE results with the TraPPE-2 and AUA4 results, it appears that the anisotropic CH$_3$-CH$_3$ bond does not significantly improve the viscosity estimates for ethane, although it does provide considerable improvement in simultaneously reproducing vapor-liquid coexistence densities and pressure.
+	Figure \ref{fig:Saturation_Ethane} compares the ethane results for saturated liquid viscosities obtained with the TraPPE, TraPPE-2, TAMie, Potoff, and AUA4 force fields. As the remainder of this section demonstrates, the over estimation of ethane $\eta_{\rm liq}^{\rm sat}$ by Potoff and TAMie is actually an anomaly compared with other normal and branched alkanes. It is not uncommon for the smallest compounds in a homologous series, i.e., methane and ethane, to follow a different trend than the larger compounds. However, the relative magnitudes of the different force fields is consistent with other compounds, namely, TraPPE and AUA4 viscosities are less than those of TAMie which are less than the Potoff viscosities. This is expected considering the respective values of $\lambda$ (the repulsive exponent), i.e., $\lambda = 12$ for TraPPE, TraPPE-2, and AUA4, $\lambda = 14$ for TAMie, and $\lambda = 16$ for Potoff. Note that the TraPPE results are similar to the TraPPE-2 and AUA4 results. Therefore, although the anisotropic CH$_3$-CH$_3$ bond provides considerable improvement in simultaneously reproducing vapor-liquid coexistence densities and pressure, it does not appear to significantly improve the viscosity estimates for ethane.
+
+%By comparing the TraPPE results with the TraPPE-2 and AUA4 results, it appears that the anisotropic CH$_3$-CH$_3$ bond does not significantly improve the viscosity estimates for ethane, although it does provide considerable improvement in simultaneously reproducing vapor-liquid coexistence densities and pressure.
 	
 	% and the TAMie results with those of the Bayesian 14-6 potential, it appears that the anisotropic CH$_3$-CH$_3$ bond significantly reduces the viscosity of ethane.  
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{compare_force_fields_ethane.pdf}
-		\caption{Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and TDE data. Bottom panel computes the percent deviation between the simulation and REFPROP values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width.}
+		\caption{Saturated liquid viscosities for ethane. Top panel compares simulation results with REFPROP correlations and experimental data available in TDE. Bottom panel presents percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values. Colors/symbols denote different force fields. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling. When available, experimental uncertainties are typically smaller than one symbol size. Unless otherwise depicted, REFPROP uncertainties are smaller than the line-width.}
 		\label{fig:Saturation_Ethane}
 	\end{figure} 
 	
-	Figure \ref{fig:Saturation_C3_C4_C8} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for propane, \textit{n}-butane, and \textit{n}-octane. Similar to what has been demonstrated in previous studies, the TraPPE force field significantly under estimates $\eta_{\rm liq}^{\rm sat}$ (between 30 and 80 \%) with the deviation increasing with decreasing temperature \cite{Gordon2006,Nieto2006}. By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \%. While TAMie deviations for propane increase to approximately 50 \% at the triple point temperature, Potoff deviations are nearly constant over the entire temperature range studied for each compound. 
+	Figure \ref{fig:Saturation_C3_C4_C8} compares the TraPPE, Potoff, and TAMie saturated liquid viscosities for propane, \textit{n}-butane, and \textit{n}-octane. Similar to what has been demonstrated in previous studies, the TraPPE force field significantly under estimates $\eta_{\rm liq}^{\rm sat}$ (between 30 and 80 \%) with the deviation increasing with decreasing temperature \cite{Gordon2006,Nieto2006}. By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \%. Although TAMie deviations for propane increase to approximately 50 \% at the triple point temperature, Potoff deviations are nearly constant over the entire temperature range studied for each compound. 
 	
 	%By contrast, the Potoff and TAMie force fields agree with the REFPROP values for these compounds to within 10 \% over the entire temperature range studied (which includes the triple point for propane), and do not demonstrate a strong temperature dependence.
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{compare_force_fields_short_normal.pdf}
-		\caption{Saturated liquid viscosities for propane (\textit{n}-C$_{3}$), \textit{n}-butane (\textit{n}-C$_{4}$), and \textit{n}-octane (\textit{n}-C$_{8}$). See caption of Figure \ref{fig:Saturation_Ethane} for detailed description. Filled symbols correspond to simulations performed at the respective force field $\rho_{\rm liq}^{\rm sat}$ (see Section \ref{Discussion/Limitations}).}
+		\caption{Saturated liquid viscosities for propane (\textit{n}-C$_{3}$), \textit{n}-butane (\textit{n}-C$_{4}$), and \textit{n}-octane (\textit{n}-C$_{8}$). See Figure \ref{fig:Saturation_Ethane} caption for details. Filled symbols correspond to simulations performed at the respective force field $\rho_{\rm liq}^{\rm sat}$ (see Section \ref{Discussion/Limitations}).}
 		\label{fig:Saturation_C3_C4_C8}
 	\end{figure} 
 	
@@ -799,7 +808,7 @@
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{compare_force_fields_long_normal.pdf}
-		\caption{Saturated liquid viscosities for \textit{n}-dodecane (\textit{n}-C$_{12}$), \textit{n}-hexadecane (\textit{n}-C$_{16}$), and \textit{n}-docosane (\textit{n}-C$_{22}$). See caption of Figure \ref{fig:Saturation_Ethane} for detailed description.}
+		\caption{Saturated liquid viscosities for \textit{n}-dodecane (\textit{n}-C$_{12}$), \textit{n}-hexadecane (\textit{n}-C$_{16}$), and \textit{n}-docosane (\textit{n}-C$_{22}$). See Figure \ref{fig:Saturation_Ethane} caption for details.}
 		\label{fig:Saturation_C12_C16_C22}
 	\end{figure} 
 	
@@ -850,35 +859,35 @@
 	%	\label{fig:Saturation_IC6_23DMB_3MP}
 	%\end{figure}
 	
-	Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched} compare the saturated liquid viscosities for each force field and branched alkane studied. Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched} present results for the compounds classified by Potoff as ``short'' and ``long'', respectively. Specifically, Figure \ref{fig:Saturation_short_branched} depicts 2-methylpropane, 2,2-dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane, while Figure \ref{fig:Saturation_long_branched} contains 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Each compound was simulated using the TraPPE and Potoff force fields. However, only 2,2-dimethylpropane was simulated with AUA4 while 2,2-dimethylpropane and 2,2,4-trimethylpentane were not simulated using the TAMie force field.
+	Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched} compare the saturated liquid viscosities for branched alkanes. Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched} present results for the compounds classified by Potoff as ``short'' and ``long'', respectively \cite{Mie}. Specifically, Figure \ref{fig:Saturation_short_branched} depicts 2-methylpropane, 2,2-dimethylpropane, 2-methylbutane, and 2,3-dimethylbutane, while Figure \ref{fig:Saturation_long_branched} contains 2-methylpentane, 3-methylpentane, and 2,2,4-trimethylpentane. Each compound was simulated using the TraPPE and Potoff force fields. However, only 2,2-dimethylpropane was simulated with AUA4 while 2,2-dimethylpropane and 2,2,4-trimethylpentane were not simulated using the TAMie force field.
 	
 	%From Figure \ref{fig:Saturation_IC4_NEOC5} to \ref{fig:Saturation_IC6_23DMB_3MP}, we see that the Potoff S/L force field is not as accurate for the simulated branched alkanes as for the normal alkanes. However, it still provides considerable improvement compared to the LJ 12-6 based models, i.e., TraPPE and AUA4. Surprisingly, the TAMie force field performs much worse for these branched alkanes. 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{compare_force_fields_short_branched.pdf}
-		\caption{Saturated liquid viscosities for 2-methylpropane (\textit{i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit{i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See caption of Figure \ref{fig:Saturation_Ethane} for detailed description. For clarity, values in top panel are shifted by $\Delta \eta$.}
+		\caption{Saturated liquid viscosities for 2-methylpropane (\textit{i}-C$_{4}$), 2,2-dimethylpropane (neo-C$_{5}$), 2-methylbutane (\textit{i}-C$_{5}$), and 2,3-dimethylbutane (2,3-DMC$_4$). See Figure \ref{fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta$.}
 		\label{fig:Saturation_short_branched}
 	\end{figure} 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{compare_force_fields_long_branched.pdf}
-		\caption{Saturated liquid viscosities for 2-methylpentane (\textit{i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit{i}-C$_{8}$). See caption of Figures \ref{fig:Saturation_Ethane} and \ref{fig:Saturation_C3_C4_C8} for detailed descriptions. For clarity, values in top panel are shifted by $\Delta \eta$.}
+		\caption{Saturated liquid viscosities for 2-methylpentane (\textit{i}-C$_{6}$), 3-methylpentane (3-MC$_5$), and 2,2,4-trimethylpentane (\textit{i}-C$_{8}$). See Figure \ref{fig:Saturation_Ethane} caption for details. For clarity, values in top panel are shifted by $\Delta \eta$. Filled symbols correspond to simulations performed at the respective force field $\rho_{\rm liq}^{\rm sat}$ (see Section \ref{Discussion/Limitations}).}
 		\label{fig:Saturation_long_branched}
 	\end{figure} 
 	
-	From Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched}, we see that the Potoff S/L and TAMie force fields are not as accurate for these branched alkanes as for the normal alkanes. In particular, Potoff and TAMie demonstrate the same temperature dependence observed for other force fields, where the deviations are largest at lower temperatures. However, Potoff still provides considerable improvement compared to the LJ 12-6 based models, i.e., TraPPE and AUA4. Note that the Potoff ``short'' and ``long'' parameters in Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched}, respectively, provide similar accuracy. 
+	From Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched}, we see that the Potoff S/L and TAMie force fields are not as accurate for these branched alkanes as for the normal alkanes. In particular, Potoff and TAMie deviations demonstrate the same temperature dependence observed for other force fields, where the percent deviations are largest at lower temperatures. However, Potoff still provides considerable improvement compared to the LJ 12-6 based models, i.e., TraPPE and AUA4. Note that the Potoff ``short'' and ``long'' parameters in Figures \ref{fig:Saturation_short_branched} and \ref{fig:Saturation_long_branched}, respectively, provide similar accuracy. 
 	
 	%The one apparent exception is 3-methylpentane, where the Potoff deviations are less than 10 \% over the entire temperature range. However, considering the availabi 
 	
-	The deviations for each force field are largest for 2-methylpropane and 2,2-dimethylpropane. Since these compounds are primarily composed of CH$_3$ UA sites, this poor performance is likely due to the assumption that the CH$_3$ non-bonded parameters are transferable from \textit{n}-alkanes to branched alkanes. Improvement might be possible if the CH$_3$ parameters were different depending on the neighboring UA site type. However, it is important to note that the 2,2-dimethylpropane REFPROP viscosity correlation is not considered to be of ``reference quality.''
+	The deviations for each force field are largest for 2-methylpropane and 2,2-dimethylpropane, the two smallest and most spherical branched alkanes. Since these compounds are primarily composed of CH$_3$ UA sites, this poor performance is likely due to the assumption that the CH$_3$ non-bonded parameters are transferable from \textit{n}-alkanes to branched alkanes. Improvement might be possible if the CH$_3$ parameters were different depending on the neighboring UA site type. However, it is also important to note that the 2,2-dimethylpropane REFPROP viscosity correlation is not considered to be of ``reference quality.''
 	
 	\subsection{Compressed liquid} \label{sec:T293highP}
 	
-	Section \ref{sec:eta_sat} demonstrates that Mie $\lambda$-6 based force fields (Potoff and TAMie) are considerably more reliable for predicting saturated liquid viscosities than LJ 12-6 based force fields (TraPPE and AUA4). However, as the Mie $\lambda$-6 potential is too repulsive at short distances for $\lambda > 12$, the Potoff (16-6) and TAMie (14-6) force fields tend to over estimate pressure at high densities \cite{Postdoc_2}. Since $\eta$ also increases with larger values of $\lambda$, our \textit{ansatz} is that Potoff and TAMie should over estimate $\eta$ at high densities/pressures. 
+	Section \ref{sec:eta_sat} demonstrates that Mie $\lambda$-6 based force fields (Potoff and TAMie) are considerably more reliable for predicting saturated liquid viscosities than LJ 12-6 based force fields (TraPPE and AUA4). However, as the Mie $\lambda$-6 potential is too repulsive at short distances for $\lambda > 12$, the Potoff (Mie 16-6) and TAMie (Mie 14-6) force fields tend to over estimate pressure at high densities \cite{Postdoc_2}. Since $\eta$ also increases with larger values of $\lambda$, our \textit{ansatz} is that Potoff and TAMie should over estimate $\eta$ at high densities/pressures. 
 	
-	Surprisingly, Gordon shows that a (slightly modified) Mie 14-6 (for CH$_3$) and Mie 20-6 (for CH$_2$) potential can accurately predict the $\eta$-$P$ dependence for \textit{n}-hexadecane up to 400 MPa \cite{Gordon2006}. Since the Gordon force field was parameterized with $\eta_{\rm liq}^{\rm sat}$ data, the purpose of this section is to determine if the Potoff and TAMie force fields, which did not include viscosity data in their parameterization, are also reliable for estimating the $\eta$-$P$ dependence. To provide additional insight into the consequences of using a Mie potential with $\lambda > 12$, we present results for the $\eta$-$\rho$ dependence as well (which was not reported by Gordon). 
+	Surprisingly, Gordon shows that a (slightly modified) Mie 14-6 (for CH$_3$) and Mie 20-6 (for CH$_2$) potential can accurately predict the $\eta$-$P$ dependence for \textit{n}-hexadecane up to 400 MPa \cite{Gordon2006}. Since the Gordon force field was parameterized with $\eta_{\rm liq}^{\rm sat}$ data, the purpose of this section is to determine if the Potoff and TAMie force fields, which did not include viscosity data in their parameterization, are also reliable for estimating the $\eta$-$P$ dependence. To provide additional insight into the consequences of using a Mie $\lambda$-6 potential with $\lambda > 12$, we present results for the $\eta$-$\rho$ dependence as well (which was not reported by Gordon). 
 	
 %	Note that Reference \citenum{Gordon2006} did not report the $\eta$-$\rho$ dependence, utilizes a slightly modified Mie formulation, and included saturated liquid viscosity data in the non-bonded parameterization.
 	
@@ -916,38 +925,40 @@
 	%	%	\item n-Dodecane $\eta-\rho$ $\eta-P$?
 	%\end{enumerate}
 	
-	Figures \ref{fig:T293highP_C3}, \ref{fig:T293highP_C4}, and \ref{fig:T293highP_C8} compare the compressed liquid viscosities $(\eta_{\rm liq}^{\rm comp})$ for propane, \textit{n}-butane, and \textit{n}-octane, respectively. Each compound is simulated using the TraPPE, Potoff, and TAMie force fields at various densities. Simulation results are compared with REFPROP correlations and TDE data, when available. All TDE data for temperatures between 288 K and 298 K are depicted. REFPROP uncertainties are assumed to be a constant percent deviation as reported in the corresponding publication. ``REFPROP extrapolation'' are values that are found outside of the ``reference quality'' range. This extrapolation is intended to guide the eye when comparing with simulation results at high densities/pressures.
+	Figures \ref{fig:T293highP_C3}, \ref{fig:T293highP_C4}, and \ref{fig:T293highP_C8} present the compressed liquid viscosities $(\eta_{\rm liq}^{\rm comp})$ for propane, \textit{n}-butane, and \textit{n}-octane, respectively. Each compound is simulated using the TraPPE, Potoff, and TAMie force fields at various densities. Simulation results are compared with REFPROP correlations and TDE data, when available. 
+	
+%	All TDE data for temperatures between 288 K and 298 K are depicted. REFPROP uncertainties are assumed to be a constant percent deviation as reported in the corresponding publication. ``REFPROP extrapolation'' are values that are found outside of the ``reference quality'' range. This extrapolation is intended to guide the eye when comparing with simulation results at high densities/pressures.
 	
 	% Note that for propane and \textit{n}-butane (Figures \ref{fig:T293highP_C3} and \ref{fig:T293highP_C4}) each force field is simulated at the same density, while for \textit{n}-octane (Figure \ref{fig:T293highP_C8}) the force fields are simulated at the same pressure. 
 	
 	%As the REFPROP viscosity correlation is not recommended above 100 MPa at 293 K, we have plotted some experimental data to guide the eye.
 	
-	\begin{figure}[htb!]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C3H8.pdf}
-		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. Dashed lines correspond to REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling.}
+		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. TDE data for temperatures between 288 and 298 K are depicted. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95 \% confidence interval estimated with bootstrap re-sampling.}
 		\label{fig:T293highP_C3}
 	\end{figure} 
 
 % Simulation uncertainties are obtained from bootstrap re-sampling and are presented at the 95 \% confidence level.
 	
-	Figure \ref{fig:T293highP_C3} demonstrates that the TraPPE force field has a constant negative bias even with increasing density/pressure. The TAMie force field has the most accurate $\eta$-$\rho$ dependence, i.e., the error does not increase significantly with respect to density. By contrast, the Potoff potential demonstrates considerable over estimation of $\eta$ at high densities, which is likely attributed to the overly repulsive Mie 16-6 potential at close distances. Remarkably, the Potoff force field is the most accurate at predicting the $\eta$-$P$ dependence from saturation pressure to 1000 MPa. This can be explained as a cancellation of errors since the Potoff force field significantly over predicts both $\eta$ and $P$ at high densities. Note that the increase in Potoff deviations for the two highest pressures can potentially be explained by the large uncertainty in the REFPROP correlation and dubious extrapolation at these extreme pressures.
+	Figures \ref{fig:T293highP_C3}, \ref{fig:T293highP_C4}, and \ref{fig:T293highP_C8} demonstrate that the TraPPE force field has a constant negative bias even with increasing density/pressure. The TAMie force field has the most accurate $\eta$-$\rho$ dependence, i.e., the error does not increase significantly with respect to density. By contrast, the Potoff potential demonstrates considerable over estimation of $\eta$ at high densities, which is likely attributed to the overly repulsive Mie 16-6 potential at close distances. Remarkably, the Potoff force field is the most accurate at predicting the $\eta$-$P$ dependence from saturation to elevated pressures (approaching 1000 MPa). This can be explained as a cancellation of errors since the Potoff force field significantly over predicts both $\eta$ and $P$ at high densities. Note that the increase in Potoff deviations for the two highest pressures in Figure \ref{fig:T293highP_C3} can potentially be explained by the large uncertainty in the REFPROP correlation and dubious extrapolation at these extreme pressures. Therefore, although Potoff should not be used to estimate the $\eta$-$\rho$ dependence, we conclude that it is the most reliable force field for estimating the $\eta$-$P$ dependence.
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C4H10.pdf}
-		\caption{Compressed liquid viscosities at 293 K for \textit{n}-butane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for \textit{n}-butane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_C4}
 	\end{figure} 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C8H18.pdf}
-		\caption{Compressed liquid viscosities at 293 K for \textit{n}-octane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for \textit{n}-octane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_C8}
 	\end{figure} 
 	
-	The results in Figures \ref{fig:T293highP_C4} and \ref{fig:T293highP_C8} for \textit{n}-butane and \textit{n}-octane, respectively, are similar to those in Figure \ref{fig:T293highP_C3} for propane. Specifically, the TraPPE force field under estimates $\eta$ at all densities/pressures, the TAMie force field provides the most accurate $\eta$-$\rho$ dependence, while the Potoff force field over predicts $\eta$ with respect to $\rho$ but accurately predicts the $\eta$-$P$ trend. We conclude that Potoff should not be used to estimate the $\eta$-$\rho$ dependence, although it is the most reliable force field for estimating the $\eta$-$P$ dependence.
+%	The results in Figures \ref{fig:T293highP_C4} and \ref{fig:T293highP_C8} for \textit{n}-butane and \textit{n}-octane, respectively, are similar to those in Figure \ref{fig:T293highP_C3} for propane. Specifically, the TraPPE force field under estimates $\eta$ at all densities/pressures, the TAMie force field provides the most accurate $\eta$-$\rho$ dependence, while the Potoff force field over predicts $\eta$ with respect to $\rho$ but accurately predicts the $\eta$-$P$ trend. We conclude that Potoff should not be used to estimate the $\eta$-$\rho$ dependence, although it is the most reliable force field for estimating the $\eta$-$P$ dependence.
 	
 	%, which is often the desired relationship in practice.  
 	
@@ -970,33 +981,33 @@
 	%	%	\item 2,3-dimethylbutane $\eta-\rho$ $\eta-P$?
 	%\end{enumerate}
 	
-   The trends observed in Figures \ref{fig:T293highP_IC4} to \ref{fig:T293highP_IC8} are consistent with the compressed liquid trends for \textit{n}-alkanes. Specifically, TraPPE under predicts $\eta$ with respect to both $\rho$ and $P$. Potoff over predicts $\eta$ with respect to $\rho$ but provides a reasonable estimate of the $\eta$-$P$ trend. As observed in Section \ref{sec:eta_sat}, Potoff and TAMie are less accurate for branched alkanes than for \textit{n}-alkanes. In particular, the Potoff $\eta$-$P$ trends are systematically lower than the REFPROP correlations for 2-methylbutane and 3-methylpentane. However, note that the Potoff $\eta$-$P$ trends are quite reliable for 2-methylpropane and 2,2,4-trimethylpentane. These results cannot be attributed to the ``short'' or ``long'' parameter distinction, since 2-methylbutane and 2-methylpropane both use ``short'' parameters while 3-methylpentane and 2,2,4-trimethylpentane both use ``long'' parameters. 
+   The trends observed in Figures \ref{fig:T293highP_IC4} to \ref{fig:T293highP_IC8} are consistent with the compressed liquid trends for \textit{n}-alkanes. Specifically, TraPPE under predicts $\eta$ with respect to both $\rho$ and $P$. Potoff over predicts $\eta$ with respect to $\rho$ but provides a reasonable estimate of the $\eta$-$P$ trend. However, as observed in Section \ref{sec:eta_sat}, Potoff and TAMie are less accurate for branched alkanes than for \textit{n}-alkanes. In particular, the Potoff $\eta$-$P$ trends are systematically lower than the REFPROP correlations for 2-methylbutane and 3-methylpentane. However, note that the Potoff $\eta$-$P$ trends are quite reliable for 2-methylpropane and 2,2,4-trimethylpentane. These results cannot be attributed to the ``short'' or ``long'' parameter distinction, since 2-methylbutane and 2-methylpropane both use ``short'' parameters while 3-methylpentane and 2,2,4-trimethylpentane both use ``long'' parameters. 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC4H10.pdf}
-		\caption{Compressed liquid viscosities at 293 K for 2-methylpropane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for 2-methylpropane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_IC4}
 	\end{figure} 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC5H12.pdf}
-		\caption{Compressed liquid viscosities at 293 K for 2-methylbutane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for 2-methylbutane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_IC5}
 	\end{figure} 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_3MPentane.pdf}
-		\caption{Compressed liquid viscosities at 293 K for 3-methylpentane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for 3-methylpentane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_3MP}
 	\end{figure} 
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_IC8H18.pdf}
-		\caption{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See caption of Figure \ref{fig:T293highP_C3} for detailed description.}
+		\caption{Compressed liquid viscosities at 293 K for 2,2,4-trimethylpentane. See Figure \ref{fig:T293highP_C3} caption for details.}
 		\label{fig:T293highP_IC8}
 	\end{figure} 
 	
@@ -1004,14 +1015,14 @@
 	
 	\subsection{Liquid structure} \label{sec:RDF}
 	
-	While the Potoff force field significantly over predicts the $\eta$-$\rho$ dependence at $T= 293$ K, it does not over predict $\eta$ for the highest saturated liquid densities (those near the triple point temperature) (cf. Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:T293highP_C3}). To better understand this seemingly inconsistent result, Figure \ref{fig:RDF_comparison_CH3} compares the radial distribution functions (RDF) for three different state points, namely, near the triple point $(T=86$ K and $\rho = 732.63$ kg/m$^3)$ and two densities along the $T = 293$ K isotherm ($\rho = 732.63$ kg/m$^3$ and $\rho = 806.23$ kg/m$^3)$. In order to provide a fair comparison between force fields, the RDF is plotted with respect to a reduced distance, namely, $r/r_{\rm min}$.
+	While the Potoff force field significantly over predicts the $\eta$-$\rho$ dependence at $T= 293$ K, it does not over predict $\eta$ for the highest saturated liquid densities (those near the triple point temperature) (cf. Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:T293highP_C3} for propane). To better understand this seemingly inconsistent result, Figure \ref{fig:RDF_comparison_CH3} compares the radial distribution functions (RDF) for three different state points, namely, near the triple point $(T=86$ K and $\rho = 732.63$ kg/m$^3)$ and two densities along the $T = 293$ K isotherm ($\rho = 732.63$ kg/m$^3$ and $\rho = 806.23$ kg/m$^3)$. In order to provide a fair comparison between force fields, the RDF is plotted with respect to a reduced distance, namely, $r/r_{\rm min}$.
 	
 	% $(T_{\rm tp}$ and $\rho_{\rm tp})$ and two densities along the $T = 293$ K isotherm ($\rho_{\rm tp}$ and the maximum $\rho$)
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{RDF_comparison_CH3.pdf}
-		\caption{Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields.}
+		\caption{Comparison of radial distribution function for CH$_3$-CH$_3$ interactions $(g_{\rm CH_3-CH_3}(r))$. The top panel compares two different temperatures along the triple point isochore. The bottom panel compares two different densities along the 293 K isotherm. Colors correspond to different state points while line styles denote different force fields.}
 		\label{fig:RDF_comparison_CH3}
 	\end{figure} 
 	
@@ -1047,7 +1058,7 @@
 
 	\subsection{Finite-size effects}
 
-	Although finite-size effects are often assumed to be negligible for viscosity estimates with equilibrium molecular dynamics, ``Best Practices'' recommends validating this assumption by plotting $\eta$ with respect to $N^{-1/3}$. Figure \ref{fig:finite_size_effects} compares simulation results for 100, 200, 400, and 800 molecule systems. While the results in Figure \ref{fig:finite_size_effects} are for propane, we observe similar results for a larger compound, specifically, 2,2,4-trimethylpentane.
+	Although finite-size effects are often assumed to be negligible for viscosity estimates with equilibrium molecular dynamics, ``Best Practices'' recommends validating this assumption by plotting $\eta$ with respect to $N^{-1/3}$. Figure \ref{fig:finite_size_effects} compares simulation results for 100, 200, 400, and 800 molecule systems. While Figure \ref{fig:finite_size_effects} only presents results for propane, we also observe similar results for a larger compound, specifically, 2,2,4-trimethylpentane.
 	
 	%Previous studies have demonstrated that finite-size effects are often negligible for viscosity estimates with equilibrium molecular dynamics.
 	
@@ -1123,7 +1134,7 @@
 	
 	% each force field except Potoff, which utilizes only a 1.0 nm cut-off. This choice was made because the Potoff force field was parameterized with a 1.0 nm cut-off. 
 	
-	The ``Best Practices'' guide suggests that cut-off lengths could be significant but does not provide any support for this claim. To address this issue, we perform simulations of the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
+	The ``Best Practices'' guide suggests that cut-off lengths could impact viscosity estimates but does not provide any support for this claim. To address this issue, we perform simulations with the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
 	
 	% convincing evidence to prove or disprove this notion.
 	
@@ -1146,7 +1157,7 @@
 %	
 	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, however, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time and does not resolve the observed bias. For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 	
-	Unfortunately, even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length. This is somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. Therefore, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off.
+	Unfortunately, even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff (and TAMie) force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length. This is somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. Therefore, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off.
 		
 	%For this reason, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 	
@@ -1156,30 +1167,36 @@
 	
 %	In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time. 
 	
-	The instability of a 1.0 nm cut-off (with 2 fs time-steps) demonstrates the importance of verifying that the cut-off distance is long enough to not impact the system dynamics. Furthermore, this demonstrates a scenario where alternative tail modifications may be preferable, e.g., force-shift or switch-force \cite{GROMACS_2018}. Unfortunately, these tail modifications significantly impact saturation properties, suggesting that the non-bonded parameters must be re-optimized with the tail modification. Therefore, performing simulations with a force-shift or switch-force potential for Potoff, TraPPE, TAMie, and AUA4 would likely result in inaccurate viscosities. Re-parameterizing the non-bonded interactions for a force-shift or switch-force potential is beyond the scope of this study.
+	The instability of a 1.0 nm cut-off (with 2 fs time-steps) and the discrepancy in $\eta$ values obtained with different cut-offs demonstrate the importance of verifying that the cut-off distance is long enough to not impact the system dynamics. Furthermore, this demonstrates a scenario where alternative tail modifications may be preferable, e.g., force-shift or switch-force \cite{GROMACS_2018}. Unfortunately, these tail modifications significantly impact saturation properties, suggesting that the non-bonded parameters must be re-optimized with the tail modification \cite{Thol_LJTS,Thol2016_LJ}. Therefore, performing simulations with a force-shift or switch-force potential for Potoff, TraPPE, TAMie, and AUA4 would likely result in inaccurate viscosities. Re-parameterizing the non-bonded interactions for a force-shift or switch-force potential is beyond the scope of this study.
 	
 	\subsection{$\rho_{\rm liq}^{\rm sat}$}
 	
-	The use of REFPROP $\rho_{\rm liq}^{\rm sat}$ instead of the force field $\rho_{\rm liq}^{\rm sat}$ can lead to meta-stable simulations and spurious results. Specifically, this occurs when the force field $P_{\rm vap}^{\rm sat}$ is less than the REFPROP $P_{\rm vap}^{\rm sat}$. Fortunately, this is uncommon since Potoff, TAMie, and AUA4 are quite reliable for estimating $P_{\rm vap}^{\rm sat}$ and TraPPE significantly over estimates $P_{\rm vap}^{\rm sat}$. Furthermore, even the lowest temperature simulations of propane did not appear to be below the melting point for each force field, i.e., the RDFs were liquid-like (cf. top panel of Figure \ref{fig:RDF_comparison_CH3}). 
+	The use of REFPROP $\rho_{\rm liq}^{\rm sat}$ instead of the force field $\rho_{\rm liq}^{\rm sat}$ can lead to meta-stable simulations and spurious results. This occurs when the force field $P_{\rm vap}^{\rm sat}$ is less than the REFPROP $P_{\rm vap}^{\rm sat}$. Fortunately, this is uncommon since Potoff, TAMie, AUA4, and TraPPE-2 are quite reliable for estimating $P_{\rm vap}^{\rm sat}$ and TraPPE significantly over estimates $P_{\rm vap}^{\rm sat}$. Furthermore, even the lowest temperature simulations of propane did not appear to be below the melting point for each force field, i.e., the RDFs were liquid-like (cf. top panel of Figure \ref{fig:RDF_comparison_CH3}). 
 	
 	There are at least four reasons why we perform simulations at the REFPROP $\rho_{\rm liq}^{\rm sat}$ instead of the force field $\rho_{\rm liq}^{\rm sat}$. First, this approach allows for a fair comparison of the force fields' ability to predict viscosity, without penalizing force fields which are less accurate at predicting $\rho_{\rm liq}^{\rm sat}$ or rewarding force fields that mask their deficiencies in predicting viscosity by over- or under estimating $\rho_{\rm liq}^{\rm sat}$.
-	Second, this facilitates comparing force fields over the entire range of saturation temperatures, whereas this is not possible using standard simulation methods for determining vapor-liquid saturation densities, such as Gibbs Ensemble Monte Carlo (GEMC) and Grand Canonical Monte Carlo (GCMC) histogram reweighting (HR). Third, it is straightforward to, at least qualitatively, account for a systematic deviation between the force field and REFPROP $\rho_{\rm liq}^{\rm sat}$, e.g., a positive bias in $\rho_{\rm liq}^{\rm sat}$ will increase $\eta_{\rm liq}^{\rm sat}$. Fourth, since each of the studied force fields utilized $\rho_{\rm liq}^{\rm sat}$ data in their optimization, deviations between the REFPROP and force field values are small, typically less than 1 \% (see Table 1 of Reference \citenum{Potoff_branched}). 
+	Second, this facilitates comparing force fields over the entire range of saturation temperatures, whereas this is extremely challenging using standard simulation methods for determining vapor-liquid saturation densities, such as Gibbs Ensemble Monte Carlo (GEMC) or Grand Canonical Monte Carlo (GCMC) histogram reweighting (HR). Third, it is straightforward to, at least qualitatively, account for a systematic deviation between the force field and REFPROP $\rho_{\rm liq}^{\rm sat}$, e.g., a positive bias in $\rho_{\rm liq}^{\rm sat}$ will increase $\eta_{\rm liq}^{\rm sat}$. Fourth, since each of the studied force fields utilized $\rho_{\rm liq}^{\rm sat}$ data in their optimization, deviations between the REFPROP and force field values are small, typically less than 1 \% (see Table 1 of Reference \citenum{Potoff_branched}). 
 	
-	However, due to the exponential dependence of $\eta$ on $\rho$, small differences in density can result in large deviations in viscosity. For this reason, we perform a small set of validation simulations to determine the variability caused by utilizing the REFPROP densities. Specifically, we simulate \textit{n}-butane with Potoff, TraPPE, and TAMie and 3-methylpentane using Potoff and TraPPE. The saturated liquid densities for these validation runs were taken from the literature \cite{Mie,Martin1999,Potoff_branched,TAMie}, where Reference \citenum{Martin1999} utilized GEMC and References \cite{Mie,Potoff_branched,TAMie} used GCMC-HR.      
+	However, due to the exponential dependence of $\eta$ on $\rho$, small differences in density can result in relatively large deviations in viscosity. For this reason, we perform a small set of validation simulations to determine the variability caused by utilizing the REFPROP densities. Specifically, we simulate \textit{n}-butane with Potoff, TraPPE, and TAMie and 3-methylpentane using Potoff and TraPPE. The saturated liquid densities for these validation runs were taken from the literature \cite{Martin1999,Mie,Potoff_branched,TAMie}, where Reference \citenum{Martin1999} utilized GEMC and References \citenum{Mie,Potoff_branched,TAMie} used GCMC-HR.      
 	
-	The results using the ``true'' force field for \textit{n}-butane and 3-methylpentane are found in Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:Saturation_long_branched}, respectively, as filled symbols. Note that the Potoff, TAMie, and TraPPE \textit{n}-butane and TraPPE 3-methylpentane filled points are consistent with the respective empty points because the force field $\rho_{\rm liq}^{\rm sat}$ deviates from the REFPROP $\rho_{\rm liq}^{\rm sat}$ by less than 0.3 \%. By contrast, the Potoff 3-methylpentane filled point is approximately 3 \% lower than the respective empty points. This is because the Potoff force field under estimates $\rho_{\rm liq}^{\rm sat}$ by around 1.15 \% \cite{Potoff_branched}. In comparison, the Potoff S/L deviations in $\rho_{\rm liq}^{\rm sat}$ are between -0.12 \% and -0.60 \% for all other branched compounds studied. TraPPE percent deviations in $\rho_{\rm liq}^{\rm sat}$ are less than $\pm$ 0.6 for all compounds except for 2,2-dimethylpropane and 2,2,4-trimethylpentane, which have -1.55 \% and 2.81 \% deviations, respectively.     
+	The results using the ``true'' force field $\rho_{\rm liq}^{\rm sat}$ for \textit{n}-butane and 3-methylpentane are found in Figures \ref{fig:Saturation_C3_C4_C8} and \ref{fig:Saturation_long_branched}, respectively, as filled symbols. Note that the Potoff, TAMie, and TraPPE \textit{n}-butane and TraPPE 3-methylpentane filled points are consistent with the respective empty points. This is due to the good agreement between the force field $\rho_{\rm liq}^{\rm sat}$ and the REFPROP $\rho_{\rm liq}^{\rm sat}$ (less than 0.3 \%). By contrast, the Potoff 3-methylpentane filled point is approximately 3 \% lower than the respective empty points. This is because the Potoff force field under estimates $\rho_{\rm liq}^{\rm sat}$ by around 1.15 \% \cite{Potoff_branched}. In comparison, the Potoff S/L deviations in $\rho_{\rm liq}^{\rm sat}$ are between -0.12 \% and -0.60 \% for all other branched compounds studied. TraPPE deviations in $\rho_{\rm liq}^{\rm sat}$ are less than $\pm$ 0.6 \% for all compounds except for 2,2-dimethylpropane and 2,2,4-trimethylpentane, which have -1.55 \% and 2.81 \% deviations, respectively. Therefore, utilizing the actual force field $\rho_{\rm liq}^{\rm sat}$ values would not alter the qualitative trends observed in Figures \ref{fig:Saturation_Ethane} to \ref{fig:Saturation_long_branched} and should only modify the quantitative values by a few percent in most cases and not more than 10 \% in the most extreme cases.     
 	
 %	, are less reliable near the triple point. By utilizing REFPROP densities, it is possible to compare force fields over the entire range of saturation temperatures.
 	
 	\section{Conclusions} \label{Conclusions}
 	
-	This study demonstrates the improvement that has taken place over the past two decades for predicting viscosity with molecular simulation. First, the ``Best Practices'' for EMD lead to more reproducible results. Second, the state-of-the-art Mie $\lambda$-6 force fields are significantly more accurate than the traditional Lennard-Jones 12-6 force fields for viscosity, as well as for vapor-liquid coexistence properties. More specifically, the Potoff and TAMie force fields typically predict saturated liquid viscosities for \textit{n}-alkanes to within 10 \% of the REFPROP values. By contrast, the TraPPE and AUA4 models under predict saturated liquid viscosities by 20 \% to 50 \%, where the deviations are largest at lower temperatures. While Potoff and TAMie are also more reliable for branched alkanes, deviations are larger and demonstrate a similar temperature dependence. The key limitation of the Potoff force field is that the choice of $\lambda = 16$ is too repulsive at close distances, which causes the viscosity to be over estimated at high densities. Due to a fortuitous cancellation of errors, the Potoff potential does provide a reliable $\eta$-$P$ trend. Since TAMie uses $\lambda =14$, the $\eta$-$\rho$ trend is slightly more reliable than that of Potoff. It is important to emphasize that transport properties were not included in the training set for parameterizing the Potoff and TAMie force fields. Therefore, the results from this study demonstrate that the improved prediction of static vapor-liquid coexistence properties obtained with Mie $\lambda$-6 potentials also results in improved prediction of a transport property, namely, liquid viscosity.
+	This study demonstrates the improvement that has taken place over the past two decades for predicting viscosity with molecular simulation. First, the ``Best Practices'' for EMD lead to more reproducible results. Second, the state-of-the-art Mie $\lambda$-6 force fields are significantly more accurate than the traditional Lennard-Jones 12-6 force fields for viscosity, as well as for vapor-liquid coexistence properties. More specifically, the Potoff and TAMie force fields typically predict saturated liquid viscosities for \textit{n}-alkanes to within 10 \% of the REFPROP values. By contrast, the TraPPE and AUA4 models under predict saturated liquid viscosities by 20 \% to 50 \%, where the deviations are largest at lower temperatures. While Potoff and TAMie are also more reliable for branched alkanes, deviations are larger and demonstrate a similar temperature dependence. 
+	
+	The key limitation of the Potoff force field is that the choice of $\lambda = 16$ is too repulsive at close distances, which causes the viscosity to be over estimated at high densities. Due to a fortuitous cancellation of errors, the Potoff potential does provide a reliable $\eta$-$P$ trend. Since TAMie uses $\lambda =14$, the $\eta$-$\rho$ trend is slightly more reliable than that of Potoff. It is important to emphasize that transport properties were not included in the training set for parameterizing the Potoff and TAMie force fields. Therefore, the results from this study demonstrate that the improved prediction of static vapor-liquid coexistence properties obtained with Mie $\lambda$-6 potentials also results in improved prediction of liquid viscosity, a dynamic property.
+	
+	% liquid viscosity. a transport property, namely, liquid viscosity.
+	
+	\section*{Supporting Information}
+	
+	Section \ref{Systems simulated} enumerates all systems simulated. Section \ref{Gromacs input files} provides GROMACS input files. Section \ref{Additonal simulation details} details the MD integrator, thermostat, and barostat. Section \ref{SI:Simulation time} compares simulation results with varying production times. Section \ref{Validation Runs} validates our methods by comparing with reference simulation values. Section \ref{fixed flexible} determines the sensitivity of our results to the use of fixed bonds. Section \ref{SI:GK_analysis} outlines the Green-Kubo analysis process. Section \ref{SI:Tabulated} contains tabulated simulation values.       
 	
 	\section*{Acknowledgments}
 	
-	We are grateful for the internal review provided by Andrei F. Kazakov and Alta Y. Fang of the National Institute of Standards and Technology (NIST). 
-	
-	This research was performed while Richard A. Messerly held a National Research Council (NRC) Postdoctoral Research Associateship at NIST and while Michelle C. Anderson held a Summer Undergraduate Research Fellowship (SURF) position at NIST.
+	We are grateful for the internal review provided by Andrei F. Kazakov and Alta Y. Fang of the National Institute of Standards and Technology (NIST). This research was performed while Richard A. Messerly held a National Research Council (NRC) Postdoctoral Research Associateship at NIST and while Michelle C. Anderson held a Summer Undergraduate Research Fellowship (SURF) position at NIST.
 	
 	\bibliographystyle{unsrt}
 	\bibliography{Special_issue_references}
