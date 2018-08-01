@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.11)  31 JUL 2018 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.11)  1 AUG 2018 07:47
 entering extended mode
 **./Special_issue_manuscript.tex
 (Special_issue_manuscript.tex
@@ -1302,12 +1302,7 @@ Overfull \hbox (9.23111pt too wide) in paragraph at lines 539--540
 . The ``Best Prac-tices Guide''
  []
 
-[9]
-
-LaTeX Warning: Reference `Additional simulation details' on page 10 undefined o
-n input line 631.
-
-[10]
+[9] [10]
 Overfull \hbox (2.61661pt too wide) in paragraph at lines 676--680
 []\T1/ppl/m/n/12 Following the ``Best Prac-tices'' rec-om-men-da-tion, we im-pl
 e-ment the Green-Kubo ``time-
@@ -1331,7 +1326,7 @@ Overfull \hbox (31.32356pt too wide) in paragraph at lines 756--757
  and 2,2,4-trimethylpentane
  []
 
-[13] <figures/compare_force_fields_ethane.pdf, id=316, 722.7pt x 1445.4pt>
+[13] <figures/compare_force_fields_ethane.pdf, id=317, 722.7pt x 1445.4pt>
 File: figures/compare_force_fields_ethane.pdf Graphic file (type pdf)
 
 <use figures/compare_force_fields_ethane.pdf>
@@ -1344,7 +1339,7 @@ Overfull \hbox (15.31299pt too wide) in paragraph at lines 793--794
 -rated liq-uid vis-cosi-ties for propane,
  []
 
-<figures/compare_force_fields_short_normal.pdf, id=320, 722.7pt x 1445.4pt>
+<figures/compare_force_fields_short_normal.pdf, id=321, 722.7pt x 1445.4pt>
 File: figures/compare_force_fields_short_normal.pdf Graphic file (type pdf)
 
 <use figures/compare_force_fields_short_normal.pdf>
@@ -1352,7 +1347,7 @@ Package pdftex.def Info: figures/compare_force_fields_short_normal.pdf used on
 input line 799.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
 
-<figures/compare_force_fields_long_normal.pdf, id=328, 722.7pt x 1445.4pt>
+<figures/compare_force_fields_long_normal.pdf, id=329, 722.7pt x 1445.4pt>
 File: figures/compare_force_fields_long_normal.pdf Graphic file (type pdf)
 
 <use figures/compare_force_fields_long_normal.pdf>
@@ -1365,7 +1360,7 @@ LaTeX Warning: Text page 15 contains only floats.
 
 [15 <./figures/compare_force_fields_ethane.pdf>] [16 <./figures/compare_force_f
 ields_short_normal.pdf>]
-<figures/compare_force_fields_short_branched.pdf, id=466, 722.7pt x 1445.4pt>
+<figures/compare_force_fields_short_branched.pdf, id=467, 722.7pt x 1445.4pt>
 File: figures/compare_force_fields_short_branched.pdf Graphic file (type pdf)
 
 <use figures/compare_force_fields_short_branched.pdf>
@@ -1373,7 +1368,7 @@ Package pdftex.def Info: figures/compare_force_fields_short_branched.pdf used o
 n input line 868.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
 
-<figures/compare_force_fields_long_branched.pdf, id=469, 722.7pt x 1445.4pt>
+<figures/compare_force_fields_long_branched.pdf, id=470, 722.7pt x 1445.4pt>
 File: figures/compare_force_fields_long_branched.pdf Graphic file (type pdf)
 
 <use figures/compare_force_fields_long_branched.pdf>
@@ -1388,7 +1383,7 @@ lpropane and 2,2-dimethylpropane,
  []
 
 [19 <./figures/compare_force_fields_long_branched.pdf>]
-<figures/compare_REFPROP_T293highP_C3H8.pdf, id=679, 1445.4pt x 1445.4pt>
+<figures/compare_REFPROP_T293highP_C3H8.pdf, id=680, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_C3H8.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_C3H8.pdf>
@@ -1396,7 +1391,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_C3H8.pdf used on inp
 ut line 938.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
  [20] [21 <./figures/compare_REFPROP_T293highP_C3H8.pdf>]
-<figures/compare_REFPROP_T293highP_C4H10.pdf, id=755, 1445.4pt x 1445.4pt>
+<figures/compare_REFPROP_T293highP_C4H10.pdf, id=756, 1445.4pt x 1445.4pt>
 File: figures/compare_REFPROP_T293highP_C4H10.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_C4H10.pdf>
@@ -1404,7 +1399,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_C4H10.pdf used on in
 put line 949.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 
-<figures/compare_REFPROP_T293highP_C8H18.pdf, id=757, 1445.4pt x 722.7pt>
+<figures/compare_REFPROP_T293highP_C8H18.pdf, id=758, 1445.4pt x 722.7pt>
 File: figures/compare_REFPROP_T293highP_C8H18.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_C8H18.pdf>
@@ -1412,7 +1407,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_C8H18.pdf used on in
 put line 956.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
 
-<figures/compare_REFPROP_T293highP_IC4H10.pdf, id=762, 1445.4pt x 722.7pt>
+<figures/compare_REFPROP_T293highP_IC4H10.pdf, id=763, 1445.4pt x 722.7pt>
 File: figures/compare_REFPROP_T293highP_IC4H10.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_IC4H10.pdf>
@@ -1420,7 +1415,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_IC4H10.pdf used on i
 nput line 988.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
 
-<figures/compare_REFPROP_T293highP_IC5H12.pdf, id=764, 1445.4pt x 722.7pt>
+<figures/compare_REFPROP_T293highP_IC5H12.pdf, id=765, 1445.4pt x 722.7pt>
 File: figures/compare_REFPROP_T293highP_IC5H12.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_IC5H12.pdf>
@@ -1428,7 +1423,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_IC5H12.pdf used on i
 nput line 995.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
 
-<figures/compare_REFPROP_T293highP_3MPentane.pdf, id=766, 1445.4pt x 722.7pt>
+<figures/compare_REFPROP_T293highP_3MPentane.pdf, id=767, 1445.4pt x 722.7pt>
 File: figures/compare_REFPROP_T293highP_3MPentane.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_3MPentane.pdf>
@@ -1436,7 +1431,7 @@ Package pdftex.def Info: figures/compare_REFPROP_T293highP_3MPentane.pdf used o
 n input line 1002.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
 
-<figures/compare_REFPROP_T293highP_IC8H18.pdf, id=768, 1445.4pt x 722.7pt>
+<figures/compare_REFPROP_T293highP_IC8H18.pdf, id=769, 1445.4pt x 722.7pt>
 File: figures/compare_REFPROP_T293highP_IC8H18.pdf Graphic file (type pdf)
 
 <use figures/compare_REFPROP_T293highP_IC8H18.pdf>
@@ -1449,7 +1444,7 @@ re_REFPROP_T293highP_C8H18.pdf> <./figures/compare_REFPROP_T293highP_IC4H10.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/compare_REFPROP_T293highP_IC4H10.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
->] <figures/RDF_comparison_CH3.pdf, id=960, 867.24pt x 1734.48pt>
+>] <figures/RDF_comparison_CH3.pdf, id=961, 867.24pt x 1734.48pt>
 File: figures/RDF_comparison_CH3.pdf Graphic file (type pdf)
 
 <use figures/RDF_comparison_CH3.pdf>
@@ -1467,7 +1462,7 @@ Overfull \hbox (50.31938pt too wide) in paragraph at lines 1061--1062
 und, specif-i-cally, 2,2,4-trimethylpentane. 
  []
 
-<figures/C3H8_Potoff_finite_size_effects.pdf, id=1082, 722.7pt x 722.7pt>
+<figures/C3H8_Potoff_finite_size_effects.pdf, id=1083, 722.7pt x 722.7pt>
 File: figures/C3H8_Potoff_finite_size_effects.pdf Graphic file (type pdf)
 
 <use figures/C3H8_Potoff_finite_size_effects.pdf>
@@ -1476,7 +1471,7 @@ put line 1071.
 (pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
  [26 <./figures/compare_REFPROP_T293highP_IC8H18.pdf>] [27 <./figures/RDF_compa
 rison_CH3.pdf>] [28 <./figures/C3H8_Potoff_finite_size_effects.pdf>]
-<figures/cutoff_distance.pdf, id=1235, 867.24pt x 867.24pt>
+<figures/cutoff_distance.pdf, id=1236, 867.24pt x 867.24pt>
 File: figures/cutoff_distance.pdf Graphic file (type pdf)
 
 <use figures/cutoff_distance.pdf>
@@ -1514,16 +1509,12 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1204.
 Package rerunfilecheck Info: File `Special_issue_manuscript.out' has not change
 d.
 (rerunfilecheck)             Checksum: 96329BA639E105B8287B4613DA118136;1129.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1204.
  ) 
 Here is how much of TeX's memory you used:
  29430 strings out of 493323
- 594003 string characters out of 3130449
- 646843 words of memory out of 3000000
+ 593986 string characters out of 3130449
+ 646845 words of memory out of 3000000
  32417 multiletter control sequences out of 15000+200000
  555009 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1531,10 +1522,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{section.8} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
+pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
+pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
 replaced by a fixed one
 
 {C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C
@@ -1561,9 +1552,9 @@ w/courier/ucrr8a.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/palatino/uplb8a.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplr8a.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Special_issue_manuscript.pdf (39 pages, 797185 bytes).
+Output written on Special_issue_manuscript.pdf (39 pages, 796866 bytes).
 PDF statistics:
- 1461 PDF objects out of 1728 (max. 8388607)
+ 1462 PDF objects out of 1728 (max. 8388607)
  143 named destinations out of 1000 (max. 500000)
  232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

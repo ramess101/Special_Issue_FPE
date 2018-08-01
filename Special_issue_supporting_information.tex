@@ -67,6 +67,8 @@
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
 \usepackage{siunitx}
 \usepackage{xr}
+\usepackage{adjustbox}
+\usepackage{lscape}
 
 %%% Old arguments
 %\usepackage{graphicx}
@@ -282,6 +284,20 @@
 	
 %	Following ``Best Practices'', we compute $\eta$ with several different production times (1, 2, 4, and 8 ns) for select systems to verify that the results are indistinguishable (see Supporting Information). Furthermore, we investigate system size effects by comparing results with 100, 200, 400, and 800 molecules (see Section \ref{Discussion/Limitations}). In addition, we compare fixed and flexible bonds in the Supporting Information.
 	
+	\section{Input files} \label{Gromacs input files}
+	
+	We provide example input files for simulating 2,2,4-trimethylpentane at 245 K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files necessary to generate the results from this study can be found at \newline www.github.com/ramess101/IFPSC\_10.
+	
+	%	\begin{enumerate}
+	%		\item Include all the .gro files
+	%		\item Include all the .top file templates
+	%		\item Include .mdp files
+	%		\item Or we can just include an example and then refer them to the GitHub website
+	%	\end{enumerate}
+	%	
+	
+	\newpage
+	
 	\section{Systems simulated} \label{Systems simulated}
 	
 	Table \ref{tab:simulations_performed} enumerates the compounds, force fields, and viscosity types simulated in this study.
@@ -309,27 +325,17 @@
 			\end{tabular}
 		\end{center} 
 	\end{table}
-		
-	\section{Input files} \label{Gromacs input files}
-	
-	We provide example input files for simulating 2,2,4-trimethylpentane at 245 K with the Potoff force field in GROMACS (see attached .gro, .top, and .mdp files). Additionally, all files necessary to generate the results from this study can be found at \newline www.github.com/ramess101/IFPSC\_10.
-	
-%	\begin{enumerate}
-%		\item Include all the .gro files
-%		\item Include all the .top file templates
-%		\item Include .mdp files
-%		\item Or we can just include an example and then refer them to the GitHub website
-%	\end{enumerate}
-%	
 
-    \section{Additional simulation details} \label{Additonal simulation details}
+	\newpage
+
+    \section{Additional simulation details} \label{Additional simulation details}
     
     Table \ref{tab:thermostats_barostats} lists the integrators, thermostats, and barostats used for each $NPT$ or $NVT$ stage.
     
-    \begin{table}[h!]
+    \begin{table}[htbp!]
     	\caption{Integrator, thermostat and barostat specifications.} \label{tab:thermostats_barostats}
-    	\begin{center}
-    		\begin{tabular}{|c|c|c|c|c|}
+%    	\begin{center}
+    		\begin{tabular}{|p{2.6cm}|c|c|c|c|}
     			\hline
     			& $NPT$ Equil. & $NPT$ Prod. & $NVT$ Equil. & $NVT$ Prod. \\ \hline
     			Integrator & Velocity Verlet & Leap frog & Velocity Verlet & Velocity Verlet \\ \hline 
@@ -340,9 +346,10 @@
     			Barostat compressibility & 4.5E-5 & 4.5E-5 & N/A & N/A \\
     			\hline
     		\end{tabular}
-    	\end{center} 
+%    	\end{center} 
     \end{table}
     
+	\newpage
 		
 	\section{Simulation time} \label{SI:Simulation time}
 	
@@ -364,7 +371,7 @@
     \begin{figure}[htb!]
     	\centering
     	\includegraphics[width=3.2in]{most_viscous_systems.pdf}
-    	\caption{Green-Kubo integrals for the most viscous systems studied. Each compound was simulated with the Potoff potential. Solid lines are the average of $N_{\rm reps}$ replicates. Dashed lines are the estimated $\eta$ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}
+    	\caption{Green-Kubo integrals for the most viscous systems studied. Simulations performed with Potoff or TAMie force fields. Solid lines are the average of $N_{\rm reps}$ replicates. Dashed lines are the estimated $\eta$ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}
     	\label{fig:most_viscous}
     \end{figure} 
     
@@ -379,46 +386,8 @@
 %	\begin{enumerate}
 %		\item Verified that 1 ns is long enough for larger compounds
 %	\end{enumerate}
-	
-	\section{Validation Runs} \label{Validation Runs}
-	
-    To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Standard Reference Simulation Website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Kioupis2000,Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
-    
-    The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are at elevated pressures, which provides validation of our $NPT$ ensemble results. 
-    
-    % from this study with those from NIST and the literature, respectively.   
-    
-    \begin{figure}[htb!]
-    	\centering
-    	\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
-    	\caption{Comparison with NIST Standard Reference Simulation benchmark data \cite{NIST_SRSW}. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant uncertainty of 4 \% is assumed for NIST values.}
-    	\label{fig:validation_runs}
-    \end{figure} 
 
-    Figure \ref{fig:validation_runs} demonstrates that our results are consistent with the NIST Reference Simulation Data at higher densities, with some discrepancies at lower densities. Note that the NIST Standard Reference Simulation benchmark data were obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported on the NIST website. Also, the NIST simulations used 500 molecules, 250 ps production time, and a 0.5 fs time-step.  
-    
-    \begin{figure}[htb!]
-		\centering
-		\includegraphics[width=6.4in]{validation_TraPPE_octane.pdf}
-		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}
-		\label{fig:validation_runs2}
-	\end{figure}
-
-    Figure \ref{fig:validation_runs2} demonstrates that our results agree with the literature values for TraPPE \textit{n}-octane at high pressures. Note that our flexible fond results utilize the same harmonic potential as Reference \citenum{Kioupis2000} ($k_{\rm b}/k_{\rm B} = 45.29$ K/pm$^2$, value actually reported in Reference \citenum{Kioupis1999}). Thus, by comparing the circular points, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity. Furthermore, by comparing the fixed and flexible bond results we see a small shift towards higher viscosities for the harmonic potential. This is investigated further in Section \ref{fixed flexible}.
-    
-    %Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols. By comparing the harmonic potential results, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity.
-    
-    % while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths.
-    
-    Recently, we became aware that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we use a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations} of the manuscript, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
-    
-    Note that there appears to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. Also, small discrepancies exist between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. Also,  
-    
-%	
-%	\begin{enumerate}
-%		\item Ethane NIST
-%		\item n-Octane Literature
-%	\end{enumerate}
+	\newpage
 	
 	\section{Fixed vs flexible bonds} \label{fixed flexible}
 	
@@ -457,6 +426,9 @@
 %	\begin{enumerate}
 %		\item Propane and n-butane with harmonic (arbirary bond constant) shows systematic increase
 %	\end{enumerate}
+
+    \clearpage
+	\newpage
 	
 	\section{Green-Kubo analysis} \label{SI:GK_analysis}
 	
@@ -504,6 +476,49 @@
 %	Example analysis, i.e., bootstrap distribution, replicates
 	
 %	\subsection{MCMC?}
+
+    \clearpage
+	\newpage
+
+	\section{Validation Runs} \label{Validation Runs}
+	
+	To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Standard Reference Simulation Website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Kioupis2000,Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
+	
+	The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are at elevated pressures, which provides validation of our $NPT$ ensemble results. 
+	
+	% from this study with those from NIST and the literature, respectively.   
+	
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
+		\caption{Comparison with NIST Standard Reference Simulation benchmark data \cite{NIST_SRSW}. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant uncertainty of 4 \% is assumed for NIST values.}
+		\label{fig:validation_runs}
+	\end{figure} 
+	
+	Figure \ref{fig:validation_runs} demonstrates that our results are consistent with the NIST Reference Simulation Data at higher densities, with some discrepancies at lower densities. Note that the NIST Standard Reference Simulation benchmark data were obtained with the $NVE$ ensemble, while our simulations were performed with the $NVT$ ensemble at the average $T$ reported on the NIST website. Also, the NIST simulations used 500 molecules, 250 ps production time, and a 0.5 fs time-step.  
+	
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[width=6.4in]{validation_TraPPE_octane.pdf}
+		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}
+		\label{fig:validation_runs2}
+	\end{figure}
+	
+	Figure \ref{fig:validation_runs2} demonstrates that our results agree with the literature values for TraPPE \textit{n}-octane at high pressures. Note that our flexible fond results utilize the same harmonic potential as Reference \citenum{Kioupis2000} ($k_{\rm b}/k_{\rm B} = 45.29$ K/pm$^2$, value actually reported in Reference \citenum{Kioupis1999}). Thus, by comparing the circular points, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity. Furthermore, by comparing the fixed and flexible bond results we see a small shift towards higher viscosities for the harmonic potential. This is investigated further in Section \ref{fixed flexible}.
+	
+	%Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols. By comparing the harmonic potential results, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity.
+	
+	% while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths.
+	
+	Recently, we became aware that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we use a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations} of the manuscript, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
+	
+	Note that there appears to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. Also, small discrepancies exist between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. Also,  
+	
+	%	
+	%	\begin{enumerate}
+	%		\item Ethane NIST
+	%		\item n-Octane Literature
+	%	\end{enumerate}
 
     \clearpage
 
@@ -789,6 +804,8 @@
 		\end{center}
 	\end{table}
 
+\begin{landscape}
+
 	\begin{table}[H]
 		\caption{Compressed liquid viscosity values for 2-methylpropane.}
 		\begin{center}
@@ -796,7 +813,7 @@
 				\hline
 				& \multicolumn{3}{c|}{Potoff}                                                                          & \multicolumn{3}{c|}{TAMie}                                                                              & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
 				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
-				293         & 558.6$_{1.2}$                              & -0.03$_{0.91}$ & 0.1501$_{6.3 \rm E-3}$                      & 1.72$_{0.23}$                          & 0.0758$_{9.5 \rm E-3}$ & 2.71 \rm E-3$_{3.4 \rm E-4}$                     & 559.1$_{2.1}$                          & 0.1$_{1.3}$    & 0.1167$_{2.6 \rm E-3}$                      \\ \hline
+				293         & 558.6$_{1.2}$                              & -0.03$_{0.91}$ & 0.1501$_{6.3 \rm E-3}$                      & --                          & -- & --                     & 559.1$_{2.1}$                          & 0.1$_{1.3}$    & 0.1167$_{2.6 \rm E-3}$                      \\ \hline
 				293         & 626.45$_{0.53}$                            & 69.9$_{1.3}$   & 0.287$_{0.016}$                        & 636.45$_{0.93}$                         & 62.7$_{5.6}$      & 0.2338$_{8.9 \rm E-3}$                      & 640.08$_{0.95}$                         & 70.1$_{1.9}$   & 0.2227$_{7.7 \rm E-3}$                      \\ \hline
 				293         & 752.08$_{0.25}$                            & 500.2$_{2.3}$  & 1.676$_{0.066}$                        & 770.48$_{0.39}$                         & 491.1$_{2.4}$     & 1.077$_{0.034}$                        & 786.19$_{0.33}$                         & 500.3$_{2.2}$  & 1.029$_{0.037}$                        \\ \hline
 				293         & 787.35$_{0.18}$                            & 750.2$_{2.6}$  & 3.53$_{0.17}$                          & 806.17$_{0.25}$                         & 723.3$_{2.5}$     & 1.87$_{0.20}$                          & 827.97$_{0.28}$                         & 750.8$_{2.6}$  & 1.844$_{0.073}$                        \\ \hline
@@ -837,21 +854,26 @@
 		\end{center}
 	\end{table}
 
-	\begin{table}[H]
-		\caption{Compressed liquid viscosity values for 2,2,4-trimethylpentane.}
-		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
-				\hline
-				& \multicolumn{3}{c|}{Potoff}                                                                         & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
-				293         & 691.60$_{0.64}$                            & -1.88$_{0.98}$ & 0.432$_{0.013}$                        & 704.21$_{0.84}$                         & -1.7$_{1.0}$   & 0.3299$_{8.5 \rm E-3}$                      \\ \hline
-				293         & 788.98$_{0.33}$                            & 207.1$_{1.6}$  & 2.24$_{0.11}$                          & 817.59$_{0.33}$                         & 206.9$_{1.3}$  & 1.455$_{0.069}$                        \\ \hline
-				293         & 848.66$_{0.34}$                            & 499.9$_{2.8}$  & 15.1$_{1.2}$                           & 887.40$_{0.28}$                         & 499.7$_{1.8}$  & 4.91$_{0.20}$                          \\ \hline
-				293         & 881.93$_{0.59}$                            & 750.5$_{6.0}$  & 77.2$_{6.5}$                           & 926.81$_{0.29}$                         & 750.5$_{2.4}$  & 15.02$_{0.78}$                         \\ \hline
-				293         & --                                          & --              & --                                      & 957.44$_{0.44}$                         & 1000.5$_{4.3}$ & 49.5$_{5.4}$                           \\ \hline
-			\end{tabular}
-		\end{center}
-	\end{table}
+
+%	\begin{adjustbox}{angle=90}
+		\begin{table}[H]
+			\caption{Compressed liquid viscosity values for 2,2,4-trimethylpentane.}
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					& \multicolumn{3}{c|}{Potoff}                                                                         & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
+					$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+					293         & 691.60$_{0.64}$                            & -1.88$_{0.98}$ & 0.432$_{0.013}$                        & 704.21$_{0.84}$                         & -1.7$_{1.0}$   & 0.3299$_{8.5 \rm E-3}$                      \\ \hline
+					293         & 788.98$_{0.33}$                            & 207.1$_{1.6}$  & 2.24$_{0.11}$                          & 817.59$_{0.33}$                         & 206.9$_{1.3}$  & 1.455$_{0.069}$                        \\ \hline
+					293         & 848.66$_{0.34}$                            & 499.9$_{2.8}$  & 15.1$_{1.2}$                           & 887.40$_{0.28}$                         & 499.7$_{1.8}$  & 4.91$_{0.20}$                          \\ \hline
+					293         & 881.93$_{0.59}$                            & 750.5$_{6.0}$  & 77.2$_{6.5}$                           & 926.81$_{0.29}$                         & 750.5$_{2.4}$  & 15.02$_{0.78}$                         \\ \hline
+					293         & --                                          & --              & --                                      & 957.44$_{0.44}$                         & 1000.5$_{4.3}$ & 49.5$_{5.4}$                           \\ \hline
+				\end{tabular}
+			\end{center}
+		\end{table}
+%	\end{adjustbox}
+
+\end{landscape}
 
 
 
@@ -896,8 +918,6 @@
 	%	\end{enumerate}
 	
 	\newpage
-	
-	\section*{References for Supporting Information}
 	
 	\bibliographystyle{unsrt}
 	\bibliography{Special_issue_references}
