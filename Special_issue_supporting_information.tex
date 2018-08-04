@@ -366,14 +366,20 @@
 
     For more viscous systems (greater than 0.02 Pa-s) a 1 ns simulation is too short to observe a plateau in the Green-Kubo integral. In these cases, we increase the simulation time to a value between 2 and 8 ns. Due to the increased computational cost of such simulations, we did not perform an exhaustive test with increasing simulation time. Instead, the choice of simulation time was determined primarily by the ability to detect a plateau region. Therefore, it is possible that even longer simulations are required for the most viscous systems. 
     
-    Figure \ref{fig:most_viscous} depicts some of these highly viscous systems. Note that the total simulation time is twice the maximum time plotted. For example, an 8 ns run appears to be sufficient to detect a plateau for 2,2,4-trimethylpentane at 750 MPa, despite this system having a viscosity around 0.08 Pa-s. By contrast, a 1 ns run provides a reasonable plateau for the other two systems with viscosities near 0.02 Pa-s.
+    Figure \ref{fig:most_viscous} depicts the Green-Kubo integral with respect to time for these highly viscous systems (note that the total simulation time is twice the maximum time plotted). For example, an 8 ns run appears to be sufficient to detect a plateau for 2,2,4-trimethylpentane with Potoff at 750 MPa, while 16 ns are required for 2,2,4-trimethylpentane with Potoff at 1000 MPa. This demonstrates that it is possible to obtain reasonable estimates for systems with viscosities much greater than 0.02 Pa-s. However, the bootstrap uncertainty is significantly larger for these more viscous systems.
+    
+    % does increase significantly with increasing viscosity.
+    
+    %  despite this system having a viscosity around 0.08 Pa-s. By contrast, a 1 ns run provides a reasonable plateau for the other two systems with viscosities near 0.02 Pa-s.
     
     \begin{figure}[htb!]
     	\centering
     	\includegraphics[width=3.2in]{most_viscous_systems.pdf}
-    	\caption{Green-Kubo integrals for the most viscous systems studied. Simulations performed with Potoff or TAMie force fields. Solid lines are the average of $N_{\rm reps}$ replicates. Dashed lines are the estimated $\eta$ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}
+    	\caption{Green-Kubo integrals for the most viscous systems studied. Solid lines are the average of $N_{\rm reps}$ replicates. Dashed lines are the estimated $\eta$ value after fitting. Dotted lines represent the 95 \% bootstrapped uncertainties.}
     	\label{fig:most_viscous}
     \end{figure} 
+    
+    %Simulations performed with Potoff or TAMie force fields.
     
     %, i.e., greater than 100 MPa,
     
@@ -867,7 +873,7 @@
 					293         & 788.98$_{0.33}$                            & 207.1$_{1.6}$  & 2.24$_{0.11}$                          & 817.59$_{0.33}$                         & 206.9$_{1.3}$  & 1.455$_{0.069}$                        \\ \hline
 					293         & 848.66$_{0.34}$                            & 499.9$_{2.8}$  & 15.1$_{1.2}$                           & 887.40$_{0.28}$                         & 499.7$_{1.8}$  & 4.91$_{0.20}$                          \\ \hline
 					293         & 881.93$_{0.59}$                            & 750.5$_{6.0}$  & 77.2$_{6.5}$                           & 926.81$_{0.29}$                         & 750.5$_{2.4}$  & 15.02$_{0.78}$                         \\ \hline
-					293         & --                                          & --              & --                                      & 957.44$_{0.44}$                         & 1000.5$_{4.3}$ & 49.5$_{5.4}$                           \\ \hline
+					293         & 907.61$_{0.90}$	                         & 994.1$_{9.7}$  &	315$_{17}$                                      & 957.44$_{0.44}$                         & 1000.5$_{4.3}$ & 49.5$_{5.4}$                           \\ \hline
 				\end{tabular}
 			\end{center}
 		\end{table}
