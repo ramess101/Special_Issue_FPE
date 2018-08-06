@@ -21,9 +21,10 @@ You're missing a field name---line 2489 of file Special_issue_references.bib
  : %URL = {https://doi.org/10.1080/08927022.2012.702423},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Illegal end of database file---line 2620 of file Special_issue_references.bib
- : }
- :  
+I was expecting a `,' or a `}'---line 2622 of file Special_issue_references.bib
+ : 
+ : @article{Hess1998,
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty year in NIST_SRSW
 (There were 5 error messages)

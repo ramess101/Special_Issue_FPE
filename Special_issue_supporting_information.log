@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  4 AUG 2018 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  6 AUG 2018 15:13
 entering extended mode
 **./Special_issue_supporting_information.tex
 (Special_issue_supporting_information.tex
@@ -9,8 +9,8 @@ Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -1276,34 +1276,44 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 283.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 287.
  [1
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 343--343
-[]|\T1/ppl/m/n/12 Thermostat
+[]|\T1/ppl/m/n/10.95 Thermostat
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 343--343
-\T1/ppl/m/n/12 time-constant
+\T1/ppl/m/n/10.95 time-constant
  []
 
 
-Overfull \hbox (2.1375pt too wide) in paragraph at lines 338--350
-[][] 
+Underfull \hbox (badness 5893) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/10.95 Barostat time-
  []
 
-[3] <figures/simulation_time.pdf, id=64, 867.24pt x 867.24pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/10.95 Barostat com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+\T1/ppl/m/n/10.95 press-ibil-ity
+ []
+
+[3] <figures/simulation_time.pdf, id=65, 867.24pt x 867.24pt>
 File: figures/simulation_time.pdf Graphic file (type pdf)
 
 <use figures/simulation_time.pdf>
 Package pdftex.def Info: figures/simulation_time.pdf used on input line 362.
 (pdftex.def)             Requested size: 231.26378pt x 231.2599pt.
  [4 <./figures/simulation_time.pdf>]
-<figures/most_viscous_systems.pdf, id=117, 867.24pt x 867.24pt>
+<figures/most_viscous_systems.pdf, id=118, 867.24pt x 867.24pt>
 File: figures/most_viscous_systems.pdf Graphic file (type pdf)
 
 <use figures/most_viscous_systems.pdf>
@@ -1311,7 +1321,7 @@ Package pdftex.def Info: figures/most_viscous_systems.pdf used on input line 37
 7.
 (pdftex.def)             Requested size: 231.26378pt x 231.2599pt.
  [5 <./figures/most_viscous_systems.pdf>] <figures/nAlkanes_TraPPE_BondType.pdf
-, id=181, 722.7pt x 1445.4pt>
+, id=182, 722.7pt x 1445.4pt>
 File: figures/nAlkanes_TraPPE_BondType.pdf Graphic file (type pdf)
 
 <use figures/nAlkanes_TraPPE_BondType.pdf>
@@ -1319,7 +1329,7 @@ Package pdftex.def Info: figures/nAlkanes_TraPPE_BondType.pdf used on input lin
 e 416.
 (pdftex.def)             Requested size: 231.26378pt x 462.5154pt.
  [6] [7 <./figures/nAlkanes_TraPPE_BondType.pdf>]
-<figures/autocorrelation_function.pdf, id=267, 867.24pt x 867.24pt>
+<figures/autocorrelation_function.pdf, id=270, 867.24pt x 867.24pt>
 File: figures/autocorrelation_function.pdf Graphic file (type pdf)
 
 <use figures/autocorrelation_function.pdf>
@@ -1327,21 +1337,21 @@ Package pdftex.def Info: figures/autocorrelation_function.pdf used on input lin
 e 451.
 (pdftex.def)             Requested size: 231.26378pt x 231.2599pt.
 
-<figures/GK_MCMC_all_rho0.pdf, id=268, 433.62pt x 433.62pt>
+<figures/GK_MCMC_all_rho0.pdf, id=271, 433.62pt x 433.62pt>
 File: figures/GK_MCMC_all_rho0.pdf Graphic file (type pdf)
 
 <use figures/GK_MCMC_all_rho0.pdf>
 Package pdftex.def Info: figures/GK_MCMC_all_rho0.pdf used on input line 458.
 (pdftex.def)             Requested size: 231.26378pt x 231.26651pt.
 
-<figures/sig_fit_rho0.pdf, id=269, 433.62pt x 433.62pt>
+<figures/sig_fit_rho0.pdf, id=272, 433.62pt x 433.62pt>
 File: figures/sig_fit_rho0.pdf Graphic file (type pdf)
 
 <use figures/sig_fit_rho0.pdf>
 Package pdftex.def Info: figures/sig_fit_rho0.pdf used on input line 465.
 (pdftex.def)             Requested size: 231.26378pt x 231.26651pt.
 
-<figures/GK_bootstraps_MCMC_rho0.pdf, id=270, 433.62pt x 433.62pt>
+<figures/GK_bootstraps_MCMC_rho0.pdf, id=273, 433.62pt x 433.62pt>
 File: figures/GK_bootstraps_MCMC_rho0.pdf Graphic file (type pdf)
 
 <use figures/GK_bootstraps_MCMC_rho0.pdf>
@@ -1358,69 +1368,75 @@ on: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./figures/GK_bootstraps_MCMC_rho0.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
->] <figures/NIST_ethane_TraPPE_validation.pdf, id=459, 867.24pt x 867.24pt>
+>] <figures/NIST_ethane_TraPPE_validation.pdf, id=462, 867.24pt x 867.24pt>
 File: figures/NIST_ethane_TraPPE_validation.pdf Graphic file (type pdf)
 
 <use figures/NIST_ethane_TraPPE_validation.pdf>
 Package pdftex.def Info: figures/NIST_ethane_TraPPE_validation.pdf used on inpu
 t line 499.
 (pdftex.def)             Requested size: 231.26378pt x 231.2599pt.
- [11
 
- <./figures/NIST_ethane_TraPPE_validation.pdf>]
-<figures/validation_TraPPE_octane.pdf, id=509, 1445.4pt x 722.7pt>
+<figures/validation_TraPPE_octane.pdf, id=466, 1445.4pt x 722.7pt>
 File: figures/validation_TraPPE_octane.pdf Graphic file (type pdf)
 
 <use figures/validation_TraPPE_octane.pdf>
 Package pdftex.def Info: figures/validation_TraPPE_octane.pdf used on input lin
 e 508.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
- [12 <./figures/validation_TraPPE_octane.pdf>] [13]
-Overfull \hbox (26.51428pt too wide) in paragraph at lines 536--546
+ [11
+
+ <./figures/NIST_ethane_TraPPE_validation.pdf>] [12 <./figures/validation_TraPP
+E_octane.pdf>]
+Overfull \hbox (5.66153pt too wide) in paragraph at lines 536--546
  [] 
  []
 
-[14
+[13
 
-] [15] [16] [17] [18] [19]
-Overfull \hbox (72.25854pt too wide) in paragraph at lines 764--778
+] [14] [15] [16]
+Overfull \hbox (71.84184pt too wide) in paragraph at lines 764--778
  [] 
  []
 
-[20]
-Overfull \hbox (59.14047pt too wide) in paragraph at lines 784--794
- [] 
- []
-
-
-Overfull \hbox (56.90433pt too wide) in paragraph at lines 800--810
- [] 
- []
-
-[21] [22]
-Overfull \hbox (69.63667pt too wide) in paragraph at lines 818--828
+[17]
+Overfull \hbox (60.89186pt too wide) in paragraph at lines 784--794
  [] 
  []
 
 
-Overfull \hbox (69.63667pt too wide) in paragraph at lines 834--844
+Overfull \hbox (60.89186pt too wide) in paragraph at lines 800--810
+ [] 
+ []
+
+[18] [19]
+Overfull \hbox (60.33276pt too wide) in paragraph at lines 818--828
  [] 
  []
 
 
-Overfull \hbox (69.63667pt too wide) in paragraph at lines 850--860
+Overfull \hbox (59.88737pt too wide) in paragraph at lines 834--844
  [] 
  []
 
-[23
 
-] [24] (Special_issue_supporting_information.bbl) [25
+Overfull \hbox (59.88737pt too wide) in paragraph at lines 850--860
+ [] 
+ []
+
+[20
+
+] [21] (Special_issue_supporting_information.bbl
+Underfull \hbox (badness 1527) in paragraph at lines 33--37
+[]\T1/ppl/m/n/10.95 Carlos Nieto-Draghi, Philippe Un-gerer, and Bernard Roussea
+u.  Op-ti-miza-tion of the
+ []
+
+) [22
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 931.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 931.
-
-(Special_issue_supporting_information.aux)
+ (Special_issue_supporting_information.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 931.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 931.
 Package rerunfilecheck Info: File `Special_issue_supporting_information.out' ha
@@ -1429,30 +1445,30 @@ s not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 931.
  ) 
 Here is how much of TeX's memory you used:
- 30154 strings out of 493333
- 598626 string characters out of 3139198
- 665232 words of memory out of 3000000
- 33142 multiletter control sequences out of 15000+200000
- 28136 words of font info for 79 fonts, out of 3000000 for 9000
+ 30163 strings out of 493333
+ 598752 string characters out of 3139198
+ 665310 words of memory out of 3000000
+ 33150 multiletter control sequences out of 15000+200000
+ 30159 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,67p,10438b,747s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palat
-ino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pf
-b>
-Output written on Special_issue_supporting_information.pdf (25 pages, 2665068 b
+ic/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
+alatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Special_issue_supporting_information.pdf (22 pages, 2670002 b
 ytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 723 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,7 +19,7 @@
 %% with numbered style bibliographic references
 %% SP 2008/03/01
 
-\documentclass[preprint,review,12pt]{elsarticle}
+\documentclass[preprint,review,11pt]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
@@ -343,7 +343,7 @@
     			Thermostat time-constant (ps) & 1.0 & 1.0 & 1.0 & 1.0 \\ \hline
     			Barostat & Berendsen & Parrinello-Rahman & N/A & N/A \\ \hline
     			Barostat time-constant (ps) & 1.0 & 5.0 & N/A & N/A \\ \hline
-    			Barostat compressibility & 4.5E-5 & 4.5E-5 & N/A & N/A \\
+    			Barostat compressibility (1/bar) & 4.5E-5 & 4.5E-5 & N/A & N/A \\
     			\hline
     		\end{tabular}
 %    	\end{center} 
@@ -405,7 +405,7 @@
     \end{equation}
     where $u^{\rm bond}$ is the bonded potential, $k_{\rm b}$ is the harmonic force constant, and $r_{\rm eq}$ is the equilibrium bond-length. We use an arbitrarily large value for the force constant, $k_{\rm b}/k_{\rm B} = 60.43$ K/pm$^2$, as this should result in a fairly stiff bonded potential, i.e., the bond-lengths should not vary significantly.
     
-    . %Since the bond-length should not vary significantly, any deviations should not be attributed to the fluctuations in bond-length but rather to the contributions that the bonded forces make to the viscosity. 
+    %Since the bond-length should not vary significantly, any deviations should not be attributed to the fluctuations in bond-length but rather to the contributions that the bonded forces make to the viscosity. 
     
     Figure \ref{fig:fixed_flexible} demonstrates that the difference between fixed and flexible bonds is negligible in certain cases. However, there is a small, but systematic, deviation towards higher viscosities for the stiff harmonic potential. 
     
@@ -510,7 +510,7 @@
 		\label{fig:validation_runs2}
 	\end{figure}
 	
-	Figure \ref{fig:validation_runs2} demonstrates that our results agree with the literature values for TraPPE \textit{n}-octane at high pressures. Note that our flexible fond results utilize the same harmonic potential as Reference \citenum{Kioupis2000} ($k_{\rm b}/k_{\rm B} = 45.29$ K/pm$^2$, value actually reported in Reference \citenum{Kioupis1999}). Thus, by comparing the circular points, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity. Furthermore, by comparing the fixed and flexible bond results we see a small shift towards higher viscosities for the harmonic potential. This is investigated further in Section \ref{fixed flexible}.
+	Figure \ref{fig:validation_runs2} demonstrates that our results agree with the literature values for TraPPE \textit{n}-octane at high pressures. Note that our flexible bond results utilize the same harmonic potential as Reference \citenum{Kioupis2000} ($k_{\rm b}/k_{\rm B} = 45.29$ K/pm$^2$, value actually reported in Reference \citenum{Kioupis1999}). Thus, by comparing the circular points, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity. Furthermore, by comparing the fixed and flexible bond results we see a small shift towards higher viscosities for the harmonic potential. This is investigated further in Section \ref{fixed flexible}.
 	
 	%Thus, the comparison between literature and ``this work'' should only be made for circle symbols and square symbols. By comparing the harmonic potential results, there is an apparent positive bias between the Reference \citenum{Kioupis2000} values and those from this work. We note that Reference \citenum{Kioupis2000} utilizes NEMD simulations, where extrapolation to zero shear is necessary. From this result, we suggest that the extrapolation tends to over estimate the true viscosity.
 	
@@ -518,7 +518,7 @@
 	
 	Recently, we became aware that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we use a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations} of the manuscript, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
 	
-	Note that there appears to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. Also, small discrepancies exist between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. Also,  
+	Note that there appears to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. Also, small discrepancies exist between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. 
 	
 	%	
 	%	\begin{enumerate}
@@ -536,7 +536,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE 	& AUA4	& TraPPE-2            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				137 & 600.04 & 0.516$_{0.024}$   & 0.389$_{0.013}$   & 0.313$_{0.014}$   & 0.321$_{0.011}$   & 0.2981$_{8.5 \rm E-3}$ \\ \hline
 				174 & 557.16 & 0.2338$_{4.8 \rm E-3}$ & 0.2046$_{4.0 \rm E-3}$ & 0.1714$_{3.7 \rm E-3}$ & 0.1741$_{4.1 \rm E-3}$ & 0.1773$_{3.3 \rm E-3}$ \\ \hline
 				207 & 514.33 & 0.1499$_{3.3 \rm E-3}$ & 0.1360$_{3.0 \rm E-3}$ & 0.1123$_{2.5 \rm E-3}$ & 0.1185$_{3.6 \rm E-3}$ & 0.1204$_{2.1 \rm E-3}$ \\ \hline
@@ -552,7 +552,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				86 & 732.21 & 10.7$_{1.5}$      & 5.31$_{0.40}$     & 2.47$_{0.16}$     \\ \hline
 				90 & 728.03 & 8.34$_{0.96}$     & 4.42$_{0.22}$     & 2.01$_{0.12}$     \\ \hline
 				100  & 717.71 & 3.56$_{0.22}$     & 2.53$_{0.18}$     & 1.243$_{0.049}$   \\ \hline
@@ -573,7 +573,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				191 & 341.27 & 0.551$_{0.019}$   & 0.604$_{0.030}$   & 0.336$_{0.029}$   \\ \hline
 				241 & 316.89 & 0.286$_{0.013}$   & 0.2664$_{6.2 \rm E-3}$ & 0.1900$_{4.3 \rm E-3}$ \\ \hline
 				287 & 292.52 & 0.1690$_{3.6 \rm E-3}$ & 0.1640$_{3.7 \rm E-3}$ & 0.1327$_{2.7 \rm E-3}$ \\ \hline
@@ -589,7 +589,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				256 & 732.07 & 0.830$_{0.041}$   & 0.870$_{0.029}$   & 0.504$_{0.019}$   \\ \hline
 				321 & 679.78 & 0.373$_{0.011}$   & 0.373$_{0.010}$   & 0.2675$_{7.0 \rm E-3}$ \\ \hline
 				381 & 627.49 & 0.2231$_{0.010}$  & 0.2378$_{5.9 \rm E-3}$ & 0.1689$_{4.9 \rm E-3}$ \\ \hline
@@ -605,7 +605,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				296 & 747.27 & 1.056$_{0.065}$   & 1.009$_{0.048}$   & 0.691$_{0.049}$   \\ \hline
 				362 & 698.31 & 0.487$_{0.024}$   & 0.487$_{0.014}$   & 0.349$_{0.014}$   \\ \hline
 				427 & 647.90 & 0.2768$_{8.1 \rm E-3}$ & 0.2868$_{8.7 \rm E-3}$ & 0.2180$_{7.0 \rm E-3}$ \\ \hline
@@ -621,7 +621,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				325 & 751.26 & 1.225$_{0.092}$   & 1.217$_{0.094}$   & 0.794$_{0.047}$   \\ \hline
 				397 & 700.84 & 0.572$_{0.027}$   & 0.568$_{0.023}$   & 0.439$_{0.017}$   \\ \hline
 				469 & 648.85 & 0.364$_{0.025}$   & 0.329$_{0.017}$   & 0.264$_{0.010}$   \\ \hline
@@ -637,7 +637,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				435 & 700.85 & 0.626$_{0.028}$   & 0.677$_{0.046}$   & 0.529$_{0.026}$   \\ \hline
 				514 & 647.14 & 0.384$_{0.016}$   & 0.381$_{0.014}$   & 0.341$_{0.016}$   \\ \hline
 				594 & 588.70 & 0.2422$_{8.6 \rm E-3}$ & 0.246$_{0.010}$   & 0.1901$_{7.1 \rm E-3}$ \\ \hline
@@ -652,7 +652,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				184 & 673.41 & 0.546$_{0.017}$   & 0.3630$_{9.7 \rm E-3}$ & 0.347$_{0.019}$   \\ \hline
 				232 & 625.31 & 0.2706$_{6.6 \rm E-3}$ & 0.2189$_{5.2 \rm E-3}$ & 0.2016$_{4.5 \rm E-3}$ \\ \hline
 				276 & 577.21 & 0.1612$_{3.5 \rm E-3}$ & 0.1403$_{3.1 \rm E-3}$ & 0.1316$_{2.3 \rm E-3}$ \\ \hline
@@ -668,7 +668,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				207 & 700.98 & 0.648$_{0.019}$   & 0.475$_{0.014}$   & 0.396$_{0.021}$   \\ \hline
 				261 & 650.91 & 0.3056$_{8.8 \rm E-3}$ & 0.2647$_{9.3 \rm E-3}$ & 0.2134$_{8.4 \rm E-3}$ \\ \hline
 				312 & 600.84 & 0.1815$_{4.3 \rm E-3}$ & 0.1700$_{5.0 \rm E-3}$ & 0.1452$_{6.7 \rm E-3}$ \\ \hline
@@ -684,7 +684,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				224 & 713.87 & 0.572$_{0.016}$   & 0.501$_{0.019}$   & 0.330$_{0.014}$   \\ \hline
 				282 & 662.88 & 0.2848$_{9.6 \rm E-3}$ & 0.2551$_{7.6 \rm E-3}$ & 0.2069$_{5.9 \rm E-3}$ \\ \hline
 				337 & 611.89 & 0.1763$_{4.3 \rm E-3}$ & 0.1690$_{4.5 \rm E-3}$ & 0.1371$_{3.1 \rm E-3}$ \\ \hline
@@ -700,7 +700,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				227 & 723.49 & 0.587$_{0.024}$   & 0.545$_{0.019}$   & 0.392$_{0.012}$   \\ \hline
 				278 & 678.27 & 0.341$_{0.016}$   & 0.3090$_{8.6 \rm E-3}$ & 0.2423$_{7.3 \rm E-3}$ \\ \hline
 				328 & 632.19 & 0.2060$_{5.6 \rm E-3}$ & 0.1913$_{5.0 \rm E-3}$ & 0.1700$_{9.3 \rm E-3}$ \\ \hline
@@ -716,7 +716,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & AUA4             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				257 & 627.44 & 0.325$_{0.024}$   & 0.1694$_{3.6 \rm E-3}$ & 0.2172$_{5.5 \rm E-3}$ \\ \hline
 				300 & 582.62 & 0.1780$_{4.8 \rm E-3}$ & 0.1212$_{2.3 \rm E-3}$ & 0.1404$_{3.4 \rm E-3}$ \\ \hline
 				337 & 537.80 & 0.1219$_{1.9 \rm E-3}$ & 0.0919$_{3.4 \rm E-3}$ & 0.1006$_{1.9 \rm E-3}$ \\ \hline
@@ -732,7 +732,7 @@
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TAMie             & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				225 & 719.43 & 0.898$_{0.035}$   & 0.579$_{0.019}$   & 0.478$_{0.013}$   \\ \hline
 				275 & 677.37 & 0.410$_{0.013}$   & 0.332$_{0.015}$   & 0.2756$_{7.1 \rm E-3}$ \\ \hline
 				325 & 632.13 & 0.270$_{0.011}$   & 0.218$_{0.010}$   & 0.1938$_{5.6 \rm E-3}$ \\ \hline
@@ -748,7 +748,7 @@
 			\begin{tabular}{|c|c|c|c|}
 				\hline
 				&                                       & Potoff            & TraPPE            \\ \hline
-				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}Pa-s{]} \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
 				245 & 730.93 & 0.807$_{0.046}$   & 0.450$_{0.023}$   \\ \hline
 				309 & 678.72 & 0.390$_{0.014}$   & 0.255$_{0.013}$   \\ \hline
 				369 & 626.51 & 0.245$_{0.013}$   & 0.1654$_{7.8 \rm E-3}$ \\ \hline
@@ -764,7 +764,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|}
 				\hline
 				            &                  & \multicolumn{2}{c|}{Potoff}     & \multicolumn{2}{c|}{TAMie}      & \multicolumn{2}{c|}{TraPPE}    \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293         & 500.28           & -0.11$_{0.39}$   & 0.0987$_{2.4 \rm E-3}$ & 0.54$_{0.35}$    & 0.0966$_{4.3 \rm E-3}$ & 0.71$_{0.45}$   & 0.0831$_{3.0 \rm E-3}$ \\ \hline
 				293         & 559.78           & 40.48$_{0.45}$   & 0.1595$_{4.2 \rm E-3}$ & 41.14$_{0.53}$   & 0.183$_{0.024}$   & 32.51$_{0.56}$  & 0.1211$_{2.2 \rm E-3}$ \\ \hline
 				293         & 629.11           & 156.03$_{0.63}$  & 0.318$_{0.015}$   & 154.23$_{0.58}$  & 0.316$_{0.023}$   & 117.77$_{0.74}$ & 0.2185$_{7.9 \rm E-3}$ \\ \hline
@@ -784,7 +784,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|}
 				\hline
 				&                  & \multicolumn{2}{c|}{Potoff}     & \multicolumn{2}{c|}{TAMie}      & \multicolumn{2}{c|}{TraPPE}    \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293         & 578.76                                     & 1.51$_{0.43}$    & 0.1568$_{4.0 \rm E-3}$                      & 4.92$_{0.44}$    &	0.1611$_{8.6e-3}$                       & -0.05$_{0.49}$  & 0.1339$_{7.4 \rm E-3}$                      \\ \hline
 				293         & 618.15                                     & 38.98$_{0.53}$   & 0.2242$_{4.7 \rm E-3}$                      & 43.98$_{0.51}$	 &  0.2362$_{5.2e-3}$                      & 28.12$_{0.54}$  & 0.1754$_{7.7 \rm E-3}$                      \\ \hline
 				293         & 661.20                                     & 110.51$_{0.62}$  & 0.3633$_{9.7 \rm E-3}$                      & 116.62$_{0.46}$	 &  0.377$_{0.017}$                        & 80.01$_{0.55}$  & 0.249$_{0.010}$                        \\ \hline
@@ -800,7 +800,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|}
 				\hline
 				&                  & \multicolumn{2}{c|}{Potoff}     & \multicolumn{2}{c|}{TAMie}      & \multicolumn{2}{c|}{TraPPE}    \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}    & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $P$ {[}MPa{]}   & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293 & 702.44 & 1.15$_{0.65}$   & 0.508$_{0.034}$ & 13.64$_{0.63}$  & 0.505$_{0.020}$ & -6.37$_{0.47}$  & 0.324$_{0.014}$ \\ \hline
 				293 & 764.16 & 123.47$_{0.83}$ & 1.435$_{0.076}$ & 142.97$_{0.98}$ & 1.148$_{0.070}$ & 77.88$_{0.59}$  & 0.657$_{0.024}$ \\ \hline
 				293 & 832.65 & 405.1$_{7.6}$   & 6.28$_{0.53}$   & 426.7$_{2.8}$   & 6.02$_{0.41}$   & 260.9$_{1.1}$   & 1.790$_{0.084}$ \\ \hline
@@ -818,7 +818,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				& \multicolumn{3}{c|}{Potoff}                                                                          & \multicolumn{3}{c|}{TAMie}                                                                              & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293         & 558.6$_{1.2}$                              & -0.03$_{0.91}$ & 0.1501$_{6.3 \rm E-3}$                      & --                          & -- & --                     & 559.1$_{2.1}$                          & 0.1$_{1.3}$    & 0.1167$_{2.6 \rm E-3}$                      \\ \hline
 				293         & 626.45$_{0.53}$                            & 69.9$_{1.3}$   & 0.287$_{0.016}$                        & 636.45$_{0.93}$                         & 62.7$_{5.6}$      & 0.2338$_{8.9 \rm E-3}$                      & 640.08$_{0.95}$                         & 70.1$_{1.9}$   & 0.2227$_{7.7 \rm E-3}$                      \\ \hline
 				293         & 752.08$_{0.25}$                            & 500.2$_{2.3}$  & 1.676$_{0.066}$                        & 770.48$_{0.39}$                         & 491.1$_{2.4}$     & 1.077$_{0.034}$                        & 786.19$_{0.33}$                         & 500.3$_{2.2}$  & 1.029$_{0.037}$                        \\ \hline
@@ -834,7 +834,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				& \multicolumn{3}{c|}{Potoff}                                                                          & \multicolumn{3}{c|}{TAMie}                                                                              & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293         & 617.83$_{0.58}$                            & -0.17$_{0.75}$ & 0.2233$_{9.6 \rm E-3}$                      & 622.94$_{0.59}$                         & -0.21$_{0.71}$ & 0.1968$_{4.0 \rm E-3}$                      & 622.35$_{0.83}$                         & -0.20$_{0.66}$ & 0.1618$_{3.3 \rm E-3}$                      \\ \hline
 				293         & 741.30$_{0.21}$                            & 249.9$_{1.2}$  & 0.925$_{0.039}$                        & 751.79$_{0.19}$                         & 250.0$_{1.2}$  & 0.816$_{0.028}$                        & 767.87$_{0.23}$                         & 250.1$_{1.1}$  & 0.667$_{0.028}$                        \\ \hline
 				293         & 792.67$_{0.19}$                            & 500.1$_{1.4}$  & 2.32$_{0.10}$                          & 805.79$_{0.17}$                         & 499.8$_{1.5}$  & 1.90$_{0.11}$                          & 828.04$_{0.17}$                         & 500.2$_{1.4}$  & 1.461$_{0.060}$                        \\ \hline
@@ -850,7 +850,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				& \multicolumn{3}{c|}{Potoff}                                                                          & \multicolumn{3}{c|}{TAMie}                                                                              & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
-				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+				$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}     & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 				293         & 647.42$_{0.68}$                            & -0.18$_{0.86}$ & 0.2312$_{5.7 \rm E-3}$                      & 660.41$_{0.46}$                         & -0.08$_{0.60}$ & 0.2528$_{6.8 \rm E-3}$                      & 667.88$_{0.50}$                         & -0.21$_{0.61}$ & 0.2145$_{4.6 \rm E-3}$                      \\ \hline
 				293         & 768.20$_{0.22}$                            & 250.0$_{1.3}$  & 1.079$_{0.049}$                        & 778.92$_{0.24}$                         & 250.1$_{1.0}$  & 1.099$_{0.048}$                        & 800.52$_{0.25}$                         & 250.1$_{1.3}$  & 0.833$_{0.067}$                        \\ \hline
 				293         & 819.29$_{0.20}$                            & 500.3$_{1.8}$  & 2.61$_{0.13}$                          & 831.42$_{0.18}$                         & 500.5$_{1.6}$  & 2.78$_{0.19}$                          & 858.95$_{0.18}$                         & 500.2$_{1.5}$  & 1.94$_{0.12}$                          \\ \hline
@@ -868,7 +868,7 @@
 				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline
 					& \multicolumn{3}{c|}{Potoff}                                                                         & \multicolumn{3}{c|}{TraPPE}                                                                          \\ \hline
-					$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}Pa-s{]} \\ \hline
+					$T$ {[}K{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} & $\rho^{\rm comp}_{\rm liq}$ {[}kg/m$^3${]} & $P$ {[}MPa{]}  & $\eta^{\rm comp}_{\rm liq}$ {[}mPa-s{]} \\ \hline
 					293         & 691.60$_{0.64}$                            & -1.88$_{0.98}$ & 0.432$_{0.013}$                        & 704.21$_{0.84}$                         & -1.7$_{1.0}$   & 0.3299$_{8.5 \rm E-3}$                      \\ \hline
 					293         & 788.98$_{0.33}$                            & 207.1$_{1.6}$  & 2.24$_{0.11}$                          & 817.59$_{0.33}$                         & 206.9$_{1.3}$  & 1.455$_{0.069}$                        \\ \hline
 					293         & 848.66$_{0.34}$                            & 499.9$_{2.8}$  & 15.1$_{1.2}$                           & 887.40$_{0.28}$                         & 499.7$_{1.8}$  & 4.91$_{0.20}$                          \\ \hline

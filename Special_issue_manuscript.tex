@@ -329,8 +329,8 @@
 	 %However, the focus of this study is the second challenge, namely, determining the most accurate force field(s). 
 	 
 %	 We investigate the accuracy of united-atom (UA) Mie $\lambda$-6 force fields, a popular class designed for the engineering purpose of predicting thermophysical properties. Specifically, the force fields we compare are the Transferable Potential for Phase Equilibria (TraPPE-UA and TraPPE-UA2), Transferable Anisotropic Mie (TAMie), Potoff, and fourth generation anisotropic-united-atom (AUA4). The suitability of these force fields for quantitative viscosity prediction has been widely debated in the literature.
-	 
-	 We investigate the accuracy of four force fields, namely, Transferable Potential for Phase Equilibria (TraPPE-UA, also referred to simply as TraPPE), Transferable Anisotropic Mie (TAMie), Potoff, and fourth generation anisotropic-united-atom (AUA4). Each force field is a variation of the united-atom (UA) Mie $\lambda$-6 (generalized Lennard-Jones) model, a popular class designed for the engineering purpose of predicting thermophysical properties. However, the suitability of these force fields for quantitative viscosity prediction, especially at high pressures, has been widely debated in the literature.
+
+	 We investigate the accuracy of four force fields, namely, Transferable Potential for Phase Equilibria (TraPPE-UA, also referred to simply as TraPPE \cite{TraPPE,Martin1999,TraPPEUA2}), Transferable Anisotropic Mie (TAMie) \cite{TAMie,Weidler2016}, Potoff \cite{Mie,Potoff_branched}, and fourth generation anisotropic-united-atom (AUA4) \cite{AUA4,Nieto2008}. Each force field is a variation of the united-atom (UA) Mie $\lambda$-6 (generalized Lennard-Jones) model, a popular class designed for the engineering purpose of predicting thermophysical properties. However, the suitability of these force fields for quantitative viscosity prediction, especially at high pressures, has been widely debated in the literature.
 	 
 %	 Recently, it was shown that the Mie 14-6 and 16-6 potentials of TAMie and Potoff, respectively, are overly repulsive at high densities/pressures.
 	
@@ -342,7 +342,7 @@
 	
 	%Some studies have suggested that united-atom models are not capable of accurately reproducing viscosity and, therefore, anisotropic-united-atom or all-atom models are needed \cite{Allen1997,Payal2012,Mondello1997}.
 	
-	For example, depending on the compound structure and state conditions, some studies suggest that united-atom Lennard-Jones 12-6 models (e.g., TraPPE) are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. Considering the significant increase in computational cost of AA simulations, two promising alternatives have been investigated, namely, Mie $\lambda$-6 and/or modified torsional potentials. The UA Mie $\lambda$-6 has been shown to accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant deprecation of other vapor-liquid saturation properties \cite{Gordon2006}, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Nieto-Draghi et al. demonstrate significant improvement in viscosity prediction by modifying the torsional potential \cite{Nieto2006}.  
+	For example, depending on the compound structure and state conditions, some studies suggest that united-atom Lennard-Jones 12-6 models (e.g., TraPPE) are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. Considering the significant increase in computational cost of AA simulations, two promising alternatives have been investigated, namely, Mie $\lambda$-6 and/or modified torsional potentials. The UA Mie $\lambda$-6 has been shown to accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant degradation of other vapor-liquid saturation properties \cite{Gordon2006}, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Nieto-Draghi et al. demonstrate significant improvement in viscosity prediction by modifying the torsional potential \cite{Nieto2006}.  
 	
 %For example, some studies suggest that, depending on the compound structure and state conditions, united-atom models are inadequate for estimating viscosities and recommend the use of anisotropic-united-atom (AUA) or all-atom (AA) models for this purpose \cite{Allen1997,Payal2012,Mondello1997,Ungerer2007}. However, these studies focused primarily on UA Lennard-Jones (LJ) 12-6 force fields. Reference \citenum{Gordon2006} provides evidence that the UA Mie $\lambda$-6 potential can accurately predict saturated liquid viscosity $(\eta_{\rm liq}^{\rm sat})$ without significant deprecation of other vapor-liquid saturation properties, i.e., saturated liquid density $(\rho_{\rm liq}^{\rm sat})$, saturated vapor density $(\rho_{\rm vap}^{\rm sat})$, and saturated vapor pressure $(P_{\rm vap}^{\rm sat})$. Alternatively, Reference \citenum{Nieto2006} demonstrated significant improvement in viscosity prediction by modifying the AUA4 torsional potential (AUA4m). Considering the significant increase in computational cost of AA simulations, Mie $\lambda$-6 and/or modified torsional potentials are a desirable alternative to AA force fields. 
 	
@@ -439,7 +439,9 @@
 	\begin{equation}
 	u^{\rm bend} = \frac{k_\theta}{2} \left(\theta-\theta_0\right)^2
 	\end{equation}
-	where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle (see Table \ref{tab:angles}), and $k_\theta$ is the harmonic force constant which is equal to 62500 K/rad$^2$ for all bonding angles. 
+	where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle (see Table \ref{tab:angles}), and $k_\theta$ is the harmonic force constant with $k_\theta/k_{\rm B} = 62500 \rm{K/rad}^2$ for all bonding angles, where $k_{\rm B}$ is the Boltzmann constant. 
+	 
+	 %$k_{\rm B}$ is the Boltzmann constant,
 	 
 	\begin{table}[h!]
 		\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0 and 3.} \label{tab:angles}
@@ -462,11 +464,11 @@
 	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants listed in Table \ref{tab:torsions}.
 	
 	\begin{table}[h!]
-		\caption{Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0 and 3.} \label{tab:torsions}
+		\caption{Fourier constants $(c_i/k_{\rm B})$ in units of K. $x$ and $y$ are values between 0 and 3.} \label{tab:torsions}
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				Torsion sites & $c_0$ & $c_1$ & $c_2$ & $c_3$ \\ \hline
+				Torsion sites & $c_0/k_{\rm B}$ & $c_1/k_{\rm B}$ & $c_2/k_{\rm B}$ & $c_3/k_{\rm B}$ \\ \hline
 				CH$_x$-CH$_2$-CH$_2$-CH$_y$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
 				CH$_x$-CH$_2$-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
 				CH$_x$-CH$_2$-C-CH$_y$ & 0.0 & 0.0 & 0.0 & 461.29 \\
@@ -488,7 +490,7 @@
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline
 				\multicolumn{1}{|c}{} & \multicolumn{3}{|c}{TraPPE  (TraPPE-2)} & \multicolumn{3}{|c|}{Potoff (S/L)}  \\ \hline
-				United-atom & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ \\ \hline
+				United-atom & $\epsilon/k_{\rm B}$ (K) & $\sigma$ (nm) & $\lambda$ & $\epsilon/k_{\rm B}$ (K) & $\sigma$ (nm) & $\lambda$ \\ \hline
 				CH$_3$ & 98 (134.5)  & 0.375 (0.352) & 12 & 121.25 & 0.3783 & 16  \\ 
 				CH$_2$ & 46 & 0.395 & 12 & 61 & 0.399 & 16 \\ 
 				CH & 10 & 0.468 & 12 & 15 (15/14) & 0.46 (0.47/0.47) & 16\\
@@ -565,7 +567,7 @@
 				Production time (ns) & 1, 2, 4, 8, or 16 \\
 				Cut-off length (nm) & 1.4 (1.0 for Potoff) \\
 				Tail-corrections & $U$ and $P$ \\
-				Constrained bonds & LINCS \cite{GROMACS_2018} \\
+				Constrained bonds & LINCS \cite{Hess1998} \\
 				LINCS-order & 8 \\			     
 				Number of molecules & 400 \\
 				\hline        
@@ -680,7 +682,7 @@
 	\begin{equation} \label{eq:Green_Kubo}
 	\eta(t) = \frac{V}{3 k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \sum_{\alpha \ne \beta} \int_{0}^{t}dt'\left\langle \tau_{\alpha\beta,n}(t') \tau_{\alpha\beta,n}(0)\right\rangle_{t_0}
 	\end{equation} 
-	where $t$ is time, $V$ is the volume, $k_{\rm B}$ is the Boltzmann constant, $N_{\rm reps}$ is the number of independent replicate simulations, $\langle \cdots \rangle_{t_0}$ denotes an average over time origins $(t_0)$, $\alpha$ and $\beta = x, y, $ or $z$ Cartesian coordinates, and $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal stress tensor element for the $n^{\rm th}$ replicate. 
+	where $t$ is time, $V$ is the volume, $N_{\rm reps}$ is the number of independent replicate simulations, $\langle \cdots \rangle_{t_0}$ denotes an average over time origins $(t_0)$, $\alpha$ and $\beta = x, y, $ or $z$ Cartesian coordinates, and $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal stress tensor element for the $n^{\rm th}$ replicate. 
 	
 	$\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) for accurate integration of Equation \ref{eq:Green_Kubo}. To improve precision, Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components (hence the factor of 3 in the denominator of Equation \ref{eq:Green_Kubo}).
 	
@@ -936,7 +938,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C3H8.pdf}
-		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. TDE data for temperatures between 288 and 298 K are depicted. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95~\% confidence interval estimated with bootstrap re-sampling.}
+		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. TDE data for temperatures between 288 and 298 K are depicted when available. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95~\% confidence interval estimated with bootstrap re-sampling.}
 		\label{fig:T293highP_C3}
 	\end{figure} 
 
@@ -1026,7 +1028,9 @@
 		\label{fig:RDF_comparison_CH3}
 	\end{figure} 
 	
-	The top panel of Figure \ref{fig:RDF_comparison_CH3} demonstrates that the RDF shifts to the left (closer interactions) when increasing the temperature from 86 K to 293 K. Although the magnitude of this shift is similar for all three force fields, the Potoff viscosities appear to be impacted the most due to the steepness of the Mie 16-6 potential. By contrast, the bottom panel demonstrates that increasing the density at constant temperature does not shift the RDF, although it does increase the frequency of close-range interactions. Therefore, the overly repulsive Mie 16-6 potential is only problematic at high densities if there is sufficient thermal energy for the system to sample extremely close-range interactions. This explains why the Potoff force field is reliable at high densities along the saturation curve but over estimates the $\eta$-$\rho$ dependence at 293 K.	
+	The top panel of Figure \ref{fig:RDF_comparison_CH3} demonstrates that the RDF shifts to the left (closer interactions) when increasing the temperature from 86 K to 293 K. Although the magnitude of this shift is similar for all three force fields, the Potoff viscosities appear to be impacted the most due to the steepness of the Mie 16-6 potential. By contrast, the bottom panel demonstrates that increasing the density at constant temperature does not shift the RDF, although it does increase the frequency of close-range interactions. Therefore, the overly repulsive Mie 16-6 potential is only problematic at high densities if there is sufficient thermal energy for the system to sample extremely close-range interactions. This explains why the Potoff force field is reliable near the triple point but significantly over estimates $\eta$ for high density systems at 293 K.
+	
+	% at high densities along the saturation curve but over estimates the $\eta$-$\rho$ dependence at 293 K.	
 	
 	%Therefore, It is clear from Figure \ref{fig:RDF_comparison_CH3} that the higher pressure simulations sample from much closer interactions than the triple point and, therefore, these close interactions cause the over estimation of compressed liquid viscosities but not saturated high density liquid viscosities.
 	
@@ -1134,14 +1138,14 @@
 	
 	% each force field except Potoff, which utilizes only a 1.0 nm cut-off. This choice was made because the Potoff force field was parameterized with a 1.0 nm cut-off. 
 	
-	The ``Best Practices'' guide suggests that cut-off lengths could impact viscosity estimates but does not provide any support for this claim. To address this issue, we perform simulations with the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, 1.8 nm. 
+	The ``Best Practices'' guide suggests that cut-off lengths could impact viscosity estimates but does not provide any support for this claim. To address this issue, we perform simulations with the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, and 1.8 nm. 
 	
 	% convincing evidence to prove or disprove this notion.
 	
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{cutoff_distance.pdf}
-		\caption{Impact of cut-off distance. Filled symbols are for \textit{n}-butane and empty symbols for \textit{n}-dodecane. Colors/shapes denote different cut-off lengths. Simulations performed with Potoff force field at saturation conditions.}
+		\caption{Impact of cut-off distance. Colors/symbols denote different cut-off lengths. Different shapes correspond to \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane. REFPROP values are provided as a visual reference. Simulations are performed with Potoff force field at saturation conditions.}
 		\label{fig:cutoff_distance}
 	\end{figure} 
 
@@ -1155,9 +1159,11 @@
 %	
 %	In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time.  For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 %	
-	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds the impact of cut-off is negligible. For larger compounds, however, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. In fact, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time and does not resolve the observed bias. For these reasons, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
+	Figure \ref{fig:cutoff_distance} demonstrates that for smaller compounds (\textit{n}-butane and \textit{n}-octane) the impact of cut-off is negligible. For larger compounds, however, such as \textit{n}-dodecane, a 1.0 nm cut-off leads to significant error. Unfortunately, Figure \ref{fig:cutoff_distance} demonstrates that even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. 
 	
-	Unfortunately, even the 1.4 nm cut-off results are not identical to those with a 1.8 nm cut-off for \textit{n}-dodecane. Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff (and TAMie) force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length. This is somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. Therefore, the 1.8 nm cut-off increases the simulation wall-time by nearly a factor of two compared to the 1.4 nm cut-off.
+	Recall in Figure \ref{fig:Saturation_C12_C16_C22} that the longer \textit{n}-alkanes demonstrate a temperature dependent deviation for the Potoff (and TAMie) force field, which was not observed for smaller compounds. Based on the results in Figure \ref{fig:cutoff_distance}, we propose that this deviation is not a limitation in the force field, but rather is an artifact of the cut-off length. This is somewhat troubling, since the computationally expensive operation of computing pair interactions is proportional to the square of the cut-off. For example, the 1.8 nm cut-off increases the simulation wall-time for these systems by nearly a factor of two compared to the 1.4 nm cut-off.
+	
+	In addition, \textit{n}-hexadecane and \textit{n}-docosane were unstable with a 1.0 nm cut-off and a 2 fs time-step. Reducing the time step to 1 fs was capable of stabilizing the 1.0 nm cut-off, but would require twice the computational time and does not resolve the observed bias. As a compromise between stability, speed, and accuracy, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 		
 	%For this reason, the Potoff results for \textit{n}-dodecane, \textit{n}-hexadecane, and \textit{n}-docosane presented previously in Figure \ref{fig:Saturation_C12_C16_C22} were actually obtained using a 1.4 nm cut-off.
 	
@@ -1196,7 +1202,7 @@
 	
 	\section*{Acknowledgments}
 	
-	We are grateful for the internal review provided by Andrei F. Kazakov and Alta Y. Fang of the National Institute of Standards and Technology (NIST). This research was performed while Richard A. Messerly held a National Research Council (NRC) Postdoctoral Research Associateship at NIST and while Michelle C. Anderson held a Summer Undergraduate Research Fellowship (SURF) position at NIST.
+	We are grateful for the internal review provided by Andrei F. Kazakov and Alta Y. Fang of the National Institute of Standards and Technology (NIST). This research was performed while Richard A. Messerly held a National Research Council (NRC) Postdoctoral Research Associateship at NIST and while Michelle C. Anderson held a Summer Undergraduate Research Fellowship (SURF) position at NIST. Contribution of NIST, an agency of the United States government; not subject to copyright in the United States.
 	
 	\bibliographystyle{unsrt}
 	\bibliography{Special_issue_references}
