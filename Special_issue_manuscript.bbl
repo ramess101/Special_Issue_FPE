@@ -194,6 +194,13 @@ Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
 \newblock Lincs: A linear constraint solver for molecular simulations.
 \newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
 
+\bibitem{Hess2008}
+Berk Hess.
+\newblock {P-LINCS}:  a parallel linear constraint solver for molecular
+  simulation.
+\newblock {\em Journal of Chemical Theory and Computation}, 4(1):116--122,
+  2008.
+
 \bibitem{Zhang2015}
 Yong Zhang, Akihito Otani, and Edward~J. Maginn.
 \newblock Reliable viscosity calculation from equilibrium molecular dynamics
