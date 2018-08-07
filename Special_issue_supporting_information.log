@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  7 AUG 2018 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  7 AUG 2018 15:03
 entering extended mode
 **./Special_issue_supporting_information.tex
 (Special_issue_supporting_information.tex
@@ -1386,68 +1386,53 @@ e 508.
  [11
 
  <./figures/NIST_ethane_TraPPE_validation.pdf>] [12 <./figures/validation_TraPP
-E_octane.pdf>]
+E_octane.pdf>] [13]
 Overfull \hbox (5.66153pt too wide) in paragraph at lines 536--546
  [] 
  []
 
-[13
+[14
 
-] [14] [15] [16]
-Overfull \hbox (71.84184pt too wide) in paragraph at lines 764--778
+] [15] [16] [17] [18] [19
+
+]
+Overfull \hbox (60.33276pt too wide) in paragraph at lines 820--830
  [] 
  []
 
-[17]
-Overfull \hbox (60.89186pt too wide) in paragraph at lines 784--794
- [] 
- []
-
-
-Overfull \hbox (60.89186pt too wide) in paragraph at lines 800--810
- [] 
- []
-
-[18] [19]
-Overfull \hbox (60.33276pt too wide) in paragraph at lines 818--828
+[20]
+Overfull \hbox (59.88737pt too wide) in paragraph at lines 836--846
  [] 
  []
 
 
-Overfull \hbox (59.88737pt too wide) in paragraph at lines 834--844
+Overfull \hbox (59.88737pt too wide) in paragraph at lines 852--862
  [] 
  []
 
-
-Overfull \hbox (59.88737pt too wide) in paragraph at lines 850--860
- [] 
- []
-
-[20
-
-] [21] (Special_issue_supporting_information.bbl
+[21] [22] (Special_issue_supporting_information.bbl
 Underfull \hbox (badness 1527) in paragraph at lines 33--37
 []\T1/ppl/m/n/10.95 Carlos Nieto-Draghi, Philippe Un-gerer, and Bernard Roussea
 u.  Op-ti-miza-tion of the
  []
 
-) [22
+) [23
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 933.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 933.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 935.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 935.
  (Special_issue_supporting_information.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 933.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 933.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 935.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 935.
 Package rerunfilecheck Info: File `Special_issue_supporting_information.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 4DAEFFA39B70BAD43E1494689D97F254;433.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 933.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 935.
  ) 
 Here is how much of TeX's memory you used:
- 30164 strings out of 493333
- 598762 string characters out of 3139198
- 665310 words of memory out of 3000000
+ 30165 strings out of 493333
+ 598772 string characters out of 3139198
+ 665359 words of memory out of 3000000
  33150 multiletter control sequences out of 15000+200000
  30159 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1465,10 +1450,10 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Special_issue_supporting_information.pdf (22 pages, 2670663 b
+Output written on Special_issue_supporting_information.pdf (23 pages, 2671403 b
 ytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 728 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -497,7 +497,7 @@
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=3.2in]{NIST_ethane_TraPPE_validation.pdf}
-		\caption{Comparison with NIST Standard Reference Simulation benchmark data \cite{NIST_SRSW}. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant uncertainty of 4 \% is assumed for NIST values.}
+		\caption{Comparison with NIST Standard Reference Simulation benchmark data for TraPPE ethane \cite{NIST_SRSW}. Red line corresponds to $x = y$, i.e., exact agreement between this work and the NIST values. A constant uncertainty of 4 \% is assumed for NIST values.}
 		\label{fig:validation_runs}
 	\end{figure} 
 	
@@ -506,7 +506,7 @@
 	\begin{figure}[htb!]
 		\centering
 		\includegraphics[width=6.4in]{validation_TraPPE_octane.pdf}
-		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006}. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}
+		\caption{Comparison with Kioupis \cite{Kioupis2000} and Nieto-Draghi \cite{Nieto2006} results for TraPPE \textit{n}-octane. Circle symbols were obtained with the same harmonic potential, while square symbols denote fixed bond-lengths.}
 		\label{fig:validation_runs2}
 	\end{figure}
 	
@@ -516,7 +516,7 @@
 	
 	% while Reference \citenum{Nieto2006} performed EMD simulations with fixed bond-lengths.
 	
-	Recently, we became aware that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we use a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations} of the manuscript, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
+	It is important to note that Reference \citenum{Nieto2006} utilizes a 1.0 nm cut-off, whereas we use a 1.4 nm cut-off. As demonstrated in Section \ref{Discussion/Limitations} of the manuscript, the results for a 1.0 nm and 1.4 nm cut-off can become significant for larger molecules. However, due to the good agreement between our values and those from Reference \citenum{Nieto2006}, the 1.0 nm cut-off appears to be sufficient for \textit{n}-octane at elevated pressures. It is also worth noting that Reference \citenum{Nieto2006} performed 10 to 20 ns simulations, while our simulation production time was only 1 ns.
 	
 	Note that there appears to be a slight bias towards smaller box-sizes (higher $\rho$) for a given pressure when comparing the fixed bond-lengths from this work with the values of Reference \citenum{Nieto2006}. Also, small discrepancies exist between the state points reported in Reference \citenum{Kioupis2000} and Reference \citenum{Nieto2006}. This should not impact our validation, but it is somewhat curious. 
 	
@@ -758,6 +758,8 @@
 		\end{center}
 	\end{table}
 
+\begin{landscape}
+
 	\begin{table}[H]
 		\caption{Compressed liquid viscosity values for propane.}
 		\begin{center}
@@ -810,7 +812,7 @@
 		\end{center}
 	\end{table}
 
-\begin{landscape}
+%\begin{landscape}
 
 	\begin{table}[H]
 		\caption{Compressed liquid viscosity values for 2-methylpropane.}
