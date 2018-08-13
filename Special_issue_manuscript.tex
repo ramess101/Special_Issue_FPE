@@ -444,14 +444,14 @@
 	 %$k_{\rm B}$ is the Boltzmann constant,
 	 
 	\begin{table}[h!]
-		\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0 and 3.} \label{tab:angles}
+		\caption{Equilibrium bond angles $(\theta_0)$ \cite{Martin1999}. CH$_i$ and CH$_j$ represent CH$_3$, CH$_2$, CH, or C sites.} \label{tab:angles}
 		\begin{center}
 			\begin{tabular}{|c|c|}
 				\hline
 				Bending sites & $\theta_0$ (degrees) \\ \hline
-				CH$_x$-CH$_2$-CH$_y$ & 114.0 \\ 
-				CH$_x$-CH-CH$_y$ & 112.0 \\ 
-				CH$_x$-C-CH$_y$ & 109.5 \\  
+				CH$_i$-CH$_2$-CH$_j$ & 114.0 \\ 
+				CH$_i$-CH-CH$_j$ & 112.0 \\ 
+				CH$_i$-C-CH$_j$ & 109.5 \\  
 				\hline
 			\end{tabular}
 		\end{center} 
@@ -461,18 +461,18 @@
 	\begin{equation}
 	u^{\rm tors} = c_0 + c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
 	\end{equation}
-	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants listed in Table \ref{tab:torsions}.
+	where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_n$ are the Fourier constants listed in Table \ref{tab:torsions}.
 	
 	\begin{table}[h!]
-		\caption{Fourier constants $(c_i/k_{\rm B})$ in units of K. $x$ and $y$ are values between 0 and 3.} \label{tab:torsions}
+		\caption{Fourier constants $(c_n/k_{\rm B})$ in units of K \cite{Martin1999}. CH$_i$ and CH$_j$ represent CH$_3$, CH$_2$, CH, or C sites.} \label{tab:torsions}
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				Torsion sites & $c_0/k_{\rm B}$ & $c_1/k_{\rm B}$ & $c_2/k_{\rm B}$ & $c_3/k_{\rm B}$ \\ \hline
-				CH$_x$-CH$_2$-CH$_2$-CH$_y$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
-				CH$_x$-CH$_2$-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
-				CH$_x$-CH$_2$-C-CH$_y$ & 0.0 & 0.0 & 0.0 & 461.29 \\
-				CH$_x$-CH-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
+				CH$_i$-CH$_2$-CH$_2$-CH$_j$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
+				CH$_i$-CH$_2$-CH-CH$_j$ & -251.06 & 428.73 & -111.85 & 441.27 \\
+				CH$_i$-CH$_2$-C-CH$_j$ & 0.0 & 0.0 & 0.0 & 461.29 \\
+				CH$_i$-CH-CH-CH$_j$ & -251.06 & 428.73 & -111.85 & 441.27 \\
 				\hline
 			\end{tabular}
 		\end{center} 
@@ -937,16 +937,23 @@
 	
 	%As the REFPROP viscosity correlation is not recommended above 100 MPa at 293 K, we have plotted some experimental data to guide the eye.
 	
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C3H8.pdf}
+%		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. TDE data for temperatures between 288 and 298 K are depicted when available. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95~\% confidence interval estimated with bootstrap re-sampling.}
+%		\label{fig:T293highP_C3}
+%	\end{figure} 
+
+% Simulation uncertainties are obtained from bootstrap re-sampling and are presented at the 95~\% confidence level.
+	
+	Figures \ref{fig:T293highP_C3}, \ref{fig:T293highP_C4}, and \ref{fig:T293highP_C8} demonstrate that the TraPPE force field has a constant negative bias even with increasing density/pressure. The TAMie force field has the most accurate $\eta$-$\rho$ dependence, i.e., the error does not increase significantly with respect to density. By contrast, the Potoff potential demonstrates considerable over estimation of $\eta$ at high densities, which is likely attributed to the overly repulsive Mie 16-6 potential at close distances. Remarkably, the Potoff force field is the most accurate at predicting the $\eta$-$P$ dependence from saturation to elevated pressures (approaching 1000 MPa). This can be explained as a cancellation of errors since the Potoff force field significantly over predicts both $\eta$ and $P$ at high densities. Note that the increase in Potoff deviations for the two highest pressures in Figure \ref{fig:T293highP_C3} can potentially be explained by the large uncertainty in the REFPROP correlation and dubious extrapolation at these extreme pressures. Therefore, although Potoff should not be used to estimate the $\eta$-$\rho$ dependence, we conclude that it is the most reliable force field for estimating the $\eta$-$P$ dependence.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=6.4in]{compare_REFPROP_T293highP_C3H8.pdf}
 		\caption{Compressed liquid viscosities at 293 K for propane. Top panels provide $\eta$-$\rho$ and $\eta$-$P$ dependence. Bottom panels present percent deviations between simulated $(\eta_{\rm sim})$ and REFPROP $(\eta_{\rm REFPROP})$ values with respect to $\rho$ and $P$. TDE data for temperatures between 288 and 298 K are depicted when available. Dashed lines correspond to reported REFPROP uncertainties. Dotted lines are extrapolation values outside of ``reference quality'' range, intended to guide the eye when comparing with simulation results at high densities/pressures. Colors/symbols denote different force fields and experimental data. Error bars represent the 95~\% confidence interval estimated with bootstrap re-sampling.}
 		\label{fig:T293highP_C3}
 	\end{figure} 
-
-% Simulation uncertainties are obtained from bootstrap re-sampling and are presented at the 95~\% confidence level.
-	
-	Figures \ref{fig:T293highP_C3}, \ref{fig:T293highP_C4}, and \ref{fig:T293highP_C8} demonstrate that the TraPPE force field has a constant negative bias even with increasing density/pressure. The TAMie force field has the most accurate $\eta$-$\rho$ dependence, i.e., the error does not increase significantly with respect to density. By contrast, the Potoff potential demonstrates considerable over estimation of $\eta$ at high densities, which is likely attributed to the overly repulsive Mie 16-6 potential at close distances. Remarkably, the Potoff force field is the most accurate at predicting the $\eta$-$P$ dependence from saturation to elevated pressures (approaching 1000 MPa). This can be explained as a cancellation of errors since the Potoff force field significantly over predicts both $\eta$ and $P$ at high densities. Note that the increase in Potoff deviations for the two highest pressures in Figure \ref{fig:T293highP_C3} can potentially be explained by the large uncertainty in the REFPROP correlation and dubious extrapolation at these extreme pressures. Therefore, although Potoff should not be used to estimate the $\eta$-$\rho$ dependence, we conclude that it is the most reliable force field for estimating the $\eta$-$P$ dependence.
 	
 	\begin{figure}[htb!]
 		\centering
@@ -1177,7 +1184,7 @@
 	
 	The instability of a 1.0 nm cut-off (with 2 fs time-steps) and the discrepancy in $\eta$ values obtained with different cut-offs demonstrate the importance of verifying that the cut-off distance is long enough to not impact the system dynamics. Furthermore, this demonstrates a scenario where alternative tail modifications may be preferable, e.g., force-shift or switch-force \cite{GROMACS_2018}. Unfortunately, these tail modifications significantly impact saturation properties, suggesting that the non-bonded parameters must be re-optimized with the tail modification \cite{Thol_LJTS,Thol2016_LJ}. Therefore, performing simulations with a force-shift or switch-force potential for Potoff, TraPPE, TAMie, and AUA4 would likely result in inaccurate viscosities. Re-parameterizing the non-bonded interactions for a force-shift or switch-force potential is beyond the scope of this study.
 	
-	\subsection{REFPROP saturated liquid density}
+	\subsection{REFPROP $\rho_{\rm liq}^{\rm sat}$ vs. force field $\rho_{\rm liq}^{\rm sat}$}
 	
 	The use of REFPROP $\rho_{\rm liq}^{\rm sat}$ instead of the force field $\rho_{\rm liq}^{\rm sat}$ can lead to meta-stable simulations and spurious results. This occurs when the force field $P_{\rm vap}^{\rm sat}$ is less than the REFPROP $P_{\rm vap}^{\rm sat}$. Fortunately, this is uncommon since Potoff, TAMie, AUA4, and TraPPE-2 are quite reliable for estimating $P_{\rm vap}^{\rm sat}$ and TraPPE significantly over estimates $P_{\rm vap}^{\rm sat}$. Furthermore, even the lowest temperature simulations of propane did not appear to be below the melting point for each force field, i.e., the RDFs were liquid-like (cf. top panel of Figure \ref{fig:RDF_comparison_CH3}). 
 	
@@ -1209,6 +1216,8 @@
 	Commercial equipment, instruments, or materials are identified only in order to adequately specify certain procedures. In no case does such identification imply recommendation or endorsement by NIST, nor does it imply that the products identified are necessarily the best available for the intended purpose.
 	
 	Partial contribution of NIST, an agency of the United States government; not subject to copyright in the United States.
+	
+	\section*{References}
 	
 	\bibliographystyle{unsrt}
 	\bibliography{Special_issue_references}
