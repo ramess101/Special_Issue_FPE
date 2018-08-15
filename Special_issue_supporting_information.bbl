@@ -44,4 +44,12 @@ Loukas~I. Kioupis and Edward~J. Maginn.
 \newblock {\em The Journal of Physical Chemistry B}, 103(49):10781--10790,
   1999.
 
+\bibitem{TAMie}
+Andrea Hemmen and Joachim Gross.
+\newblock Transferable anisotropic united-atom force field based on the {Mie}
+  potential for phase equilibrium calculations: \textit{n}-alkanes and
+  \textit{n}-olefins.
+\newblock {\em The Journal of Physical Chemistry B}, 119(35):11695--11707,
+  2015.
+
 \end{thebibliography}

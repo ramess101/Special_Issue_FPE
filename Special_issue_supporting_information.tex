@@ -70,6 +70,8 @@
 \usepackage{adjustbox}
 \usepackage{lscape}
 
+\usepackage{setspace}
+
 %%% Old arguments
 %\usepackage{graphicx}
 %% uncomment according to your operating system:
@@ -488,9 +490,7 @@
 
 	\section{Validation Runs} \label{Validation Runs}
 	
-	To validate our methodology, we attempt to replicate viscosity estimates available on the NIST Standard Reference Simulation Website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Kioupis2000,Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively.
-	
-	The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are at elevated pressures, which provides validation of our $NPT$ ensemble results. 
+	To validate our approach, we attempt to replicate viscosity estimates available on the NIST Standard Reference Simulation Website \cite{NIST_SRSW} for TraPPE-UA ethane as well as literature values for TraPPE-UA \textit{n}-octane \cite{Kioupis2000,Nieto2006}. Figures \ref{fig:validation_runs} and \ref{fig:validation_runs2} compare the ethane and \textit{n}-octane results, respectively. The \textit{n}-octane validation is somewhat more useful than the ethane validation for at least three reasons. First, \textit{n}-octane includes angle and torsional contributions that are absent in ethane. Second, the literature provides values for both rigid and flexible bonds. Third, the \textit{n}-octane results are at elevated pressures, which provides validation of our $NPT$ ensemble results. 
 	
 	% from this study with those from NIST and the literature, respectively.   
 	
@@ -759,6 +759,33 @@
 	\end{table}
 
 \begin{landscape}
+
+	\begin{table}[H]
+		\caption{Saturated liquid viscosity values for \textit{n}-butane at force field saturated liquid densities.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+				\hline
+				\multicolumn{3}{|c|}{Potoff}     & \multicolumn{3}{c|}{TAMie}      & \multicolumn{3}{c|}{TraPPE}            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
+				260 & 610.98 & 0.2259$_{5.9e-3}$  & 260 & 608.86$^{\star}$ & 0.2247$_{8.6e-3}$  & 262 & 613.00 & 0.1716$_{4.8e-3}$   \\ \hline
+			\end{tabular}
+		\end{center}
+	\begin{singlespace}
+	$^{\star}$ The value of 608.86 kg/m$^3$ is reported in Reference \citenum{TAMie} but for the optimized UA LJ 12-6 potential. The actual density for TAMie (AUA Mie 14-6) should have been 605.91 kg/m$^3$. We did not notice this mistake before the submission deadline. However, the percent deviations in $\rho_{\rm liq}^{\rm sat}$ relative to the REFPROP value (614.65 kg/m$^3$) are approximately $-0.94$~\% and $-1.4$~\% for the values of 608.86 kg/m$^3$ and 605.91 kg/m$^3$, respectively. Considering the large uncertainties in $\eta_{\rm liq}^{\rm sat}$ and that the 608.86 kg/m$^3$ viscosity deviation is consistent with other TAMie viscosity deviations, we did not deem it necessary to repeat this state point in the limited time available.
+	\end{singlespace}
+	\end{table}
+
+	\begin{table}[H]
+		\caption{Saturated liquid viscosity values for 3-methylpentane at force field saturated liquid densities.}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				\multicolumn{3}{|c|}{Potoff}  & \multicolumn{3}{c|}{TraPPE}            \\ \hline
+				$T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} & $T^{\rm sat}$ {[}K{]} & $\rho^{\rm sat}_{\rm liq}$ [kg/m$^3$] & $\eta_{\rm liq}^{\rm sat}$ {[}mPa-s{]} \\ \hline
+				330 & 624.00 & 0.1844$_{4.5e-3}$ & 330 & 631.60 & 0.1643$_{4.5e-3}$   \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
 
 	\begin{table}[H]
 		\caption{Compressed liquid viscosity values for propane.}
