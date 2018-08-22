@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  15 AUG 2018 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  22 AUG 2018 15:29
 entering extended mode
 **./Special_issue_manuscript.tex
 (Special_issue_manuscript.tex
@@ -1407,55 +1407,55 @@ Package pdftex.def Info: figures/C3H8_Potoff_finite_size_effects.pdf used on in
 put line 1084.
 (pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
  [28 <./figures/C3H8_Potoff_finite_size_effects.pdf>]
-<figures/cutoff_distance.pdf, id=1272, 867.24pt x 867.24pt>
+<figures/cutoff_distance.pdf, id=1273, 867.24pt x 867.24pt>
 File: figures/cutoff_distance.pdf Graphic file (type pdf)
 
 <use figures/cutoff_distance.pdf>
-Package pdftex.def Info: figures/cutoff_distance.pdf used on input line 1156.
+Package pdftex.def Info: figures/cutoff_distance.pdf used on input line 1158.
 (pdftex.def)             Requested size: 231.26378pt x 231.2599pt.
- [29] [30 <./figures/cutoff_distance.pdf>]
+ [29 <./figures/cutoff_distance.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1187.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 1187.
+(hyperref)                removing `math shift' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1187.
+(hyperref)                removing `\rho' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1187.
+(hyperref)                removing `subscript' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1187.
+(hyperref)                removing `superscript' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1187.
+(hyperref)                removing `math shift' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 1187.
+(hyperref)                removing `math shift' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1187.
+(hyperref)                removing `\rho' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1187.
+(hyperref)                removing `subscript' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1187.
+(hyperref)                removing `superscript' on input line 1189.
 
-[31]
-Overfull \hbox (3.61536pt too wide) in paragraph at lines 1204--1205
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1189.
+
+[30] [31]
+Overfull \hbox (3.61536pt too wide) in paragraph at lines 1206--1207
 \T1/ppl/m/n/12 the Potoff and TAMie force fields typ-i-cally pre-dict sat-u-rat
 ed liq-uid vis-cosi-ties for \T1/ppl/m/it/12 n\T1/ppl/m/n/12 -alkanes
  []
@@ -1473,22 +1473,22 @@ Underfull \hbox (badness 2735) in paragraph at lines 185--193
  []
 
 [37] [38] [39]) [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1227.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1229.
  (Special_issue_manuscript.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1229.
 
 Package rerunfilecheck Info: File `Special_issue_manuscript.out' has not change
 d.
 (rerunfilecheck)             Checksum: 0817BAE425A0F16E35990C5C56B0F366;1161.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1227.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1229.
  ) 
 Here is how much of TeX's memory you used:
- 29482 strings out of 493333
- 588556 string characters out of 3139198
- 643420 words of memory out of 3000000
- 32430 multiletter control sequences out of 15000+200000
+ 29486 strings out of 493333
+ 588613 string characters out of 3139198
+ 643436 words of memory out of 3000000
+ 32433 multiletter control sequences out of 15000+200000
  29067 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,10n,67p,10426b,1021s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1520,9 +1520,9 @@ ram Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palati
 no/uplri8a.pfb>
-Output written on Special_issue_manuscript.pdf (40 pages, 810280 bytes).
+Output written on Special_issue_manuscript.pdf (40 pages, 810483 bytes).
 PDF statistics:
- 1504 PDF objects out of 1728 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
+ 1506 PDF objects out of 1728 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
  232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

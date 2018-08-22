@@ -199,7 +199,7 @@ Loukas~I. Kioupis and Edward~J. Maginn.
 
 \bibitem{Hess1998}
 Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
-\newblock Lincs: A linear constraint solver for molecular simulations.
+\newblock {LINCS: A} linear constraint solver for molecular simulations.
 \newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
 
 \bibitem{Hess2008}
@@ -328,6 +328,13 @@ Richard~A. Messerly, Michael~R. Shirts, and Andrei~F. Kazakov.
 \newblock Uncertainty quantification confirms unreliable extrapolation toward
   high pressures for united-atom {Mie} $\lambda$-6 force field.
 \newblock {\em Journal of Chemical Physics}, Pending publication, 2018.
+
+\bibitem{Kim2018}
+Kang-Sahn Kim, Myung~Hoon Han, Changho Kim, Zhen Li, George~Em Karniadakis, and
+  Eok~Kyun Lee.
+\newblock Nature of intrinsic uncertainties in equilibrium molecular dynamics
+  estimation of shear viscosity for simple and complex fluids.
+\newblock {\em The Journal of Chemical Physics}, 149(4):044510, 2018.
 
 \bibitem{Thol_LJTS}
 Monika Thol, G{\'a}bor Rutkai, Roland Span, Jadran Vrabec, and Rolf Lustig.
