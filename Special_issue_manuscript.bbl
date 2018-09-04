@@ -142,6 +142,13 @@ Molecular simulation of the thermophysical properties of fluids: From
   understanding toward quantitative predictions.
 \newblock {\em Journal of Molecular Liquids}, 134(1):71 -- 89, 2007.
 
+\bibitem{Ewen2016}
+James~P Ewen, Chiara Gattinoni, Foram~M. Thakkar, Neal Morgan, H~A Spikes, and
+  Daniele Dini.
+\newblock A comparison of classical force-fields for molecular dynamics
+  simulations of lubricants.
+\newblock {\em Materials}, 9(8):651, 2016.
+
 \bibitem{Gordon2006}
 Peter~A. Gordon.
 \newblock Development of intermolecular potentials for predicting transport
