@@ -561,7 +561,11 @@
 	
 	%In addition, the shell and python scripts used for preparing and analyzing simulations are available on GitHub \cite{BLANK}. 
 	
-	Simulation specifications are provided in Table \ref{tab:sim_specs}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}) except for certain compounds (see Section \ref{Cut-off distance}). Analytical tail corrections are applied in all cases \cite{GROMACS_note}. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 16 ns for 2,2,4-trimethylpentane at 1000 MPa. Sections \ref{Finite-size effects} and \ref{Cut-off distance} provide a detailed analysis for the number of molecules and the cut-off lengths, respectively. Sections \ref{SI:Simulation time} and \ref{fixed flexible} of Supporting Information investigate, respectively, the sensitivity of our results to the production time and constrained bonds. To validate our methods, a comparison with other reference simulation values \cite{NIST_SRSW,Kioupis2000,Nieto2006} is provided in Section \ref{Validation Runs} of Supporting Information. 
+	Simulation specifications are provided in Table \ref{tab:sim_specs}. Note that each force field utilizes a 1.4 nm non-bonded cut-off distance $(r_{\rm c})$, with the exception of Potoff which employs a 1.0 nm cut-off (as recommended in Reference \citenum{Mie}) except for certain compounds (see Section \ref{Cut-off distance}). Analytical non-bonded tail corrections for internal energy and pressure are applied in all cases (see Section 4.9 of Reference \cite{GROMACS_2018}). Note that GROMACS neglects the long-range contribution from the repulsive ($r^{-\lambda}$) term as it is several orders of magnitude smaller than the attractive ($r^{-6}$) contribution. With this simplification, the energy and pressure corrections are proportional to $\epsilon \sigma^6 r_{\rm c}^{-3}$. Section \ref{Cut-off distance} provides a detailed analysis of the cut-off length. 
+	
+%	Sections \ref{Finite-size effects} and \ref{Cut-off distance} provide a detailed analysis for the number of molecules and the cut-off lengths, respectively.
+	
+	Section \ref{Finite-size effects} demonstrates finite-size effects are typically negligible for a simulation with 400 molecules. For most systems, 1 ns is a sufficient production time, while longer simulations are required for the more viscous systems, e.g., 16 ns for 2,2,4-trimethylpentane at 1000 MPa. Sections \ref{SI:Simulation time} and \ref{fixed flexible} of Supporting Information investigate, respectively, the sensitivity of our results to the production time and constrained bonds. To validate our methods, a comparison with other reference simulation values \cite{NIST_SRSW,Kioupis2000,Nieto2006} is provided in Section \ref{Validation Runs} of Supporting Information.  
 
 %	Validation results for the production times, 2 fs time-step, and constrained bonds are provided in Sections \ref{SI:Simulation time}, \ref{Validation Runs}, and \ref{fixed flexible} of Supporting Information, respectively.
 	 
@@ -690,11 +694,17 @@
 %	\frac{V}{3 k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \sum_{\alpha \ne \beta} \int_{0}^{\infty}dt\left\langle \tau_{\alpha\beta,n}(t) \tau_{\alpha\beta,n}(0)\right\rangle_{t_0}
 %	\end{equation} 
 	\begin{equation} \label{eq:Green_Kubo}
-	\eta(t) = \frac{V}{3 k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \sum_{\alpha \ne \beta} \int_{0}^{t}dt'\left\langle \tau_{\alpha\beta,n}(t') \tau_{\alpha\beta,n}(0)\right\rangle_{t_0}
+	\eta(t) = \frac{V}{k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \int_{0}^{t}dt'\left\langle \tau_{\alpha\beta,n}(t') \tau_{\alpha\beta,n}(0)\right\rangle_{t_0,\alpha\beta}
 	\end{equation} 
-	where $t$ is time, $V$ is volume, $N_{\rm reps}$ is the number of independent replicate simulations, $\langle \cdots \rangle_{t_0}$ denotes an average over time origins $(t_0)$, $\alpha$ and $\beta$ are $x, y, $ or $z$ Cartesian coordinates, and $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal stress tensor element for the $n^{\rm th}$ replicate. 
-	
-	$\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) for accurate integration of Equation \ref{eq:Green_Kubo}. To improve precision, Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components (hence the factor of 3 in the denominator of Equation \ref{eq:Green_Kubo}).
+	where $t$ is time, $V$ is volume, $N_{\rm reps}$ is the number of independent replicate simulations, $\alpha$ and $\beta$ are $x, y, $ or $z$ Cartesian coordinates, $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal atomic stress tensor element for the $n^{\rm th}$ replicate, and $\langle \cdots \rangle_{t_0,\alpha\beta}$ denotes an average over time origins $(t_0)$ and the $\tau_{xy}$, $\tau_{xz}$, and $\tau_{yz}$ stress tensor elements. Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components to improve numerical precision. Furthermore, $\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) for accurate integration of Equation \ref{eq:Green_Kubo}.
+
+%%%% Original text when submitted
+%	\begin{equation} \label{eq:Green_Kubo}
+%	\eta(t) = \frac{V}{3 k_{\rm B} T N_{\rm reps}} \sum_{n=1}^{N_{\rm reps}} \sum_{\alpha \ne \beta} \int_{0}^{t}dt'\left\langle \tau_{\alpha\beta,n}(t') \tau_{\alpha\beta,n}(0)\right\rangle_{t_0}
+%	\end{equation} 
+%	where $t$ is time, $V$ is volume, $N_{\rm reps}$ is the number of independent replicate simulations, $\langle \cdots \rangle_{t_0}$ denotes an average over time origins $(t_0)$, $\alpha$ and $\beta$ are $x, y, $ or $z$ Cartesian coordinates, and $\tau_{\alpha\beta,n}$ is the $\alpha$-$\beta$ off-diagonal stress tensor element for the $n^{\rm th}$ replicate. 
+%	
+%	$\tau_{\alpha\beta,n}$ is recorded every 6 fs (3 time-steps) for accurate integration of Equation \ref{eq:Green_Kubo}. To improve precision, Equation \ref{eq:Green_Kubo} averages several (between 30 and 60) independent replicate simulations, twelve different time-origins, and all three unique off-diagonal stress tensor components (hence the factor of 3 in the denominator of Equation \ref{eq:Green_Kubo}).
 	
 	%	Since Equation \ref{eq:Green_Kubo} requires information as $t \rightarrow \infty$ and the ``running integral'' can become quite noisy at long times, it is important to fit the ``running integral'' to a function that can be extrapolated to the ``true'' infinite time limit $(\eta^{\infty})$. Per ``Best Practices'', we use a double-exponential function for this purpose
 	
@@ -1153,7 +1163,9 @@
 	
 	\subsection{Cut-off distance} \label{Cut-off distance}
 	
-	The choice of cut-off distance is a subtle but important decision. In this study, we implement a 1.4 nm cut-off for TraPPE, TraPPE-2, TAMie, and AUA4 but a 1.0 nm cut-off for Potoff, as these are the cut-off lengths implemented by the respective authors. To determine the impact of the cut-off on viscosity estimates, we perform simulations with the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, and 1.8 nm.
+	Viscosity, like many other properties, is highly sensitive to the treatment of long-range tail corrections \cite{Leonard2018}. Furthermore, this section shows that the choice of cut-off distance is also a subtle but important decision. The results presented previously implement a 1.4 nm cut-off for TraPPE, TraPPE-2, and TAMie but a 1.0 nm cut-off for Potoff, as these are the cut-off lengths implemented by the respective authors. Note that the AUA4 developers utilize cut-off distances of 1.0 nm \cite{AUA4,Nieto2006,Bourasseau2002}, 1.2 nm \cite{Nieto2008}, and equal to half the box length \cite{Bourasseau2003,Perez2008} (which is typically larger than 1.4 nm for the systems studied). For simplicity, our AUA4 results are obtained using a 1.4 nm cut-off.
+	
+	To determine the impact of the cut-off on viscosity estimates, we also perform simulations with the Potoff force field using three different cut-off distances. Specifically, Figure \ref{fig:cutoff_distance} presents the Potoff $\eta_{\rm liq}^{\rm sat}$ values for \textit{n}-butane, \textit{n}-octane, and \textit{n}-dodecane using cut-offs of 1.0 nm, 1.4 nm, and 1.8 nm.
 	
 	% each force field except Potoff, which utilizes only a 1.0 nm cut-off. This choice was made because the Potoff force field was parameterized with a 1.0 nm cut-off. 
 	

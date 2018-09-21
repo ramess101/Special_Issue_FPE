@@ -179,15 +179,6 @@ M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
 \newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}.
 
-\bibitem{GROMACS_note}
-GROMACS non-bonded tail corrections assume that the long-range contribution
-  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. By
-  comparing the GROMACS output with other (slower) simulation packages, we
-  verified that the small error introduced with this approximation does not
-  significantly affect our results. For this reason, although it is
-  straightforward to include the $r^{-\lambda}$ contribution, we did not
-  attempt to modify the GROMACS default tail correction values.
-
 \bibitem{NIST_SRSW}
 Vince~K. Shen, Daniel~W. Siderius, William~P. Krekelberg, and Harold~W. Hatch.
 \newblock {NIST} standard reference simulation website, {NIST} standard
@@ -342,6 +333,35 @@ Kang-Sahn Kim, Myung~Hoon Han, Changho Kim, Zhen Li, George~Em Karniadakis, and
 \newblock Nature of intrinsic uncertainties in equilibrium molecular dynamics
   estimation of shear viscosity for simple and complex fluids.
 \newblock {\em The Journal of Chemical Physics}, 149(4):044510, 2018.
+
+\bibitem{Leonard2018}
+Alison~N. Leonard, Andrew~C. Simmonett, Frank~C. Pickard, Jing Huang,
+  Richard~M. Venable, Jeffery~B. Klauda, Bernard~R. Brooks, and Richard~W.
+  Pastor.
+\newblock Comparison of additive and polarizable models with explicit treatment
+  of long-range lennard-jones interactions using alkane simulations.
+\newblock {\em Journal of Chemical Theory and Computation}, 14(2):948--958,
+  2018.
+
+\bibitem{Bourasseau2002}
+Emeric Bourasseau, Philippe Ungerer, Anne Boutin, and Alain~H. Fuchs.
+\newblock Monte carlo simulation of branched alkanes and long chain
+  \textit{n}-alkanes with anisotropic united atoms intermolecular potential.
+\newblock {\em Molecular Simulation}, 28(4):317--336, 2002.
+
+\bibitem{Bourasseau2003}
+Emeric Bourasseau, Mehalia Haboudou, Anne Boutin, Alain~H. Fuchs, and Philippe
+  Ungerer.
+\newblock New optimization method for intermolecular potentials: Optimization
+  of a new anisotropic united atoms potential for olefins: Prediction of
+  equilibrium properties.
+\newblock {\em The Journal of Chemical Physics}, 118(7):3020--3034, 2003.
+
+\bibitem{Perez2008}
+Javier P{\'e}rez-Pellitero, Emeric Bourasseau, Isabelle Demachy, Jacqueline
+  Ridard, Philippe Ungerer, and Allan~D. Mackie.
+\newblock Anisotropic united-atoms {(AUA)} potential for alcohols.
+\newblock {\em The Journal of Physical Chemistry B}, 112(32):9853--9863, 2008.
 
 \bibitem{Thol_LJTS}
 Monika Thol, G{\'a}bor Rutkai, Roland Span, Jadran Vrabec, and Rolf Lustig.
