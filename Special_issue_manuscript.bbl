@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{Assael1992}
+M.~J. Assael, C.~P. Oliveira, M.~Papadaki, and W.~A. Wakeham.
+\newblock Vibrating-wire viscometers for liquids at high pressures.
+\newblock {\em International Journal of Thermophysics}, 13(4):593--615, 1992.
+
+\bibitem{Zambrano2016}
+Johnny~R. Zambrano, Manuel Sobrino, M.~Carmen Martín, Miguel~A. Villamañán,
+  César~R. Chamorro, and José~J. Segovia.
+\newblock Contributing to accurate high pressure viscosity measurements:
+  Vibrating wire viscometer and falling body viscometer techniques.
+\newblock {\em The Journal of Chemical Thermodynamics}, 96:104 -- 116, 2016.
+
 \bibitem{LEMMON-RP10}
 E.~W. Lemmon, I.~H. Bell, M.~L. Huber, and M.~O. McLinden.
 \newblock {NIST Standard Reference Database 23: Reference Fluid Thermodynamic
