@@ -6,23 +6,17 @@ You're missing a field name---line 1795 of file Special_issue_references.bib
  : %year = {2018},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2469 of file Special_issue_references.bib
- : 
- : %note = "EMLG/JMLG 2005 Special Issue",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 2486 of file Special_issue_references.bib
+You're missing a field name---line 2483 of file Special_issue_references.bib
  : 
  : %URL = {https://doi.org/10.1063/1.474002},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2500 of file Special_issue_references.bib
+You're missing a field name---line 2497 of file Special_issue_references.bib
  : 
  : %URL = {https://doi.org/10.1080/08927022.2012.702423},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty author in Ungerer2007
 Warning--empty year in NIST_SRSW
 Warning--empty journal in Romeo2018
 Warning--empty journal in Gao2017
-(There were 4 error messages)
+(There were 3 error messages)

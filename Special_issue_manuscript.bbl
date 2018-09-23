@@ -150,7 +150,9 @@ Maurizio Mondello and Gary~S. Grest.
 \newblock {\em The Journal of Chemical Physics}, 106(22):9327--9336, 1997.
 
 \bibitem{Ungerer2007}
-Molecular simulation of the thermophysical properties of fluids: From
+Philippe Ungerer, Carlos Nieto-Draghi, Bernard Rousseau, G{\:o}ktug Ahunbay,
+  and V{\'e}ronique Lachet.
+\newblock Molecular simulation of the thermophysical properties of fluids: From
   understanding toward quantitative predictions.
 \newblock {\em Journal of Molecular Liquids}, 134(1):71 -- 89, 2007.
 
@@ -160,6 +162,34 @@ James~P Ewen, Chiara Gattinoni, Foram~M. Thakkar, Neal Morgan, H~A Spikes, and
 \newblock A comparison of classical force-fields for molecular dynamics
   simulations of lubricants.
 \newblock {\em Materials}, 9(8):651, 2016.
+
+\bibitem{Intra_Potoff}
+Damien~A. Bernard-Brunel and Jeffrey~J. Potoff.
+\newblock Effect of torsional potential on the predicted phase behavior of
+  \textit{n}-alkanes.
+\newblock {\em Fluid Phase Equilibria}, 279(2):100 -- 104, 2009.
+
+\bibitem{Galliero2005}
+Guillaume Galli{\'e}ro, Christian Boned, Antoine Baylaucq, and
+  Fran\ifmmode\mbox{\c{c}}\else\c{c}\fi{}ois Montel.
+\newblock Molecular dynamics comparative study of {Lennard-Jones}
+  $\ensuremath{\alpha}$-6 and exponential $\ensuremath{\alpha}$-6 potentials:
+  Application to real simple fluids (viscosity and pressure).
+\newblock {\em Phys. Rev. E}, 73:061201, 2006.
+
+\bibitem{Galliero2005b}
+Guillaume Galli{\'e}ro, Christian Boned, and Antoine Baylaucq.
+\newblock Molecular dynamics study of the {Lennard-Jones} fluid viscosity{:
+  A}pplication to real fluids.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  44(17):6963--6972, 2005.
+
+\bibitem{Galliero2008}
+Guillaume Galli{\'e}ro and Christian Boned.
+\newblock Molecular dynamics study of the repulsive form influence of the
+  interaction potential on structural, thermodynamic, interfacial, and
+  transport properties.
+\newblock {\em The Journal of Chemical Physics}, 129(7):074506, 2008.
 
 \bibitem{Gordon2006}
 Peter~A. Gordon.
