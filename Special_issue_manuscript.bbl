@@ -76,6 +76,12 @@ Guillaume Galli{\'e}ro, Christian Boned, and Josefa Fern{\'a}ndez.
   argon, and some normal alkanes.
 \newblock {\em The Journal of Chemical Physics}, 134(6):064505, 2011.
 
+\bibitem{Simin2017}
+Simin~Yazdi Nezhad and Ulrich~K. Deiters.
+\newblock Estimation of the entropy of fluids with {Monte Carlo} computer
+  simulation.
+\newblock {\em Molecular Physics}, 115(9-12):1074--1085, 2017.
+
 \bibitem{Maginn2018}
 Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   J.~Richard Elliott.
@@ -83,11 +89,12 @@ Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   {S}elf-diffusivity and viscosity from equilibrium molecular dynamics v1.
 \newblock {\em Living Journal of Computational Molecular Science}, Pending
   publication, 2018.
+\newblock https://github.com/ejmaginn/TransportCheckList.
 
 \bibitem{Nieto2006}
 Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
-  for \textit{n}-alkanes: Improvement of transport properties.
+  for \textit{n}-alkanes{: I}mprovement of transport properties.
 \newblock {\em The Journal of Chemical Physics}, 125(4):044517, 2006.
 
 \bibitem{Bernard2009}
@@ -126,7 +133,8 @@ Andrea Hemmen and Joachim Gross.
 \bibitem{Weidler2016}
 Dominik Weidler and Joachim Gross.
 \newblock Transferable anisotropic united-atom force field based on the {Mie}
-  potential for phase equilibria: Aldehydes, ketones, and small cyclic alkanes.
+  potential for phase equilibria{: A}ldehydes, ketones, and small cyclic
+  alkanes.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   55(46):12123--12132, 2016.
 
@@ -140,7 +148,7 @@ J.~J. Potoff and D.~A. Bernard-Brunel.
 \bibitem{Potoff_branched}
 Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Loren Schwiebert, and
   Jeffrey~J. Potoff.
-\newblock Optimized {Mie} potentials for phase equilibria: Application to
+\newblock Optimized {Mie} potentials for phase equilibria{: A}pplication to
   branched alkanes.
 \newblock {\em Journal of Chemical \& Engineering Data}, 62(6):1806--1818,
   2017.
@@ -164,7 +172,7 @@ Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
 \bibitem{Allen1997}
 William Allen and Richard~L. Rowley.
 \newblock Predicting the viscosity of alkanes using nonequilibrium molecular
-  dynamics: Evaluation of intermolecular potential models.
+  dynamics{: E}valuation of intermolecular potential models.
 \newblock {\em The Journal of Chemical Physics}, 106(24):10273--10281, 1997.
 
 \bibitem{Payal2012}
@@ -204,8 +212,8 @@ Damien~A. Bernard-Brunel and Jeffrey~J. Potoff.
 Guillaume Galli{\'e}ro, Christian Boned, Antoine Baylaucq, and
   Fran\ifmmode\mbox{\c{c}}\else\c{c}\fi{}ois Montel.
 \newblock Molecular dynamics comparative study of {Lennard-Jones}
-  $\ensuremath{\alpha}$-6 and exponential $\ensuremath{\alpha}$-6 potentials:
-  Application to real simple fluids (viscosity and pressure).
+  $\ensuremath{\alpha}$-6 and exponential $\ensuremath{\alpha}$-6 potentials{:
+  A}pplication to real simple fluids (viscosity and pressure).
 \newblock {\em Phys. Rev. E}, 73:061201, 2006.
 
 \bibitem{Galliero2005b}
@@ -389,7 +397,7 @@ T.M. Blackham, A.K. Lemmon, and E.W. Lemmon.
 \bibitem{TDE}
 Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
   Chris Muzny.
-\newblock Thermodata engine {(TDE):} software implementation of the dynamic
+\newblock {ThermoData Engine (TDE): S}oftware implementation of the dynamic
   data evaluation concept.
 \newblock {\em Journal of Chemical Information and Modeling}, 45(4):816--838,
   2005.
@@ -398,7 +406,7 @@ Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
 Richard~A. Messerly, Michael~R. Shirts, and Andrei~F. Kazakov.
 \newblock Uncertainty quantification confirms unreliable extrapolation toward
   high pressures for united-atom {Mie} $\lambda$-6 force field.
-\newblock {\em Journal of Chemical Physics}, Pending publication, 2018.
+\newblock {\em The Journal of Chemical Physics}, 149(11):114109, 2018.
 
 \bibitem{Kim2018}
 Kang-Sahn Kim, Myung~Hoon Han, Changho Kim, Zhen Li, George~Em Karniadakis, and
@@ -425,8 +433,8 @@ Emeric Bourasseau, Philippe Ungerer, Anne Boutin, and Alain~H. Fuchs.
 \bibitem{Bourasseau2003}
 Emeric Bourasseau, Mehalia Haboudou, Anne Boutin, Alain~H. Fuchs, and Philippe
   Ungerer.
-\newblock New optimization method for intermolecular potentials: Optimization
-  of a new anisotropic united atoms potential for olefins: Prediction of
+\newblock New optimization method for intermolecular potentials{: O}ptimization
+  of a new anisotropic united atoms potential for olefins{: P}rediction of
   equilibrium properties.
 \newblock {\em The Journal of Chemical Physics}, 118(7):3020--3034, 2003.
 

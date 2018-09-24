@@ -7,6 +7,7 @@ Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
   {S}elf-diffusivity and viscosity from equilibrium molecular dynamics v1.
 \newblock {\em Living Journal of Computational Molecular Science}, Pending
   publication, 2018.
+\newblock https://github.com/ejmaginn/TransportCheckList.
 
 \bibitem{Zhang2015}
 Yong Zhang, Akihito Otani, and Edward~J. Maginn.
@@ -34,13 +35,13 @@ Loukas~I. Kioupis and Edward~J. Maginn.
 \bibitem{Nieto2006}
 Carlos Nieto-Draghi, Philippe Ungerer, and Bernard Rousseau.
 \newblock Optimization of the anisotropic united atoms intermolecular potential
-  for \textit{n}-alkanes: Improvement of transport properties.
+  for \textit{n}-alkanes{: I}mprovement of transport properties.
 \newblock {\em The Journal of Chemical Physics}, 125(4):044517, 2006.
 
 \bibitem{Kioupis1999}
 Loukas~I. Kioupis and Edward~J. Maginn.
-\newblock Molecular simulation of poly-$\alpha$-olefin synthetic lubricants{:}
-  impact of molecular architecture on performance properties.
+\newblock Molecular simulation of poly-$\alpha$-olefin synthetic lubricants{:
+  I}mpact of molecular architecture on performance properties.
 \newblock {\em The Journal of Physical Chemistry B}, 103(49):10781--10790,
   1999.
 
