@@ -5,9 +5,28 @@ M.~J. Assael, C.~P. Oliveira, M.~Papadaki, and W.~A. Wakeham.
 \newblock Vibrating-wire viscometers for liquids at high pressures.
 \newblock {\em International Journal of Thermophysics}, 13(4):593--615, 1992.
 
+\bibitem{Abramson2011}
+Evan~H. Abramson.
+\newblock Viscosity of methane to 6 {GPa} and 673 {K}.
+\newblock {\em Phys. Rev. E}, 84:062201, Dec 2011.
+
+\bibitem{Bair2015}
+Scott Bair.
+\newblock The temperature and pressure dependence of viscosity and volume for
+  two reference liquids.
+\newblock {\em Lubrication Science}, 28(2):81--95, 2015.
+
+\bibitem{Boned2014}
+Mar{\'i}a~J.P. Comu{\~n}as, Xavier Paredes, F{\'e}lix~M. Gaci{\~n}o, Josefa
+  Fern{\'a}ndez, Jean-Patrick Bazile, Christian Boned, Jean-Luc Daridon,
+  Guillaume Galliero, J{\'e}r{\^o}me Pauly, and Kenneth~R. Harris.
+\newblock Viscosity measurements for squalane at high pressures to 350 {MPa}
+  from {T=(293.15 to 363.15) K}.
+\newblock {\em The Journal of Chemical Thermodynamics}, 69:201--208, 2014.
+
 \bibitem{Zambrano2016}
-Johnny~R. Zambrano, Manuel Sobrino, M.~Carmen Martín, Miguel~A. Villamañán,
-  César~R. Chamorro, and José~J. Segovia.
+Johnny~R. Zambrano, Manuel Sobrino, M.~Carmen Mart{\'i}n, Miguel~A.
+  Villama{\~n}{\'a}n, C{\'e}sar~R. Chamorro, and Jos{\'e}~J. Segovia.
 \newblock Contributing to accurate high pressure viscosity measurements:
   Vibrating wire viscometer and falling body viscometer techniques.
 \newblock {\em The Journal of Chemical Thermodynamics}, 96:104 -- 116, 2016.
@@ -44,6 +63,18 @@ Oliver L{\"o}tgering-Lin and Joachim Gross.
   using the perturbed-chain polar statistical associating fluid theory.
 \newblock {\em Industrial \& Engineering Chemistry Research},
   54(32):7942--7952, 2015.
+
+\bibitem{Goel2008}
+Teena Goel, Chandra~Nath Patra, Tulsi Mukherjee, and Charusita Chakravarty.
+\newblock Excess entropy scaling of transport properties of {Lennard-Jones}
+  chains.
+\newblock {\em The Journal of Chemical Physics}, 129(16):164904, 2008.
+
+\bibitem{Galliero2011}
+Guillaume Galli{\'e}ro, Christian Boned, and Josefa Fern{\'a}ndez.
+\newblock Scaling of the viscosity of the {Lennard-Jones} chain fluid model,
+  argon, and some normal alkanes.
+\newblock {\em The Journal of Chemical Physics}, 134(6):064505, 2011.
 
 \bibitem{Maginn2018}
 Edward~J. Maginn, Richard~A. Messerly, Daniel~J. Carlson, Daniel~R. Roe, and
