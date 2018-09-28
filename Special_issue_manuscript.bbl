@@ -266,6 +266,18 @@ M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
 \newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}.
 
+\bibitem{Hess1998}
+Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
+\newblock {LINCS: A} linear constraint solver for molecular simulations.
+\newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
+
+\bibitem{Hess2008}
+Berk Hess.
+\newblock {P-LINCS: A} parallel linear constraint solver for molecular
+  simulation.
+\newblock {\em Journal of Chemical Theory and Computation}, 4(1):116--122,
+  2008.
+
 \bibitem{NIST_SRSW}
 Vince~K. Shen, Daniel~W. Siderius, William~P. Krekelberg, and Harold~W. Hatch.
 \newblock {NIST} standard reference simulation website, {NIST} standard
@@ -281,18 +293,6 @@ Loukas~I. Kioupis and Edward~J. Maginn.
 \newblock Impact of molecular architecture on the high-pressure rheology of
   hydrocarbon fluids.
 \newblock {\em The Journal of Physical Chemistry B}, 104(32):7774--7783, 2000.
-
-\bibitem{Hess1998}
-Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
-\newblock {LINCS: A} linear constraint solver for molecular simulations.
-\newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
-
-\bibitem{Hess2008}
-Berk Hess.
-\newblock {P-LINCS: A} parallel linear constraint solver for molecular
-  simulation.
-\newblock {\em Journal of Chemical Theory and Computation}, 4(1):116--122,
-  2008.
 
 \bibitem{Zhang2015}
 Yong Zhang, Akihito Otani, and Edward~J. Maginn.
@@ -426,7 +426,7 @@ Alison~N. Leonard, Andrew~C. Simmonett, Frank~C. Pickard, Jing Huang,
   Richard~M. Venable, Jeffery~B. Klauda, Bernard~R. Brooks, and Richard~W.
   Pastor.
 \newblock Comparison of additive and polarizable models with explicit treatment
-  of long-range lennard-jones interactions using alkane simulations.
+  of long-range {Lennard-Jones} interactions using alkane simulations.
 \newblock {\em Journal of Chemical Theory and Computation}, 14(2):948--958,
   2018.
 
